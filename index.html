@@ -17,10 +17,50 @@
   <link rel="stylesheet" href="css/main.css">
   <!-- Place favicon.ico in the root directory -->
 
+  <style>
+    /* Pulse */
+    @-webkit-keyframes pulse {
+      25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+    @keyframes pulse {
+      25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+    .pulse {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+    .pulse:hover, .pulse:focus, .pulse:active {
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Schwartz.World!</h1>
+  <h1 class="pulse">Schwartz.World!</h1>
   <nav>
     <ul>
       <li class="navlink"><a href="/">home</a></li>
@@ -28,12 +68,12 @@
     </ul>
     <main>
       <section>
-        <h2>About Me</h2>
+        <h2 class="pulse">About Me</h2>
         <p>
           I am a front-end developer with opinions.
         </p>
-        <h3>Languages / Frameworks</h3>
-        <h4>Professional</h4>
+        <h3 class="pulse">Languages / Frameworks</h3>
+        <h4 class="pulse">Professional</h4>
         <ul>
           <li>JavaScript / TypeScript / ReactJS</li>
           <li>NodeJS / ExpressJS</li>
@@ -42,7 +82,7 @@
           <li>GraphQL</li>
         </ul>
 
-        <h4>Hobby</h4>
+        <h4 class="pulse">Hobby</h4>
         <ul>
           <li>Lua / Löve2d</li>
           <li>Forth</li>
@@ -50,11 +90,11 @@
         </ul>
       </section>
       <section>
-        <h2>Hobby Projects</h2>
+        <h2 class="pulse">Hobby Projects</h2>
         <ul>
           <li>
             <a href="https://letter-press.netlify.app/">
-              <h3>LetterPress</h3>
+              <h3 class="pulse">LetterPress</h3>
             </a>
             <p>
               Simple games implemented in HTML5 and vanilla JS
