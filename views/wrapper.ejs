@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Blog Index</title>
+    <title>schwartz.world - <%= title %></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -89,20 +89,7 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
-    const xxx = `&lt;div&gt;
-    &lt;ul id=&#34;links&#34;&gt;
-        &lt;li&gt;
-      &lt;a href=&#34;/blog/static_site_generators&#34;&gt;
-        &lt;b&gt;Static Site Generators&lt;/b&gt;
-      &lt;/a&gt; Fri Sep 25 2020
-    &lt;/li&gt;
-&lt;li&gt;
-      &lt;a href=&#34;/blog/dongles&#34;&gt;
-        &lt;b&gt;Dongles&lt;/b&gt;
-      &lt;/a&gt; Fri Sep 25 2020
-    &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;`
+    const xxx = `<%= content %>`
 </script>
 <nav>
     <ul>
@@ -112,27 +99,16 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     </ul>
     <main>
         <div class="title">
-            <h2>Blog Index</h2>
-            
-            
-                <br/><small><b>Edited:</b> Fri Sep 25 2020</small>
-            
+            <h2><%= title %></h2>
+            <% if (createdAt) { %>
+                <small><b>Created:</b> <%= createdAt.toDateString()%></small>
+            <% } %>
+            <% if (editedAt) { %>
+                <br/><small><b>Edited:</b> <%= editedAt.toDateString() %></small>
+            <% } %>
 
         </div>
-        <div>
-    <ul id="links">
-        <li>
-      <a href="/blog/static_site_generators">
-        <b>Static Site Generators</b>
-      </a> Fri Sep 25 2020
-    </li>
-<li>
-      <a href="/blog/dongles">
-        <b>Dongles</b>
-      </a> Fri Sep 25 2020
-    </li>
-    </ul>
-</div>
+        <%- content %>
     </main>
 </nav>
 </body>

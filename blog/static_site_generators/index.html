@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Blog Index</title>
+    <title>schwartz.world - Static Site Generators</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -89,20 +89,40 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
-    const xxx = `&lt;div&gt;
-    &lt;ul id=&#34;links&#34;&gt;
-        &lt;li&gt;
-      &lt;a href=&#34;/blog/static_site_generators&#34;&gt;
-        &lt;b&gt;Static Site Generators&lt;/b&gt;
-      &lt;/a&gt; Fri Sep 25 2020
-    &lt;/li&gt;
-&lt;li&gt;
-      &lt;a href=&#34;/blog/dongles&#34;&gt;
-        &lt;b&gt;Dongles&lt;/b&gt;
-      &lt;/a&gt; Fri Sep 25 2020
-    &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;`
+    const xxx = `&lt;style&gt;
+    body {
+      background: indigo;
+      color: lightseagreen;
+    }
+    a {
+      color: lightyellow;
+    }
+&lt;/style&gt;
+&lt;h2 id=&#34;staticsitegenerators&#34;&gt;Static Site Generators&lt;/h2&gt;
+&lt;p&gt;Some people knit. Some bake. Me? I build static site generators. This site is one of them.&lt;/p&gt;
+&lt;p&gt;My introduction to static site generators was the incredible [Gatsby JS](
+www.gatsbyjs.com), and this site was built with Gatsby originally. Gatsby is an amazing product, but I don&#39;t want to write React in my off-time.&lt;/p&gt;
+&lt;p&gt;Even worse, I couldn&#39;t make Gatsby work with Leaflet. At the time, I was very interested in JavaScript maps, and there was a quirk where Leaflet would bind itself to the &lt;code&gt;window&lt;/code&gt; object before it was instatiated. This may have been fixed since then.&lt;/p&gt;
+&lt;h3 id=&#34;diyisbetter&#34;&gt;DIY is Better&lt;/h3&gt;
+&lt;p&gt;At the end of the day, a static site generator doesn&#39;t need much. You need a way to load and parse some files and then pass that content to an HTML template. It doesn&#39;t need to be particularly performant or secure since it only ever runs on my machine at home. Static files get generated and then pushed up to Netlify.&lt;/p&gt;
+&lt;h3 id=&#34;plannedfeatures&#34;&gt;Planned Features&lt;/h3&gt;
+&lt;h4 id=&#34;comments&#34;&gt;Comments&lt;/h4&gt;
+&lt;p&gt;I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comments post to node server and are fetched regularly and built into the static blog&lt;/li&gt;
+&lt;li&gt;Comments post to AWS Lambda and ???&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://formspree.io/&#34;&gt;FormSpree&lt;/a&gt; form to comment&lt;/li&gt;
+&lt;li&gt;Email to comment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;tags&#34;&gt;Tags&lt;/h4&gt;
+&lt;p&gt;I really like the idea of a dynamic tagging system. At build time, I&#39;d like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can&#39;t say there will ever be enough posts here to justify a system like this, but that&#39;s not why I&#39;m doing this. I like building the blog more than I like posting to it. Deeply ironic.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jwz.org/blog/&#34;&gt;This blog&lt;/a&gt; has a fantastic system whereby every post has a list of &lt;code&gt;previously&lt;/code&gt; links at the bottom. I&#39;d like my tags to function similarly, allowing an organic link from page to page. Damned if I know how I&#39;m going to implement it, but I have ideas.&lt;/p&gt;
+&lt;h4 id=&#34;maps&#34;&gt;Maps&lt;/h4&gt;
+&lt;p&gt;There will be maps. Oh yes. There will be maps.&lt;/p&gt;
+&lt;h4 id=&#34;rss&#34;&gt;RSS&lt;/h4&gt;
+&lt;p&gt;I&#39;d like to generate an RSS feed as well. It&#39;s only considerate.&lt;/p&gt;
+&lt;h3 id=&#34;whatwillyouwriteabout&#34;&gt;What will you write about?&lt;/h3&gt;
+&lt;p&gt;Maybe lots of things. Maybe nothing. Maybe I&#39;ll tear the whole thing down next month and try again.&lt;/p&gt;`
 </script>
 <nav>
     <ul>
@@ -112,27 +132,47 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     </ul>
     <main>
         <div class="title">
-            <h2>Blog Index</h2>
+            <h2>Static Site Generators</h2>
             
+                <small><b>Created:</b> Fri Sep 25 2020</small>
             
-                <br/><small><b>Edited:</b> Fri Sep 25 2020</small>
             
 
         </div>
-        <div>
-    <ul id="links">
-        <li>
-      <a href="/blog/static_site_generators">
-        <b>Static Site Generators</b>
-      </a> Fri Sep 25 2020
-    </li>
-<li>
-      <a href="/blog/dongles">
-        <b>Dongles</b>
-      </a> Fri Sep 25 2020
-    </li>
-    </ul>
-</div>
+        <style>
+    body {
+      background: indigo;
+      color: lightseagreen;
+    }
+    a {
+      color: lightyellow;
+    }
+</style>
+<h2 id="staticsitegenerators">Static Site Generators</h2>
+<p>Some people knit. Some bake. Me? I build static site generators. This site is one of them.</p>
+<p>My introduction to static site generators was the incredible [Gatsby JS](
+www.gatsbyjs.com), and this site was built with Gatsby originally. Gatsby is an amazing product, but I don't want to write React in my off-time.</p>
+<p>Even worse, I couldn't make Gatsby work with Leaflet. At the time, I was very interested in JavaScript maps, and there was a quirk where Leaflet would bind itself to the <code>window</code> object before it was instatiated. This may have been fixed since then.</p>
+<h3 id="diyisbetter">DIY is Better</h3>
+<p>At the end of the day, a static site generator doesn't need much. You need a way to load and parse some files and then pass that content to an HTML template. It doesn't need to be particularly performant or secure since it only ever runs on my machine at home. Static files get generated and then pushed up to Netlify.</p>
+<h3 id="plannedfeatures">Planned Features</h3>
+<h4 id="comments">Comments</h4>
+<p>I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):</p>
+<ul>
+<li>Comments post to node server and are fetched regularly and built into the static blog</li>
+<li>Comments post to AWS Lambda and ???</li>
+<li><a href="https://formspree.io/">FormSpree</a> form to comment</li>
+<li>Email to comment</li>
+</ul>
+<h4 id="tags">Tags</h4>
+<p>I really like the idea of a dynamic tagging system. At build time, I'd like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can't say there will ever be enough posts here to justify a system like this, but that's not why I'm doing this. I like building the blog more than I like posting to it. Deeply ironic.</p>
+<p><a href="https://www.jwz.org/blog/">This blog</a> has a fantastic system whereby every post has a list of <code>previously</code> links at the bottom. I'd like my tags to function similarly, allowing an organic link from page to page. Damned if I know how I'm going to implement it, but I have ideas.</p>
+<h4 id="maps">Maps</h4>
+<p>There will be maps. Oh yes. There will be maps.</p>
+<h4 id="rss">RSS</h4>
+<p>I'd like to generate an RSS feed as well. It's only considerate.</p>
+<h3 id="whatwillyouwriteabout">What will you write about?</h3>
+<p>Maybe lots of things. Maybe nothing. Maybe I'll tear the whole thing down next month and try again.</p>
     </main>
 </nav>
 </body>
