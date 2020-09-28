@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>schwartz.world - On Typescript</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="apple-touch-icon" href="../icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Place favicon.ico in the root directory -->
+    <style>
+        body {
+            background: lightsalmon;
+            color: darkslateblue;
+        }
+    </style>
+</head>
+
+<body>
+<h1><a href="/">Schwartz.World!</a></h1>
+<script>
+    const maddie = `
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkkOOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkkOkOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkOOOOkkkkkkOOkkkOOOOOOOkOOkkkOOkkkkkxddxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkOOOOOkxddoollooodxkO0KK0Okdl;,'',,;:cldxkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkxolc:;;;;cldxxO0KKKKK0kdl;,...........,:coxkkkkkkkkxxxxxxxkkkkkxkkxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkOOOOOOOOOOkdoc:;;;:cldxO0KKKXXXKK0Oxoc;,.................';:ccllc:;,,;cccllllloooddxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkxlc:;:cldxO00KKXXXXXXXKKOxoc;,'.......................................''''',:ldxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkdc;;coxkO0KKKKXXXXXXXXK0kxo:;,''.....................................'''''......,cdxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkoc;:cdOKXXXXXXXXXXXXXX0Okoc:,,'....................................',,,''',,,'......:dxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxo:::ldOKXXXXXXNNNNXXXKK0dlc;,'.....................................',;;;,''............cdxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOko::cldk0XNNNNNNNNNNXXXXKOdc;;''......................................''''.''.............,oxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxlcclodkKXXNNNNNNNNNNXXK0kdc:;,,,'..........................................................lxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxdddddk0KXNNNNNNNNNNNXKKOkxdlcc::::;''.......................................................:dxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkxkOkk0XXXXNNNNNNNNNNXKOxdoooooollcc;,,'................................. ....................,oxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkOkkOKKKXXXXXXNNNNNNNNNX0kdoc::clooolllc:,'............................      ....................,oxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkxxkO0KXNNNXXXNNNNNNNNNXKOdl:,,;:cccccclllc;,,'.........................   ...   .................,oxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOdlok0KXNNNNXNNNNNNNNNNXKOxoc;,,,,,,,,,',,,,,,,','......................    .       ...............'lxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkl;:d0XXNNNNNNNNNNNNXXKKOxo:;'......'''......'''''........    ............      ...  ...............cxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOd:,lkKXNNNXNNNNNNNK00OOdc;'.....,'.........................  ...... ...       ..;. ................:dx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOx:';d0XNNXXNNNNNXKOkkkdc'.................................  ...........       .'ll;'...............cxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxc,:d0XXXXNNNXNXKOxxxdl;...................';;;'........... ..........       ..,ldxxdolc;,'.......:dxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkc;oOXXK0XNNXXXKOxxxxo:,.................',;:,'.......................     ..'',;lxxxxxxxxdolc:;:ldxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkllOXNXKXNXXXKKOxxxxoc;;,'......'',,,,;;;;:,'.........................    .',;;;;:oxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkk0XXXKXXXK000Oxoddolc:::::;;::::ccc:::;,''................ ........... ..',;;;;::lxkxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkOKXXKKXXXX0OOkOkddolllccc:::cccc::;;,''................... ...............',;;,,::coxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOkOKXXXKXXXK0OOOOOOkdlccllccc:::;;;,''''....................................',;;;,;::clxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOkOOkkO0KXXKKK000OkkOkxkkxlccccc::::;,,'''....................  ................,,;;;;;:::clxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOkkO00OO00000OOkkOkdloddlcllcc:::;;,''''..................   ................',,;;;;:::::ldxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOkO00OxxxkO0OOkxxkkxlcooollllccc:::;,''',,,,,'''..........       ............',,,,;;;:::::lxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOkkOOO00kxxkkO000OOkxdolc:loodollllllcc:,,,;:::;,''............        ..........,;;;;,,;;::::oxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOkkkO00OkkkkkO0000Okdocc::cloddollllllllc:;::c::;,'.............   .  . .........,;;;;;,,;::::coxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOkkOOOOkxxxxxxk00Oxdlcc::::cllolllc:::ccccc:::c:;;'....................... ......,;;;;;;,;;::::coxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOkkO00kxddxddddddxxdlccclc:ccllllcccc:;;;::ccccc:;,,'''................  ........',;;,,;:;;;;::;;cdxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOkOO00Okkxxddolllccc::::clccccccc::::::;;,;:c:;;,,'''''''''''..........    .....',,;,,,,;:;;;::;;;oxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOO000Okolllll:;;;;,,,;::::::;;,,,;:::;;;;:;,'..''''''''',,,''''............'',,,,'''',;;;,;::;;cdxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOO0kxxO0Okxoc:colc:;;;;;,,;:::::;;,,,,;:::;;;;:;,''''',,,,,,,;;;,''........'',,,,,,,,,''',;;;,;;;;::cdxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOkdddddddolccccloool;;:;;;;::c:::;;;;;;;:::;;;:::;;,,,,,,,;;;;;;;;,',,,,'',,,,,,,,,,,'''',,,;;,,;;;;::ldxxxxxxxxxxxkkkkxxxx
+OOOOOOOOkxoc::llccc::::cooc:c:,,;;;;::::::;;:::::::::;;::::;,,,,;;;;;;::::;;;;;;;;;,,,,,,,,,,,''',,,'',,',,,,;::lxkkkkkkkkkkkkkkkkkkk
+kkOOkxdl:;,,,,,,'',;;;;;::;,,,',;;;;::::::::::::::::::::::;;,,;;,,;;;;;:::;::;;;;;,,,,,,,,,,,''',,'''','',,,;;::oxkkkkkkkkkkkkkkkkkkk
+oool:,''''.........'','.....''',,;::ccc:::::;:::::;;;;:::;;,,,,,''',,;;:::::;;;;;,,,;;;;;,,'''''.....',,',,;;;:coxkkkkkkkkkkkkkkkkkkk
+::;,'''......................'',;;;:::::;;;;;;;;;;;;;;;:;;;,,,'..''',:::::;;;;;;,,,,,,,,,,'''''.....'',''',;;::coxkkkkkkkkkkkkkkkkkkk
+;,,,,;;,'...................''',,,;;;;;;;,,,;;;;;;;;;;;;,,''''',,;;:ccc::;;,,,,,,,,,,,,''''''''''''''','',,;:::coxxkkkkkkkkkkkkkkkkkk
+;..''',,'...................',,,,,,;,,,;;,;;;;;;;;;:;;,'...',,;:clooddol:;;,,'''''',,,,'''''''''''''',,,,,;;:;:coxxxxxkkkkkkkkkkkkkkk
+l;'........................'',,,,,,,,,,,,,;;;;;;;;;;,'''',,;:coddxxxxddolc;;,''...''''''''''''',,,,,,,',,,;;;;::ldxxxxxxxxxxxxxxxxxxx
+ol:,......................'''''''''',,,,,,,;;;;;;;,,,;;:cloxkOkkxxxxxddooll:,''.....''',,,,,''''''''',,,,;;;;;::ccoxxxxxxxxxxxxxxxxxx
+lllc,........................''''''''',,,,,,;;;;;;;:cldkOkk0000Okkxxddddddoc;,''.....''',,,''''''''',,,,;;;;;;::::codxxxxxxxxxxxxxxxx
+llccc,..........................''''''''',,,,,,;:coxO0KK0Okk0KK0Oxdddddxxxdl:,,'''.....''','''''''',,,,,;;;;;;::::::ldxxxxxxxxxxxxxxx
+llcccc;,''......................''''........';:ldk00000KKK0000K0kxddddddxxdl:;;,,'........''''''''',,,,,,,,,;;:::::::oxxxxxxxxxxxxxxx
+lllcccccccc:::c::;;::,..................'',;:oO000OOOO00KKKK00O0Okxxxdddddolc:;;;,'.........'''''''',,,,,,;,,;::::::;cdxxxxxxxxxxxxxx
+oolccccccccclloolcccc:,'..........'',,;::::::oOKK0OkOOOOkO0K000000OOxollooolc::;;;,''''......''''''',,;;,,;,,;;;:::;;:ldxxxxxxxxxxxxx
+llccccccccllooollccc:;;,,:cc::;;;::::cccc:;;;:o0XK0O0OkxxdxO00K00000kdoooooollc::;;;,;;;,'''''''''''',;;;;;;;;;;::;;;;:ldxxxxxxxxxxxx
+lccccccccllooollcccc:;,';cllcccclooolclooc;;;,;dKXKK0K0kxxkkOO0KKKK0Okddoloolllc:;;clccc:;,,,,'''''..',;;;;;;;:::;;,,;;coxxxxxxxxxxxx
+ccccccccllooolcccccc:,',:lllcccclooolclool:;,,,:d0XKKKK0Okkkkkk0000K00kddddoollc:::coollcc:;,'''...''',;;;,,;:::;;;;,;;:cdxxxxxxxxxxx
+cccccccclooollccccc::,',:llcccccloolccloooc;,,,,;oOKK0KK0OkkkkkkkOOOO0Oxxxddolc:::;:cclllc:;,'''...'',,,;,,,;::;;;,,,,;:cldxxxxxxxxxx
+cccccccclooollccccc:;,',cllcccccclllccloool:;;,,,;cdO0KK0000O0OOkxxxxkkxxxxdollccl:;;::clc:;,'''''',,;,,,,,,;;;;,,,,,,;::coxxxxxxxxxx
+cccccccclooollccccc:;,';cllccccccccccclodool:;;;;,,;cxO0000KKK000OOkxdxxxdddoollllc;,;;;:::;;,,,,,,,;,''',,,,,,,,,,,;;::ccldddddddddd
+lllccccclllllcllllc::;,,cllcccccccccccloooool:;;;,,,,:okO0KKKK000000kddddooddoccclc;,,,,,::;;,,,,,,,,'...''''',,''',,;;::cccloooooooo
+ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:clc;,,,',;:;;,,'',,,'......'',,,,''',,,;:::,;:ccccccc
+ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
+`;
+    console.log(maddie);
+    const xxx = `&lt;h2 id=&#34;ontypescript&#34;&gt;On Typescript&lt;/h2&gt;
+&lt;p&gt;I don&#39;t like it.&lt;/p&gt;
+&lt;h3 id=&#34;myexperience&#34;&gt;My experience&lt;/h3&gt;
+&lt;p&gt;I work on a large and tangled React codebase. We have two linter rules related to &lt;code&gt;any&lt;/code&gt; types:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no implicit any&lt;/li&gt;
+&lt;li&gt;no explicit any&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The end result is that every function, component has to have a type declaration.&lt;/p&gt;
+&lt;h3 id=&#34;idontlikewritingcodejusttosuitthecompiler&#34;&gt;I don&#39;t like writing code just to suit the compiler&lt;/h3&gt;
+&lt;p&gt;There are two types of people who write TypeScript. For those who come from statically typed languages, Typescript is a way of writing JavaScript without some of the pains of JavaScript. These reluctant JS devs are forced into it because browsers don&#39;t speak Java anymore. You can&#39;t build a front end in C#.&lt;/p&gt;
+&lt;p&gt;Then there is me. I started as a JS dev. It&#39;s my &lt;em&gt;lingua materna&lt;/em&gt;. I learned in a web browser console and built websites the old fashioned way without compilers or tooling or anything like that. Just Sublime Text, &lt;code&gt;python -m SimpleHTTPServer&lt;/code&gt; and a browser window. Later I moved on to React and through my exposure to React I got comfortable in NodeJS.&lt;/p&gt;
+&lt;p&gt;For me and, I assume, others like me, there is a particular frustration wherein I write perfectly usable code that will work fine in the environment it is destined for, but the compiler won&#39;t accept it. Alternatively, I struggle to come up with flexible typing when needed. The only way to make this stuff work is to write pointless code to appease the tyrannical robot &lt;del&gt;overlord&lt;/del&gt;&lt;ins&gt;I mean protector&lt;/ins&gt; that is the typescript compiler.&lt;/p&gt;
+&lt;h3 id=&#34;largecodebasesmayhavetoomanysimilartypes&#34;&gt;Large codebases may have too many similar types&lt;/h3&gt;
+&lt;p&gt;This is self explanatory, but similar types leave you with three options: write glue code to toggle the types back and forth (bad), add more similar types / duplicated code to avoid the similar types or refactor which could be easier said than done in a large codebase.&lt;/p&gt;
+&lt;h3 id=&#34;typescriptisbestusedwithoop&#34;&gt;Typescript is best used with OOP&lt;/h3&gt;
+&lt;p&gt;Typescript seems to work best when you type your data, not your functions. The language has a lot of little things that work really well with classes. For example, if you are trying to manually check a type, you can use &lt;code&gt;instanceof&lt;/code&gt;if the type is an instance of a class. If it&#39;s just an object with an interface though, you lose that capability.&lt;/p&gt;
+&lt;p&gt;Unfortunately, classes are not en vogue in the React community. React pushes a functional model which is great, but the result is that everybody I work with things of typing in terms of input but not output.&lt;/p&gt;
+&lt;p&gt;React developers often delegate too much responsibility to React. All of their code lives in the body of components, maybe with some hooks and helper functions scattered around. React works best, in my opinion, when most of the work lives outside of React. Instead of continually adding props to components, I want to build a thing and send it tumbling down the React tree with all the information needed to work on it included. Classes are a solid abstraction in JS, and you can make them pure functions just fine.&lt;/p&gt;
+&lt;p&gt;So the point of this is, the React community largely follows a paradigm that doesn&#39;t really work well with TypeScript. It could, but it doesn&#39;t. Admittedly I can write the code the way I want, but the whole reason for a language like TS is to make it easier to work with other people&#39;s code.&lt;/p&gt;
+&lt;h3 id=&#34;typingfeelslikeanafterthought&#34;&gt;Typing feels like an afterthought&lt;/h3&gt;
+&lt;p&gt;Unlike Elm, where the types are really a first class feature of the language, types in TypeScript feel like they are stapled on, and for me that translates into the code I write. The simplest route to productivity seems to be writing the code first, then fighting with the type system for half a day to appease it. Is there a better way?&lt;/p&gt;
+&lt;h3 id=&#34;insummation&#34;&gt;In Summation&lt;/h3&gt;
+&lt;p&gt;Someday I&#39;d like to try a project with TypeScript my way, and I think I might like that. I&#39;d prefer to use the types conservatively, leaving most code &lt;em&gt;un&lt;/em&gt;typed except the most important bits. I probably won&#39;t do that unless Deno becomes mainstream enough to seriously contend with Node.&lt;/p&gt;`
+</script>
+<nav>
+    <ul>
+        <li class="navlink"><a href="/">home</a></li>
+        <li class="navlink"><a href="/blog">blog</a></li>
+        <li class="navlink"><a href="/faq">faq</a></li>
+    </ul>
+    <main>
+        <div class="title">
+            <h2>On Typescript</h2>
+            
+                <small><b>Created:</b> Sun Sep 27 2020</small>
+            
+            
+
+        </div>
+        <h2 id="ontypescript">On Typescript</h2>
+<p>I don't like it.</p>
+<h3 id="myexperience">My experience</h3>
+<p>I work on a large and tangled React codebase. We have two linter rules related to <code>any</code> types:</p>
+<ul>
+<li>no implicit any</li>
+<li>no explicit any</li>
+</ul>
+<p>The end result is that every function, component has to have a type declaration.</p>
+<h3 id="idontlikewritingcodejusttosuitthecompiler">I don't like writing code just to suit the compiler</h3>
+<p>There are two types of people who write TypeScript. For those who come from statically typed languages, Typescript is a way of writing JavaScript without some of the pains of JavaScript. These reluctant JS devs are forced into it because browsers don't speak Java anymore. You can't build a front end in C#.</p>
+<p>Then there is me. I started as a JS dev. It's my <em>lingua materna</em>. I learned in a web browser console and built websites the old fashioned way without compilers or tooling or anything like that. Just Sublime Text, <code>python -m SimpleHTTPServer</code> and a browser window. Later I moved on to React and through my exposure to React I got comfortable in NodeJS.</p>
+<p>For me and, I assume, others like me, there is a particular frustration wherein I write perfectly usable code that will work fine in the environment it is destined for, but the compiler won't accept it. Alternatively, I struggle to come up with flexible typing when needed. The only way to make this stuff work is to write pointless code to appease the tyrannical robot <del>overlord</del><ins>I mean protector</ins> that is the typescript compiler.</p>
+<h3 id="largecodebasesmayhavetoomanysimilartypes">Large codebases may have too many similar types</h3>
+<p>This is self explanatory, but similar types leave you with three options: write glue code to toggle the types back and forth (bad), add more similar types / duplicated code to avoid the similar types or refactor which could be easier said than done in a large codebase.</p>
+<h3 id="typescriptisbestusedwithoop">Typescript is best used with OOP</h3>
+<p>Typescript seems to work best when you type your data, not your functions. The language has a lot of little things that work really well with classes. For example, if you are trying to manually check a type, you can use <code>instanceof</code>if the type is an instance of a class. If it's just an object with an interface though, you lose that capability.</p>
+<p>Unfortunately, classes are not en vogue in the React community. React pushes a functional model which is great, but the result is that everybody I work with things of typing in terms of input but not output.</p>
+<p>React developers often delegate too much responsibility to React. All of their code lives in the body of components, maybe with some hooks and helper functions scattered around. React works best, in my opinion, when most of the work lives outside of React. Instead of continually adding props to components, I want to build a thing and send it tumbling down the React tree with all the information needed to work on it included. Classes are a solid abstraction in JS, and you can make them pure functions just fine.</p>
+<p>So the point of this is, the React community largely follows a paradigm that doesn't really work well with TypeScript. It could, but it doesn't. Admittedly I can write the code the way I want, but the whole reason for a language like TS is to make it easier to work with other people's code.</p>
+<h3 id="typingfeelslikeanafterthought">Typing feels like an afterthought</h3>
+<p>Unlike Elm, where the types are really a first class feature of the language, types in TypeScript feel like they are stapled on, and for me that translates into the code I write. The simplest route to productivity seems to be writing the code first, then fighting with the type system for half a day to appease it. Is there a better way?</p>
+<h3 id="insummation">In Summation</h3>
+<p>Someday I'd like to try a project with TypeScript my way, and I think I might like that. I'd prefer to use the types conservatively, leaving most code <em>un</em>typed except the most important bits. I probably won't do that unless Deno becomes mainstream enough to seriously contend with Node.</p>
+    </main>
+</nav>
+</body>
+
+</html>
