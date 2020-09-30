@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Dongles</title>
+    <title>schwartz.world - Adding Comments To The Blog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -118,56 +118,60 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     </ul>
     <main>
         <div class="title">
-            <h2>Dongles</h2>
+            <h2>Adding Comments To The Blog</h2>
             
-                <small><b>Created:</b> Fri Sep 25 2020</small>
+                <small><b>Created:</b> Tue Sep 29 2020</small>
             
-            
-                <br/><small><b>Edited:</b> Fri Sep 25 2020</small>
             
 
         </div>
         <section><style>
     body {
-      background: steelblue;
-      color: lightgoldenrodyellow;
-    }
-    a {
-      color: firebrick;
-      font-weight: bolder;
-    }
-    h1, h2, h3, h4, h5 {
-        color: darkgreen;
+        background: pink;
+        color: black;
     }
 </style>
-<h2 id="allthedevicesihavethatrequiredongles">All the devices I have that require dongles</h2>
-<p>I am on the record as being anti-dongle. It's a battle, and I'm losing it.</p>
-<p>Work has provided me with a shiny MacBook pro, which has 4 USB-c ports that have to work for everything.</p>
-<p>1) One port is taken up by the power cable. This is a ridiculous design choice, and I believe many of the flaws with new MacBooks are because of it. Sure, it's great to plug your laptop in on either side, I guess. Was that ever a problem for anybody?
-<br />
-<b>You know what was a problem for me?</b><br/>
-Kicking cables by accident. I broke a laptop screen in like 2005.<br/>
-<b>You know what fixed it?</b><br/>
-MagSafe connectors. RIP.</p>
-<p>2) Audio interface</p>
-<p>3) Shared between a monitor cable and my keyboard cable</p>
-<p>4) Shared between a monitor cable and my trackball mouse</p>
-<h2 id="faq">FAQ</h2>
-<blockquote>
-  <p>Why don't you just get wireless tech to replace your wired tech?</p>
-</blockquote>
-<p>Besides the fact that I don't want to replace perfectly good peripherals, batteries are a poor design choice. They have an expiration date, another form of planned obsolescence. I'd never pay a penny for AirBuds or whatever they're called without a replaceable battery. My peripherals will work as long as USB is still a standard. Just with dongles…</p>
-<p>I refuse to charge my headphones or mouse. That's ridiculous.</p>
-<p>Wireless tech is a lot more money too. You can get a mediocre pair of bluetooth headphones for $100 or a really great pair of wired headphones for &lt;$40.</p>
-<blockquote>
-  <p>Why do you use an audio interface?</p>
-</blockquote>
-<p>Convenience mostly. Except that I bought mine before USB-C was a thing, so now I need a dongle. Worth mentioning, my computer does have a headphone jack, but my phone doesn't. You need a dongle for that.</p>
-<blockquote>
-  <p>Why not use a USB hub?</p>
-</blockquote>
-<p>I guess I could. But I have dongles, so I use them. It's the same difference.</p></section>
+<p>I've been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
+<p>I narrowed my options down to these options:</p>
+<ul>
+<li>Users email their comments. A Node script checks the email once per day and adds the comments to a DB. I generate the HTML at build time.</li>
+<li>Build a separate app that sits in <code>the cloud</code> and receives comments posted from the browser. At build time, the static site generator pulls down any new comments and generates the HTML.</li>
+<li>Host comments on a third party service not necessarily meant for this purpose (Reddit, Lemmy, <del>Hacker News</del> <ins>The Orange Site</ins>).</li>
+</ul>
+<p>I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.</p>
+<p>It's all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub's.</p></section>
         <section id="comments">
+            
+                <script>
+                    const getComment = async () => {
+                        const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/2/comments');
+                        const comments = await data.json();
+                        console.log(comments)
+                        const comms = comments.length ? comments : [];
+                        const commentsHTML = comms.map(comment => {
+                            const isAuthor = comment.author_association === 'COLLABORATOR'
+                            || comment.author_association === 'AUTHOR' ?
+                                'isAuthor' : '';
+                            return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+    <img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+    <b>${comment.user.login}&nbsp;</b>
+    <span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                        })
+                        const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/2/comments')}">Leave a comment on GitHub</a>`
+
+                        document.querySelector('#comments').innerHTML = wrapper;
+
+                    }
+                    getComment()
+                </script>
             
         </section>
     </main>

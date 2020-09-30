@@ -10,15 +10,31 @@ function parseMd(content) {
   return converter.makeHtml(content);
 }
 
+const parseContent = (str = '') => {
+  const realContent = [];
+  const meta = new Map();
+  for (let row of str.split('\n')) {
+    if (row.substring(0, 2) === '!@') {
+      const m = row.split('::');
+      meta.set(m[0].slice(2), m[1]);
+    } else {
+      realContent.push(row)
+    }
+  }
+  return {content: realContent.join('\n'), meta}
+}
+
 const createHTMLFile = async (f) => {
   const { createdAt, editedAt, pathToFile, fileName } = f;
-  const content = await FS.readFile(pathToFile);
+  const raw = await FS.readFile(pathToFile);
+  const { content, meta } = parseContent(raw)
   const wasEdited = Math.abs(createdAt.valueOf() - editedAt.valueOf()) > 2015478
   await ejs.renderFile('./views/wrapper.ejs', {
       content: parseMd(content),
       createdAt,
       editedAt: wasEdited ? editedAt : null,
-      title: toTitleCase(fileName)
+      title: toTitleCase(fileName),
+      meta
     },
     undefined,
     (e, str) => {
@@ -47,7 +63,8 @@ const createBlogIndex = async (files) => {
       content,
       createdAt: null,
       editedAt: new Date(),
-      title: 'Blog Index'
+      title: 'Blog Index',
+      meta: new Map(),
     },
     undefined,
     (e, str) => {

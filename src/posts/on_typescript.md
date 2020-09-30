@@ -1,5 +1,3 @@
-## On Typescript
-
 I don't like it.
 
 ### My experience
@@ -40,3 +38,5 @@ Unlike Elm, where the types are really a first class feature of the language, ty
 ### In Summation
 
 Someday I'd like to try a project with TypeScript my way, and I think I might like that. I'd prefer to use the types conservatively, leaving most code *un*typed except the most important bits. I probably won't do that unless Deno becomes mainstream enough to seriously contend with Node.
+
+!@COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/1/comments
