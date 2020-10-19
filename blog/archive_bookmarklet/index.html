@@ -134,6 +134,37 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 </code></p></section>
         <section id="comments">
             
+                <script>
+                    const getComment = async () => {
+                        const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/3/comments');
+                        const comments = await data.json();
+                        console.log(comments)
+                        const comms = comments.length ? comments : [];
+                        const commentsHTML = comms.map(comment => {
+                            const isAuthor = comment.author_association === 'COLLABORATOR'
+                            || comment.author_association === 'AUTHOR' ?
+                                'isAuthor' : '';
+                            return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+    <img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+    <b>${comment.user.login}&nbsp;</b>
+    <span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                        })
+                        const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/3/comments')}">Leave a comment on GitHub</a>`
+
+                        document.querySelector('#comments').innerHTML = wrapper;
+
+                    }
+                    getComment()
+                </script>
+            
         </section>
     </main>
 </nav>
