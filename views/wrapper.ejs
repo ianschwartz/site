@@ -11,7 +11,8 @@
     <meta property="og:type" content="">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
-
+    <link rel="alternate" type="application/rss+xml"
+          href="/blog/rss.xml" title="RSS feed for My Page">
     <link rel="manifest" href="../site.webmanifest">
     <link rel="apple-touch-icon" href="../icon.png">
     <link rel="stylesheet" href="/blog/css/main.css">
@@ -20,6 +21,20 @@
         body {
             background: lightsalmon;
             color: darkslateblue;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            background: red;
+        }
+        .navlink {
+            display: inline-block;
+            background: green;
+            height: 2rem;
+        }
+        .icon {
+            height: 1rem;
+            width: 1rem;
         }
     </style>
 </head>
@@ -115,55 +130,61 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
         <li class="navlink"><a href="/">home</a></li>
         <li class="navlink"><a href="/blog">blog</a></li>
         <li class="navlink"><a href="/faq">faq</a></li>
+        <li class="navlink">
+            <a type="application/rss+xml" href="/blog/rss.xml">
+                <img class='icon' src="/img/feed.png" alt="">
+            </a>
+        </li>
     </ul>
-    <main>
-        <div class="title">
-            <h2><%= title %></h2>
-            <% if (createdAt) { %>
-                <small><b>Created:</b> <%= createdAt.toDateString()%></small>
-            <% } %>
-            <% if (editedAt) { %>
-                <br/><small><b>Edited:</b> <%= editedAt.toDateString() %></small>
-            <% } %>
+</nav>
 
-        </div>
-        <section id="main"><%- content %></section>
-        <section id="comments">
-            <% if (meta.get('COMMENTS')) { %>
-                <script>
-                    const getComment = async () => {
-                        const data = await fetch('<%= meta.get('COMMENTS') %>');
-                        const comments = await data.json();
-                        console.log(comments)
-                        const comms = comments.length ? comments : [];
-                        const commentsHTML = comms.map(comment => {
-                            const isAuthor = comment.author_association === 'COLLABORATOR'
-                            || comment.author_association === 'AUTHOR' ?
-                                'isAuthor' : '';
-                            return `<li class='comment'>
+<main>
+    <div class="title">
+        <h2><%= title %></h2>
+        <% if (createdAt) { %>
+            <small><b>Created:</b> <%= createdAt.toDateString()%></small>
+        <% } %>
+        <% if (editedAt) { %>
+            <br/><small><b>Edited:</b> <%= editedAt.toDateString() %></small>
+        <% } %>
+
+    </div>
+    <section id="main"><%- content %></section>
+    <section id="comments">
+        <% if (meta.get('COMMENTS')) { %>
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('<%= meta.get('COMMENTS') %>');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
 <div class='commentUser ${isAuthor}'>
-    <img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
-    <b>${comment.user.login}&nbsp;</b>
-    <span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
 </div>
 <p>${parseMarkdown(comment.body)}</p>
 <small><a href='${comment.html_url}'>link to comment</a></small>
 </li>`
-                        })
-                        const wrapper = `
+                    })
+                    const wrapper = `
 <h3>Comments:</h3>
 <ul>${commentsHTML.join('')}</ul>
 <a href="${toRealUrl('<%= meta.get('COMMENTS') %>')}">Leave a comment on GitHub</a>`
 
-                        document.querySelector('#comments').innerHTML = wrapper;
+                    document.querySelector('#comments').innerHTML = wrapper;
 
-                    }
-                    getComment()
-                </script>
-            <% } %>
-        </section>
-    </main>
-</nav>
+                }
+                getComment()
+            </script>
+        <% } %>
+    </section>
+</main>
 </body>
 
 </html>

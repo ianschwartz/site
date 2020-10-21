@@ -73,8 +73,7 @@ const createBlogIndex = async (files) => {
     });
 }
 
-const rssTemplate = (items) => `
-<?xml version="1.0"?>
+const rssTemplate = (items) => `<?xml version="1.0"?>
 <rss version="2.0">
   <channel>
     <title>schwartz.world blog</title>
