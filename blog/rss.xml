@@ -67,7 +67,7 @@ Then there is me. I started as a JS dev. It's my *lingua materna*. I learned in 
 <li>async programming</li>
 </ul>
 <p>See, it's not that you can't send data back up the tree, but that it has to be in response to something explicitly happening. The idiomatic way to do it is to pass down a closure which is then called in response to a user action, or as a callback to some asyncronous event.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eIrqyjlX_OU?start=57" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <h4 id="abadexampleifabitcontrived">A bad example (if a bit contrived):</h4>
 <pre><code>const Parent = () => {
     const [id, setId] = useState();
