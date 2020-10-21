@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Static Site Generators</title>
+    <title>schwartz.world - The Hardest And Easiest Part Of React</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -118,48 +118,126 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     </ul>
     <main>
         <div class="title">
-            <h2>Static Site Generators</h2>
+            <h2>The Hardest And Easiest Part Of React</h2>
             
-                <small><b>Created:</b> Fri Sep 25 2020</small>
+                <small><b>Created:</b> Wed Oct 21 2020</small>
             
+            
+                <br/><small><b>Edited:</b> Wed Oct 21 2020</small>
             
 
         </div>
         <section id="main"><style>
     body {
-      background: indigo;
-      color: lightseagreen;
+        background: #102118;
+        color: #82c58b;
     }
     a {
-      color: lightyellow;
+        color: #00db31;
     }
 </style>
-<h2 id="staticsitegenerators">Static Site Generators</h2>
-<p>Some people knit. Some bake. Me? I build static site generators. This site is one of them.</p>
-<p>My introduction to static site generators was the incredible [Gatsby JS](
-www.gatsbyjs.com), and this site was built with Gatsby originally. Gatsby is an amazing product, but I don't want to write React in my off-time.</p>
-<p>Even worse, I couldn't make Gatsby work with Leaflet. At the time, I was very interested in JavaScript maps, and there was a quirk where Leaflet would bind itself to the <code>window</code> object before it was instatiated. This may have been fixed since then.</p>
-<h3 id="diyisbetter">DIY is Better</h3>
-<p>At the end of the day, a static site generator doesn't need much. You need a way to load and parse some files and then pass that content to an HTML template. It doesn't need to be particularly performant or secure since it only ever runs on my machine at home. Static files get generated and then pushed up to Netlify.</p>
-<h3 id="plannedfeatures">Planned Features</h3>
-<h4 id="comments">Comments</h4>
-<p>I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):</p>
+<h2 id="thehardestandeasiestpartofreactjs">The Hardest and Easiest Part of ReactJS</h2>
+<p>In the last year, I switched from a small shop where I was <em>the</em> front-end guy to a bigger one where there are dozens of us. Dozens of us! I've gotten a lot better at reading other people's code as a result, especially React code. React is great in that it has a small, unopinionated API, but that same freedom is also its biggest weakness.</p>
+<p>Think about all the varying opinions on React. I'm here to tell you that they are all absolutely right. React is great and React is garbage and it all depends on this one factor, this problem that I keep seeing solved in various wrong ways.</p>
+<p>See, there's one rule when it comes to React. Only one. Data flows from the top of the app downward. Pour the champagne into the glass at the top of the pyramid and watch it trickle down. That's your data. The champagne. A lot of the code I see answers this question:</p>
+<p><em>"How do I propogate state changes from lower in the tree back up to the top?"</em></p>
+<p>You don't. Don't do it. Data from state goes down, not up.</p>
+<p><em>"Ok, sure, but I have this state down here and when it changes, I need this other thing higher in the tree to change in response"</em></p>
+<p>Your state is in the wrong place.</p>
+<p><em>"OK, but this component is fetching user data, which is used all over the app so I'll--"</em></p>
+<p>No.</p>
+<p><em>"So how do I do it then?"</em></p>
+<p>Writing really good React is easy if you understand two core concepts:</p>
 <ul>
-<li>Comments post to node server and are fetched regularly and built into the static blog</li>
-<li>Comments post to AWS Lambda and ???</li>
-<li><a href="https://formspree.io/">FormSpree</a> form to comment</li>
-<li>Email to comment</li>
+<li>closures</li>
+<li>async programming</li>
 </ul>
-<h4 id="tags">Tags</h4>
-<p>I really like the idea of a dynamic tagging system. At build time, I'd like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can't say there will ever be enough posts here to justify a system like this, but that's not why I'm doing this. I like building the blog more than I like posting to it. Deeply ironic.</p>
-<p><a href="https://www.jwz.org/blog/">This blog</a> has a fantastic system whereby every post has a list of <code>previously</code> links at the bottom. I'd like my tags to function similarly, allowing an organic link from page to page. Damned if I know how I'm going to implement it, but I have ideas.</p>
-<h4 id="maps">Maps</h4>
-<p>There will be maps. Oh yes. There will be maps.</p>
-<h4 id="rss">RSS</h4>
-<p>I'd like to generate an RSS feed as well. It's only considerate.</p>
-<h3 id="whatwillyouwriteabout">What will you write about?</h3>
-<p>Maybe lots of things. Maybe nothing. Maybe I'll tear the whole thing down next month and try again.</p></section>
+<p>See, it's not that you can't send data back up the tree, but that it has to be in response to something explicitly happening. The idiomatic way to do it is to pass down a closure which is then called in response to a user action, or as a callback to some asyncronous event.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eIrqyjlX_OU?start=57" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h4 id="abadexampleifabitcontrived">A bad example (if a bit contrived):</h4>
+<pre><code>const Parent = () => {
+    const [id, setId] = useState();
+    return &lt;Child id={id} setId={setData} />
+}
+
+const Child = ({ id, setId }) => {
+    const [fetchedId, setFetchedId] = useState();
+
+    if (!id) {
+        someAPIFunction().then((user) => setFetchedData(user.id));
+    }
+
+    if (id !== fetchedId) setId(fetchedId);
+
+    return .......
+}</code></pre>
+<p><em>"Why is this bad?"</em></p>
+<p>First of all, the two pieces of state are redundant. They can never not equal the same thing so why have it twice?</p>
+<p><em>"Dude, you wrote this strawman code."</em></p>
+<p>This time, sure, but I've code reviewed it plenty of times.</p>
+<p><em>"Sigh. Fine, continue "</em></p>
+<p>Here's an even worse implementation using <code>React.useEffect</code>.</p>
+<pre><code>const Child = ({ id, setId }) => {
+    const [fetchedId, setFetchedId] = useState();
+
+    if (!id) {
+        someAPIFunction().then((user) => setFetchedData(user.id));
+    }
+
+    useEffect(() => setId(fetchedId), [setId, fetchedId]);
+
+    return .......
+}</code></pre>
+<p><em>"Aw, jeez, Schwartz. Nobody would write that"</em>.</p>
+<p>It's done all the time, <a href="https://formik.org/docs/examples/dependent-fields">including in documentation for popular libraries</a>. And the point is that, yes it works, but no, that way madness lies. In a large React app, this kind of behavior will shoot you in the foot so flipping fast, because you won't know where changes are coming from.</p>
+<p>In my <del>expert</del> <ins>humble</ins> opinion, the right way is to have all your data fetching at the top of the app, so you never have to send data back up the tree.</p>
+<p><em>"But I want the query to happen when <code>Child</code> renders, not before."</em></p>
+<p>Fair, but I would still setup the query high in the tree, and pass the closure down to get called when <code>Child</code> renders.</p>
+<pre><code>const Parent = () => {
+    const [id, setId] = useState();
+    if (!id) {
+        someAPIFunction().then((user) => setFetchedData(user.id));
+    }
+    return &lt;Child id={id} />
+}
+
+const Child = ({ id, setId }) => {
+    return .......
+}</code></pre>
+<p><em>"Seems so easy, but this example is so simple and contrived"</em></p>
+<p>It's supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that's the exact moment you should be questioning where things are located in your app, because data shouldn't move up, but down. Go with the flow.</p></section>
         <section id="comments">
+            
+                <script>
+                    const getComment = async () => {
+                        const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/4/comments');
+                        const comments = await data.json();
+                        console.log(comments)
+                        const comms = comments.length ? comments : [];
+                        const commentsHTML = comms.map(comment => {
+                            const isAuthor = comment.author_association === 'COLLABORATOR'
+                            || comment.author_association === 'AUTHOR' ?
+                                'isAuthor' : '';
+                            return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+    <img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+    <b>${comment.user.login}&nbsp;</b>
+    <span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                        })
+                        const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/4/comments')}">Leave a comment on GitHub</a>`
+
+                        document.querySelector('#comments').innerHTML = wrapper;
+
+                    }
+                    getComment()
+                </script>
             
         </section>
     </main>

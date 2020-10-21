@@ -11,10 +11,11 @@ The end result is that every function, component has to have a type declaration.
 
 ### I don't like writing code just to suit the compiler
 
+<div id="description">
 There are two types of people who write TypeScript. For those who come from statically typed languages, Typescript is a way of writing JavaScript without some of the pains of JavaScript. These reluctant JS devs are forced into it because browsers don't speak Java anymore. You can't build a front end in C#.
 
 Then there is me. I started as a JS dev. It's my *lingua materna*. I learned in a web browser console and built websites the old fashioned way without compilers or tooling or anything like that. Just Sublime Text, `python -m SimpleHTTPServer` and a browser window. Later I moved on to React and through my exposure to React I got comfortable in NodeJS.
-
+</div>
 For me and, I assume, others like me, there is a particular frustration wherein I write perfectly usable code that will work fine in the environment it is destined for, but the compiler won't accept it. Alternatively, I struggle to come up with flexible typing when needed. The only way to make this stuff work is to write pointless code to appease the tyrannical robot <del>overlord</del><ins>I mean protector</ins> that is the typescript compiler.
 
 ### Large codebases may have too many similar types

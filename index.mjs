@@ -73,13 +73,47 @@ const createBlogIndex = async (files) => {
     });
 }
 
+const rssTemplate = (items) => `
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>schwartz.world blog</title>
+    <link>https://schwartz.world/blog/</link>
+    <description>JS Developer, Dad, Slacker</description>
+    ${items}
+  </channel>
+</rss>`
+
+const createRSSFeed = async (files) => {
+  let base = '';
+  for (let file of files) {
+    const slug = file.htmlFileName.slice(1)
+    const raw = await FS.readFile(file.pathToFile);
+    const { content } = parseContent(raw)
+    const body = parseMd(content)
+    base += `
+    <item>
+        <title>${toTitleCase(file.fileName)}</title>
+        <pubDate>${file.createdAt}</pubDate>
+        <link>https://schwartz.world${slug}</link>
+        <description>${body}</description>
+    </item>
+    `
+  }
+  fs.writeFileSync('./blog/rss.xml', rssTemplate(base), (e) => {
+    if (e) console.error(e);
+    console.log("rss done")
+  });
+}
+
 const main = async () => {
   const files = await buildIndex()
   for (let f of files) {
     ensureDirectoryExistence(f.htmlFileName)
     await createHTMLFile(f)
   }
-  createBlogIndex(files)
+  await createBlogIndex(files)
+  await createRSSFeed(files)
 }
 main().then(() => console.log('done'));
 

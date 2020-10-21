@@ -13,6 +13,7 @@ export const buildIndex = async () => {
 const parsePost = async (post) => {
   const pathToFile = `./src/posts/${post}`;
   const stats = await FS.stat(pathToFile);
+  const body = await FS.readFile(pathToFile);
   const name = post.split('.')[0];
   return {
     createdAt: stats.birthtime,
@@ -20,6 +21,7 @@ const parsePost = async (post) => {
     fileName: name,
     htmlFileName: `./blog/${name}/index.html`,
     pathToFile,
+    body
   }
 }
 
