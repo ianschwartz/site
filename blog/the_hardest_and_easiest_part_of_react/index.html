@@ -139,12 +139,12 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <main>
     <div class="title">
         <h2>The Hardest And Easiest Part Of React</h2>
-
+        
             <small><b>Created:</b> Wed Oct 21 2020</small>
-
-
-            <br/><small><b>Edited:</b> Wed Oct 21 2020</small>
-
+        
+        
+            <br/><small><b>Edited:</b> Thu Oct 22 2020</small>
+        
 
     </div>
     <section id="main"><style>
@@ -233,11 +233,12 @@ const Child = ({ id, onLoad, loading }) => {
     }
     return .......
 }</code></pre>
+<p>The difference is that we are executing the query high in the tree and storing the state high in the tree. The child component can still be in charge of calling the function.</p>
+<p>This also makes testing much easier, as testing <code>Child</code> doesn't require mocking the API response at all. You can just check that it calls its <code>onLoad</code> method when it first loads. You could further abstract the loading and data fetching behavior behind a custom hook that can also be tested in isolation.</p>
 <p><em>"Seems so easy, but this example is so simple and contrived"</em></p>
-<p>
-  It's supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that's the exact moment you should be questioning where things are located in your app, because data shouldn't move up, but down. Go with the flow.</p></section>
+<p>It's supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that's the exact moment you should be questioning where things are located in your app, because data shouldn't move up, but down. Go with the flow.</p></section>
     <section id="comments">
-
+        
             <script>
                 const getComment = async () => {
                     const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/4/comments');
@@ -268,7 +269,7 @@ const Child = ({ id, onLoad, loading }) => {
                 }
                 getComment()
             </script>
-
+        
     </section>
 </main>
 </body>

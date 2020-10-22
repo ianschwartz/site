@@ -89,7 +89,7 @@ const createRSSFeed = async (files) => {
     const slug = file.htmlFileName.slice(1)
     const raw = await FS.readFile(file.pathToFile);
     const { content } = parseContent(raw)
-    const body = parseMd(content).replace(/^<iframe.*$/m, '');
+    const body = parseMd(content).replace(/^<iframe.*$/m, '').replace(/^<style.*$/m, '').replace(/^<script.*$/m, '');
     base += `
     <item>
         <title>${toTitleCase(file.fileName)}</title>
