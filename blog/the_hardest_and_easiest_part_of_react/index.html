@@ -139,12 +139,12 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <main>
     <div class="title">
         <h2>The Hardest And Easiest Part Of React</h2>
-        
+
             <small><b>Created:</b> Wed Oct 21 2020</small>
-        
-        
+
+
             <br/><small><b>Edited:</b> Wed Oct 21 2020</small>
-        
+
 
     </div>
     <section id="main"><style>
@@ -215,19 +215,29 @@ const Child = ({ id, setId }) => {
 <p>Fair, but I would still setup the query high in the tree, and pass the closure down to get called when <code>Child</code> renders.</p>
 <pre><code>const Parent = () => {
     const [id, setId] = useState();
-    if (!id) {
-        someAPIFunction().then((user) => setFetchedData(user.id));
-    }
-    return &lt;Child id={id} />
+    const [loading, setLoading] = useState(false);
+
+    const fetchData = () {
+        setLoading(true);
+        someAPIFunction()
+          .then((user) => setFetchedData(user.id))
+          .finally(() => setLoading(false);
+    };
+
+    return &lt;Child id={id} onLoad={fetchData} loading={loading} />
 }
 
-const Child = ({ id, setId }) => {
+const Child = ({ id, onLoad, loading }) => {
+    if (!id && !loading) {
+      onLoad();
+    }
     return .......
 }</code></pre>
 <p><em>"Seems so easy, but this example is so simple and contrived"</em></p>
-<p>It's supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that's the exact moment you should be questioning where things are located in your app, because data shouldn't move up, but down. Go with the flow.</p></section>
+<p>
+  It's supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that's the exact moment you should be questioning where things are located in your app, because data shouldn't move up, but down. Go with the flow.</p></section>
     <section id="comments">
-        
+
             <script>
                 const getComment = async () => {
                     const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/4/comments');
@@ -258,7 +268,7 @@ const Child = ({ id, setId }) => {
                 }
                 getComment()
             </script>
-        
+
     </section>
 </main>
 </body>

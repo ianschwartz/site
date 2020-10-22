@@ -94,15 +94,28 @@ Fair, but I would still setup the query high in the tree, and pass the closure d
 
 <pre><code>const Parent = () => {
     const [id, setId] = useState();
-    if (!id) {
-        someAPIFunction().then((user) => setFetchedData(user.id));
-    }
-    return &lt;Child id={id} />
+    const [loading, setLoading] = useState(false);
+
+    const fetchData = () {
+        setLoading(true);
+        someAPIFunction()
+          .then((user) => setFetchedData(user.id))
+          .finally(() => setLoading(false);
+    };
+
+    return &lt;Child id={id} onLoad={fetchData} loading={loading} />
 }
 
-const Child = ({ id, setId }) => {
+const Child = ({ id, onLoad, loading }) => {
+    if (!id && !loading) {
+      onLoad();
+    }
     return .......
 }</code></pre>
+
+The difference is that we are executing the query high in the tree and storing the state high in the tree. The child component can still be in charge of calling the function.
+
+This also makes testing much easier, as testing `Child` doesn't require mocking the API response at all. You can just check that it calls its `onLoad` method when it first loads. You could further abstract the loading and data fetching behavior behind a custom hook that can also be tested in isolation.
 
 *"Seems so easy, but this example is so simple and contrived"*
 
