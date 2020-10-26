@@ -1,3 +1,19 @@
+<style>
+    body {
+      background: darkred;
+      color: lightpink;
+    }
+    a {
+      color: deepskyblue;
+      font-weight: bolder;
+    }
+    h1, h2, h3, h4, h5 {
+        color: hotpink;
+    }
+    code {
+        color: skyblue;
+    }
+</style>
 ## [Brownie Cupcakes Recipe](https://www.alsothecrumbsplease.com/brownie-cupcakes-recipe/)
 
 ### Ingredients

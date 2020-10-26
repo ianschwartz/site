@@ -1,3 +1,19 @@
+<style>
+    body {
+      background: darkslategrey;
+      color: darkturquoise;
+    }
+    a {
+      color: paleturquoise;
+      font-weight: bolder;
+    }
+    h1, h2, h3, h4, h5 {
+        color: dodgerblue;
+    }
+    code {
+        color: skyblue;
+    }
+</style>
 ## Converting Large Movies to Smallish MP4s using FFMPEG
 
 Not much to this. I've set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.
