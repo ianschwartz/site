@@ -2,15 +2,15 @@
 
 ### Ingredients
 
-1 cup butter, melted and cooled (226g)
-2 cups granulated white sugar (400g)
-4 large eggs
-2 vanilla beans* (or 2 tsp pure vanilla extract)
-1 cup dutch-processed cocoa powder (84g)
-1 cup all-purpose flour (120g)
-1 tsp salt
+- 1 cup butter, melted and cooled (226g)
+- 2 cups granulated white sugar (400g)
+- 4 large eggs
+- 2 vanilla beans* (or 2 tsp pure vanilla extract)
+- 1 cup dutch-processed cocoa powder (84g)
+- 1 cup all-purpose flour (120g)
+- 1 tsp salt
 
-## Instructions
+### Instructions
 
 Preheat oven to 350°F / 175°C. Line two 12 cup muffin pans with 13-14 cupcake liners. Set aside.
 
