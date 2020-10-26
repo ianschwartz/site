@@ -1,11 +1,20 @@
-import {EJS} from "../EJS";
-import {FS} from "./FS";
+import {EJS} from "../EJS.mjs";
+import {FS} from "./FS.mjs";
 import {Pandoc} from "./Pandoc.mjs";
+import {JSDOM} from "../../index.mjs";
 
 export const createHTMLFile = async (f) => {
     const {createdAt, editedAt, pathToFile, fileName, htmlFileName} = f;
     const result = await Pandoc(pathToFile)
+    const dom = new JSDOM(result);
+    const domMeta = dom.window.document.body.querySelector('#meta');
     const meta = new Map()
+    if (domMeta) {
+      Array.from(domMeta.children).forEach(child => {
+        const [key, value] = child.innerHTML.split('::');
+        meta.set(key, value);
+      })
+    }
 
     await FS.mkdir(htmlFileName);
 

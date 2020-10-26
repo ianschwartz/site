@@ -1,0 +1,4 @@
+yarn run v1.22.5
+$ node index.mjs
+undefined
+Done in 0.65s.

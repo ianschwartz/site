@@ -15,5 +15,6 @@ I narrowed my options down to these options:
 I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.
 
 It's all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub's.
-
-!@COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/2/comments
+<div id="meta">
+COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/2/comments
+</div>

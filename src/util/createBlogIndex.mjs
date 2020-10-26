@@ -1,4 +1,4 @@
-import {toTitleCase} from "./createHTMLFile";
+import {toTitleCase} from "./createHTMLFile.mjs";
 import ejs from "ejs";
 import fs from "fs";
 

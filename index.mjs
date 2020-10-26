@@ -2,7 +2,7 @@ import jsdom from 'jsdom';
 import {buildIndex} from "./src/buildIndex.mjs";
 import {createHTMLFile} from "./src/util/createHTMLFile.mjs";
 import {createBlogIndex} from "./src/util/createBlogIndex.mjs";
-import {createRSSFeed} from "./src/util/createRSSFeed";
+import {createRSSFeed} from "./src/util/createRSSFeed.mjs";
 
 export const {JSDOM} = jsdom;
 
@@ -21,9 +21,7 @@ const RSSEntries = [];
 const main = async () => {
   const files = await buildIndex()
   for (let f of files) {
-    ensureDirectoryExistence(f.htmlFileName)
-    const entry = await createHTMLFile(f);
-    RSSEntries.push(entry);
+    createHTMLFile(f).then(entry => RSSEntries.push(entry));
   }
   await createBlogIndex(files)
   await createRSSFeed(RSSEntries)

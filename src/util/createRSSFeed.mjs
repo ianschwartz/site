@@ -1,6 +1,6 @@
-import {toTitleCase} from "./createHTMLFile";
+import {toTitleCase} from "./createHTMLFile.mjs";
 import fs from "fs";
-import {JSDOM, rssTemplate} from "../../index";
+import {JSDOM, rssTemplate} from "../../index.mjs";
 
 export const createRSSFeed = async (entries) => {
     let base = '';

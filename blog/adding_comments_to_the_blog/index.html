@@ -34,6 +34,9 @@
             height: 1rem;
             width: 1rem;
         }
+        #meta {
+            display: none;
+        }
     </style>
 </head>
 
@@ -103,21 +106,6 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 `;
     console.log(maddie);
 
-    function parseMarkdown(markdownText) {
-        const htmlText = markdownText
-            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-            .replace(/\*(.*)\*/gim, '<i>$1</i>')
-            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
-            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
-            .replace(/\n$/gim, '<br />')
-
-        return htmlText.trim()
-    }
-
     const toRealUrl = (url = '') => {
         const [_, slug] = url.split('repos');
         return `https://github.com${slug.replace('comments', '')}`;
@@ -139,12 +127,12 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <main>
     <div class="title">
         <h2>Adding Comments To The Blog</h2>
-        
+
             <small><b>Created:</b> Tue Sep 29 2020</small>
-        
-        
+
+
             <br/><small><b>Edited:</b> Mon Oct 26 2020</small>
-        
+
 
     </div>
     <section id="main"><style>
@@ -161,11 +149,13 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <li>Host comments on a third party service not necessarily meant for this purpose (Reddit, Lemmy, <del>Hacker News</del> <ins>The Orange Site</ins>).</li>
 </ul>
 <p>I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.</p>
-<p>It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.</p>
-<p>!<span class="citation" data-cites="COMMENTS">@COMMENTS</span>::https://api.github.com/repos/ianschwartz/site/issues/2/comments</p>
+It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.
+<div id="meta">
+<pre><code>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/2/comments</code></pre>
+</div>
 </section>
     <section id="comments">
-        
+
     </section>
 </main>
 </body>

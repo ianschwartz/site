@@ -1,4 +1,6 @@
-!@COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/4/comments
+<div id="meta">
+COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/4/comments
+</div>
 <style>
     body {
         background: #102118;
