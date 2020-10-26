@@ -143,15 +143,17 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
             <small><b>Created:</b> Tue Sep 29 2020</small>
         
         
+            <br/><small><b>Edited:</b> Mon Oct 26 2020</small>
+        
 
     </div>
     <section id="main"><style>
     body {
-        background: pink;
+        background: darkkhaki;
         color: black;
     }
 </style>
-<p>I've been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
+<p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
 <p>I narrowed my options down to these options:</p>
 <ul>
 <li>Users email their comments. A Node script checks the email once per day and adds the comments to a DB. I generate the HTML at build time.</li>
@@ -159,39 +161,10 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <li>Host comments on a third party service not necessarily meant for this purpose (Reddit, Lemmy, <del>Hacker News</del> <ins>The Orange Site</ins>).</li>
 </ul>
 <p>I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.</p>
-<p>It's all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub's.</p></section>
+<p>It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.</p>
+<p>!<span class="citation" data-cites="COMMENTS">@COMMENTS</span>::https://api.github.com/repos/ianschwartz/site/issues/2/comments</p>
+</section>
     <section id="comments">
-        
-            <script>
-                const getComment = async () => {
-                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/2/comments');
-                    const comments = await data.json();
-                    console.log(comments)
-                    const comms = comments.length ? comments : [];
-                    const commentsHTML = comms.map(comment => {
-                        const isAuthor = comment.author_association === 'COLLABORATOR'
-                        || comment.author_association === 'AUTHOR' ?
-                            'isAuthor' : '';
-                        return `<li class='comment'>
-<div class='commentUser ${isAuthor}'>
-<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
-<b>${comment.user.login}&nbsp;</b>
-<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
-</div>
-<p>${parseMarkdown(comment.body)}</p>
-<small><a href='${comment.html_url}'>link to comment</a></small>
-</li>`
-                    })
-                    const wrapper = `
-<h3>Comments:</h3>
-<ul>${commentsHTML.join('')}</ul>
-<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/2/comments')}">Leave a comment on GitHub</a>`
-
-                    document.querySelector('#comments').innerHTML = wrapper;
-
-                }
-                getComment()
-            </script>
         
     </section>
 </main>

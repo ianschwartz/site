@@ -36,7 +36,7 @@ export const FS = {
   },
   readFile: (path) => {
     return new Promise((resolve, reject) => {
-      return  fs.readFile(path, 'utf-8', (err, data) => {
+      return fs.readFile(path, 'utf-8', (err, data) => {
         if (err) reject(err);
         resolve(data)
       })
@@ -47,6 +47,14 @@ export const FS = {
       return fs.stat(path, (err, data) => {
         if (err) reject(err);
         resolve(data)
+      })
+    })
+  },
+  writeFile: (path, data) => {
+    return new Promise((resolve, reject) => {
+      return fs.writeFile(path, data, (err, res) => {
+        if (err) reject(err);
+        resolve(res)
       })
     })
   }

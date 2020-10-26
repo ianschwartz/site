@@ -1,6 +1,6 @@
 <style>
     body {
-        background: pink;
+        background: darkkhaki;
         color: black;
     }
 </style>

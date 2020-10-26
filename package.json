@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ianschwartz/site#readme",
   "dependencies": {
     "ejs": "^3.1.5",
+    "jsdom": "^16.4.0",
     "node-pandoc": "^0.3.0",
     "showdown": "^1.9.1"
   }

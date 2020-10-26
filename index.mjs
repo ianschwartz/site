@@ -1,10 +1,11 @@
 import fs from 'fs';
+import jsdom from 'jsdom';
 import ejs from 'ejs';
 import path from 'path';
 import {buildIndex, FS} from "./src/buildIndex.mjs";
 import showdown from 'showdown';
 import nodePandoc from 'node-pandoc';
-
+const {JSDOM} = jsdom;
 const converter = new showdown.Converter()
 
 function parseMd(content) {
@@ -26,27 +27,56 @@ const parseContent = (str = '') => {
 }
 
 const createHTMLFile = async (f) => {
-  const { createdAt, editedAt, pathToFile, fileName } = f;
-  nodePandoc(pathToFile,`-o /pandoc${f.htmlFileName.slice(1)}`, (err, result) => {
-    if (err) console.error(err.message);
-    console.log('result:', result);
-  })
-  const raw = await FS.readFile(pathToFile);
-  const { content, meta } = parseContent(raw)
-  const wasEdited = Math.abs(createdAt.valueOf() - editedAt.valueOf()) > 2015478
-  await ejs.renderFile('./views/wrapper.ejs', {
-      content: parseMd(content),
-      createdAt,
-      editedAt: wasEdited ? editedAt : null,
-      title: toTitleCase(fileName),
-      meta
-    },
-    undefined,
-    (e, str) => {
-      if (e) console.error(e.message);
-      fs.writeFileSync(f.htmlFileName, str);
-    });
+  const { createdAt, editedAt, pathToFile, fileName, htmlFileName } = f;
+  const pandocPathArr = htmlFileName.split('/')
+  const _ = pandocPathArr.pop();
+  const pandocPath = pandocPathArr.join('/');
+
+
+    const result = await Pandoc(pathToFile)
+    const meta = new Map()
+
+    if (!fs.existsSync(pandocPath)){
+      fs.mkdirSync(pandocPath, {recursive: true}, err => console.error(err.message));
+    }
+
+    const wasEdited = Math.abs(createdAt.valueOf() - editedAt.valueOf()) > 2015478
+    const title = toTitleCase(fileName);
+    const str = await EJS.renderFile('./views/wrapper.ejs', {
+        content: result,
+        createdAt,
+        editedAt: wasEdited ? editedAt : null,
+        title,
+        meta
+      });
+    await FS.writeFile(f.htmlFileName, str);
+    console.log(f.htmlFileName + " html written")
+    return { title, pubDate: createdAt, description: result, slug: htmlFileName.slice(1) }
+  ;
 }
+
+export const EJS = {
+  renderFile: (path, options) => {
+    return new Promise((resolve, reject) => {
+      ejs.renderFile(path, options,
+        undefined,
+        async (e, str) => {
+          if (e) console.error(e.message);
+          return resolve(str)
+        });
+    })
+  }
+}
+
+export const Pandoc = (pathToFile, options = []) => {
+  return new Promise((resolve, reject) => {
+    nodePandoc(pathToFile, [], async (err, result) => {
+      if (err) reject(err.message);
+      return resolve(result)
+    })
+  })
+}
+
 
 const createBlogIndex = async (files) => {
   const links = files.sort((a, b) => {
@@ -88,36 +118,44 @@ const rssTemplate = (items) => `<?xml version="1.0"?>
   </channel>
 </rss>`
 
-const createRSSFeed = async (files) => {
+const createRSSFeed = async (entries) => {
   let base = '';
-  for (let file of files) {
-    const slug = file.htmlFileName.slice(1)
-    const raw = await FS.readFile(file.pathToFile);
-    const { content } = parseContent(raw)
-    const body = parseMd(content).replace(/^<iframe.*$/m, '').replace(/^<style.*$/m, '').replace(/^<script.*$/m, '');
+  for (let entry of entries) {
+    const {title, slug, description, pubDate} = entry
+
+    const dom = new JSDOM(description);
+    const body = dom.window.document.body;
+    const removables = [
+      ...body.querySelectorAll('style'),
+      ...body.querySelectorAll('iframe'),
+      ...body.querySelectorAll('br'),
+      ...body.querySelectorAll('script'),
+    ];
+    removables.forEach(r => r.remove());
     base += `
     <item>
-        <title>${toTitleCase(file.fileName)}</title>
-        <pubDate>${file.createdAt}</pubDate>
+        <title>${toTitleCase(title)}</title>
+        <pubDate>${new Date(pubDate).toDateString()}</pubDate>
         <link>https://schwartz.world${slug}</link>
-        <description>${body}</description>
+        <description>${body.innerHTML}</description>
     </item>
     `
   }
   fs.writeFileSync('./blog/rss.xml', rssTemplate(base), (e) => {
     if (e) console.error(e);
-    console.log("rss done")
+    console.log("rss donerss donerss donerss donerss donerss donerss donerss donerss donerss done")
   });
 }
-
+const RSSEntries = [];
 const main = async () => {
   const files = await buildIndex()
   for (let f of files) {
     ensureDirectoryExistence(f.htmlFileName)
-    await createHTMLFile(f)
+    const entry = await createHTMLFile(f);
+    RSSEntries.push(entry);
   }
   await createBlogIndex(files)
-  await createRSSFeed(files)
+  await createRSSFeed(RSSEntries)
 }
 main().then(() => console.log('done'));
 
