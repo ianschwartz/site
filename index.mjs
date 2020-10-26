@@ -3,6 +3,7 @@ import ejs from 'ejs';
 import path from 'path';
 import {buildIndex, FS} from "./src/buildIndex.mjs";
 import showdown from 'showdown';
+import nodePandoc from 'node-pandoc';
 
 const converter = new showdown.Converter()
 
@@ -26,6 +27,10 @@ const parseContent = (str = '') => {
 
 const createHTMLFile = async (f) => {
   const { createdAt, editedAt, pathToFile, fileName } = f;
+  nodePandoc(pathToFile,`-o /pandoc${f.htmlFileName.slice(1)}`, (err, result) => {
+    if (err) console.error(err);
+    console.log('result:', result);
+  })
   const raw = await FS.readFile(pathToFile);
   const { content, meta } = parseContent(raw)
   const wasEdited = Math.abs(createdAt.valueOf() - editedAt.valueOf()) > 2015478

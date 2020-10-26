@@ -148,6 +148,11 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
+node-pandoc@^0.3.0:
+  version "0.3.0"
+  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/node-pandoc/-/node-pandoc-0.3.0.tgz#d46577cd0a72af415353fcb8a0117adb6242f9c8"
+  integrity sha1-1GV3zQpyr0FTU/y4oBF622JC+cg=
+
 p-limit@^2.0.0:
   version "2.3.0"
   resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
