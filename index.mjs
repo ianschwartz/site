@@ -3,28 +3,9 @@ import jsdom from 'jsdom';
 import ejs from 'ejs';
 import path from 'path';
 import {buildIndex, FS} from "./src/buildIndex.mjs";
-import showdown from 'showdown';
 import nodePandoc from 'node-pandoc';
 const {JSDOM} = jsdom;
-const converter = new showdown.Converter()
 
-function parseMd(content) {
-  return converter.makeHtml(content);
-}
-
-const parseContent = (str = '') => {
-  const realContent = [];
-  const meta = new Map();
-  for (let row of str.split('\n')) {
-    if (row.substring(0, 2) === '!@') {
-      const m = row.split('::');
-      meta.set(m[0].slice(2), m[1]);
-    } else {
-      realContent.push(row)
-    }
-  }
-  return {content: realContent.join('\n'), meta}
-}
 
 const createHTMLFile = async (f) => {
   const { createdAt, editedAt, pathToFile, fileName, htmlFileName } = f;
