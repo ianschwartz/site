@@ -28,7 +28,7 @@ const parseContent = (str = '') => {
 const createHTMLFile = async (f) => {
   const { createdAt, editedAt, pathToFile, fileName } = f;
   nodePandoc(pathToFile,`-o /pandoc${f.htmlFileName.slice(1)}`, (err, result) => {
-    if (err) console.error(err);
+    if (err) console.error(err.message);
     console.log('result:', result);
   })
   const raw = await FS.readFile(pathToFile);
