@@ -37,7 +37,31 @@
         #meta {
             display: none;
         }
+        body {
+            background: lightsalmon;
+            color: darkslateblue;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .navlink {
+            display: inline-block;
+            height: 2rem;
+        }
+        .icon {
+            height: 1rem;
+            width: 1rem;
+        }
+        .comment{
+            list-style: none;
+        }
+        .gravatar {
+            height: 2rem;
+            width: 2rem;
+        }
     </style>
+
 </head>
 
 <body>
@@ -143,7 +167,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     <div class="title">
         <h2>Converting Large Movies To Smallish Mp4s</h2>
         
-            <small><b>Created:</b> Mon Oct 26 2020 16:15:01 GMT-0400 (Eastern Daylight Time)</small>
+            <small><b>Created:</b> Mon Oct 26 2020 16:23:03 GMT-0400 (Eastern Daylight Time)</small>
         
         
 
@@ -169,6 +193,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <p>Eventually I’d like to get it working with some sort of attached storage, but at the moment I’m using the MacBook’s HD which is relatively meager once you start filling up the HD with movies. I don’t need much though, since the main purpose is providing my kids with better educational content than is offered on Netlix / Prime / Hulu, as well as allowing us to eliminate our Disney+ subscription. The kids watch the same movies over and over again (he said as he cued up Olaf’s Frozen Adventure for the 10,000th time).</p>
 <p>Warning: It isn’t a fast process, at least not on an old-ass MacBook. Doing a full season of a TV show takes forever since FFMPEG goes through line by line.</p>
 <p>Warning: This appends <code>.mp4</code> to the filename, meaning <code>some-movie.mkv</code> becomes <code>some-movie.mkv.mp4</code>. I’m working on a bulk file renaming tool to run afterward to format the titles into the Plex naming scheme (<code>"MASH s01e09"</code>).</p>
+<p>#feet</p>
 <h4 id="bash">BASH</h4>
 <pre><code>shrinkmov() {
     for movie in *;
@@ -185,8 +210,42 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
         rm $movie;
     done;
 }</code></pre>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/5/comments</p>
+</div>
 </section>
     <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/5/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/5/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
         
     </section>
 </main>

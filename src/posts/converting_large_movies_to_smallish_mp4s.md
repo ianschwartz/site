@@ -24,6 +24,8 @@ Warning: It isn't a fast process, at least not on an old-ass MacBook. Doing a fu
 
 Warning: This appends `.mp4` to the filename, meaning `some-movie.mkv` becomes `some-movie.mkv.mp4`. I'm working on a bulk file renaming tool to run afterward to format the titles into the Plex naming scheme (`"MASH s01e09"`).
 
+#feet
+
 #### BASH
 ```
 shrinkmov() {
@@ -45,3 +47,8 @@ shrinkmov() {
     done;
 }
 ```
+
+<div id="meta">
+COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/5/comments
+</div>
+

@@ -21,10 +21,12 @@ const RSSEntries = [];
 const main = async () => {
   const files = await buildIndex()
   for (let f of files) {
-    createHTMLFile(f).then(entry => RSSEntries.push(entry));
+    await createHTMLFile(f).then(entry => {
+      RSSEntries.push(entry)
+    });
   }
   await createBlogIndex(files)
-  await createRSSFeed(RSSEntries)
+  return await createRSSFeed(RSSEntries)
 }
 main().then(() => console.log('done'));
 

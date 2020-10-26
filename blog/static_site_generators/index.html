@@ -37,7 +37,31 @@
         #meta {
             display: none;
         }
+        body {
+            background: lightsalmon;
+            color: darkslateblue;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .navlink {
+            display: inline-block;
+            height: 2rem;
+        }
+        .icon {
+            height: 1rem;
+            width: 1rem;
+        }
+        .comment{
+            list-style: none;
+        }
+        .gravatar {
+            height: 2rem;
+            width: 2rem;
+        }
     </style>
+
 </head>
 
 <body>
@@ -146,6 +170,8 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
             <small><b>Created:</b> Fri Sep 25 2020 22:17:28 GMT-0400 (Eastern Daylight Time)</small>
         
         
+            <br/><small><b>Edited:</b> Mon Oct 26 2020</small>
+        
 
     </div>
     <section id="main"><style>
@@ -181,8 +207,42 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <p>I’d like to generate an RSS feed as well. It’s only considerate.</p>
 <h3 id="what-will-you-write-about">What will you write about?</h3>
 <p>Maybe lots of things. Maybe nothing. Maybe I’ll tear the whole thing down next month and try again.</p>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/1/comments</p>
+</div>
 </section>
     <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/1/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/1/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
         
     </section>
 </main>

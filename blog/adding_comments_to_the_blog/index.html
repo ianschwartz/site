@@ -37,7 +37,31 @@
         #meta {
             display: none;
         }
+        body {
+            background: lightsalmon;
+            color: darkslateblue;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .navlink {
+            display: inline-block;
+            height: 2rem;
+        }
+        .icon {
+            height: 1rem;
+            width: 1rem;
+        }
+        .comment{
+            list-style: none;
+        }
+        .gravatar {
+            height: 2rem;
+            width: 2rem;
+        }
     </style>
+
 </head>
 
 <body>
@@ -143,7 +167,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     <div class="title">
         <h2>Adding Comments To The Blog</h2>
         
-            <small><b>Created:</b> Mon Oct 26 2020 16:15:01 GMT-0400 (Eastern Daylight Time)</small>
+            <small><b>Created:</b> Mon Oct 26 2020 16:23:03 GMT-0400 (Eastern Daylight Time)</small>
         
         
 
@@ -162,7 +186,9 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <li>Host comments on a third party service not necessarily meant for this purpose (Reddit, Lemmy, <del>Hacker News</del> <ins>The Orange Site</ins>).</li>
 </ul>
 <p>I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.</p>
-It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.
+<p>It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.</p>
+<h3 id="update-2020-26-10">Update: 2020-26-10</h3>
+<p>I’ve updated the build tools for the blog to inlcude Pandoc and JSDom, which gives me the ability to manipulate the generated HTML. Previously, I was parsing the MD with JavaScript and having a heck of a time of it. That means that our links to <code>meta</code> data (like where comments are located), can be left in the HTML with <code>display: none;</code>. If you view the source of this page, you’ll see it right there.</p>
 <div id="meta">
 <p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/2/comments</p>
 </div>

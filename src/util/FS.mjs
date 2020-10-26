@@ -20,6 +20,7 @@ export const FS = {
                     resolve(data)
                 })
             }
+            resolve();
         })
     },
     readFile: (path) => {
@@ -42,6 +43,7 @@ export const FS = {
         return fs.existsSync(args)
     },
     writeFile: (path, data) => {
+      console.log(path)
         return new Promise((resolve, reject) => {
             return fs.writeFile(path, data, (err, res) => {
                 if (err) reject(err);
@@ -49,15 +51,4 @@ export const FS = {
             })
         })
     },
-    unlink: (path) => {
-      return new Promise((resolve, reject) => {
-        if (fs.existsSync(path)) {
-          fs.unlink(path, (err, res) => {
-            if (err) reject(err);
-            resolve(res)
-          })
-        }
-        resolve();
-      })
-    }
 }

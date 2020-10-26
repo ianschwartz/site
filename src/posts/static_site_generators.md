@@ -48,3 +48,7 @@ I'd like to generate an RSS feed as well. It's only considerate.
 ### What will you write about?
 
 Maybe lots of things. Maybe nothing. Maybe I'll tear the whole thing down next month and try again.
+
+<div id="meta">
+COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/1/comments
+</div>

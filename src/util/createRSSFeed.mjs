@@ -14,8 +14,11 @@ export const createRSSFeed = async (entries) => {
             ...body.querySelectorAll('iframe'),
             ...body.querySelectorAll('br'),
             ...body.querySelectorAll('script'),
+            body.querySelector('#meta'),
         ];
-        removables.forEach(r => r.remove());
+        removables.forEach(r => {
+          if (r) r.remove()
+        });
         base += `
     <item>
         <title>${toTitleCase(title)}</title>

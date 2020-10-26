@@ -35,3 +35,8 @@ Stir together butter, sugar, eggs, and vanilla just until combined. Don't use a 
 Spoon batter with an ice cream scoop into the liners and fill almost full.
 
 Bake for 22-26 minutes until the tops look crinkled and a toothpick centered in the middle comes out slightly dirty. Don't overbake them or they are getting cakey. I baked mine for exactly 25 minutes. Remove from the oven and let cool for 10 minutes. Then carefully remove from pan and transfer to a wire rack and let cool completely before frosting.
+
+<div id="meta">
+COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/6/comments
+</div>
+
