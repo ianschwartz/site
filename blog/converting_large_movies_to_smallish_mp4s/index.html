@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Blog Index</title>
+    <title>schwartz.world - Converting Large Movies To Smallish Mp4s</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -138,52 +138,35 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Blog Index</h2>
+        <h2>Converting Large Movies To Smallish Mp4s</h2>
         
+            <small><b>Created:</b> Mon Oct 26 2020</small>
         
-            <br/><small><b>Edited:</b> Mon Oct 26 2020</small>
         
 
     </div>
-    <section id="main"><div>
-    <ul id="links">
-        <li>
-      <a href="/blog/converting_large_movies_to_smallish_mp4s">
-        <b>Converting Large Movies To Smallish Mp4s</b>
-      </a> Mon Oct 26 2020
-    </li>
-<li>
-      <a href="/blog/adding_comments_to_the_blog">
-        <b>Adding Comments To The Blog</b>
-      </a> Tue Sep 29 2020
-    </li>
-<li>
-      <a href="/blog/the_hardest_and_easiest_part_of_react">
-        <b>The Hardest And Easiest Part Of React</b>
-      </a> Wed Oct 21 2020
-    </li>
-<li>
-      <a href="/blog/on_typescript">
-        <b>On Typescript</b>
-      </a> Sun Sep 27 2020
-    </li>
-<li>
-      <a href="/blog/archive_bookmarklet">
-        <b>Archive Bookmarklet</b>
-      </a> Fri Sep 25 2020
-    </li>
-<li>
-      <a href="/blog/static_site_generators">
-        <b>Static Site Generators</b>
-      </a> Fri Sep 25 2020
-    </li>
-<li>
-      <a href="/blog/dongles">
-        <b>Dongles</b>
-      </a> Fri Sep 25 2020
-    </li>
-    </ul>
-</div></section>
+    <section id="main"><h2 id="converting-large-movies-to-smallish-mp4s-using-ffmpeg">Converting Large Movies to Smallish MP4s using FFMPEG</h2>
+<p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
+<p>Eventually I’d like to get it working with some sort of attached storage, but at the moment I’m using the MacBook’s HD which is relatively meager once you start filling up the HD with movies. I don’t need much though, since the main purpose is providing my kids with better educational content than is offered on Netlix / Prime / Hulu, as well as allowing us to eliminate our Disney+ subscription. The kids watch the same movies over and over again (he said as he cued up Olaf’s Frozen Adventure for the 10,000th time).</p>
+<p>Warning: It isn’t a fast process, at least not on an old-ass MacBook. Doing a full season of a TV show takes forever since FFMPEG goes through line by line.</p>
+<p>Warning: This appends <code>.mp4</code> to the filename, meaning <code>some-movie.mkv</code> becomes <code>some-movie.mkv.mp4</code>. I’m working on a bulk file renaming tool to run afterward to format the titles into the Plex naming scheme (<code>"MASH s01e09"</code>).</p>
+<h4 id="bash">BASH</h4>
+<pre><code>shrinkmov() {
+    for movie in *;
+    do;
+        ffmpeg -i $movie -c:v libx264 -crf 18 &quot;$movie.mp4&quot;;
+        rm $movie;
+    done;
+}</code></pre>
+<h4 id="zsh">ZSH</h4>
+<pre><code>shrinkmov() {
+    for movie in $(ls);
+    do;
+        ffmpeg -i $movie -c:v libx264 -crf 18 &quot;$movie.mp4&quot;;
+        rm $movie;
+    done;
+}</code></pre>
+</section>
     <section id="comments">
         
     </section>
