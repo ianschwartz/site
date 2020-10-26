@@ -1,4 +1,4 @@
-import fs from 'fs';
+import {FS} from "./util/FS.mjs";
 
 export const buildIndex = async () => {
   const posts = await FS.readdir('./src/posts');
@@ -25,37 +25,3 @@ const parsePost = async (post) => {
   }
 }
 
-export const FS = {
-  readdir: (path) => {
-    return new Promise((resolve, reject) => {
-      return fs.readdir(path, (err, data) => {
-        if (err) reject(err);
-        resolve(data)
-      })
-    })
-  },
-  readFile: (path) => {
-    return new Promise((resolve, reject) => {
-      return fs.readFile(path, 'utf-8', (err, data) => {
-        if (err) reject(err);
-        resolve(data)
-      })
-    })
-  },
-  stat: (path) => {
-    return new Promise((resolve, reject) => {
-      return fs.stat(path, (err, data) => {
-        if (err) reject(err);
-        resolve(data)
-      })
-    })
-  },
-  writeFile: (path, data) => {
-    return new Promise((resolve, reject) => {
-      return fs.writeFile(path, data, (err, res) => {
-        if (err) reject(err);
-        resolve(res)
-      })
-    })
-  }
-}
