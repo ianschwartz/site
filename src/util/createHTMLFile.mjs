@@ -27,8 +27,9 @@ export const createHTMLFile = async (f) => {
         title,
         meta
     });
-    await FS.writeFile(f.htmlFileName, str);
-    console.log(f.htmlFileName + " html written")
+    await FS.unlink(htmlFileName)
+    await FS.writeFile(htmlFileName, str);
+    console.log(htmlFileName + " html written")
     return {title, pubDate: createdAt, description: result, slug: htmlFileName.slice(1)}
         ;
 }

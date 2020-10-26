@@ -48,5 +48,16 @@ export const FS = {
                 resolve(res)
             })
         })
+    },
+    unlink: (path) => {
+      return new Promise((resolve, reject) => {
+        if (fs.existsSync(path)) {
+          fs.unlink(path, (err, res) => {
+            if (err) reject(err);
+            resolve(res)
+          })
+        }
+        resolve();
+      })
     }
 }

@@ -143,10 +143,8 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     <div class="title">
         <h2>Archive Bookmarklet</h2>
         
-            <small><b>Created:</b> Fri Sep 25 2020</small>
+            <small><b>Created:</b> Mon Oct 26 2020 16:15:01 GMT-0400 (Eastern Daylight Time)</small>
         
-        
-            <br/><small><b>Edited:</b> Mon Oct 26 2020</small>
         
 
     </div>
@@ -155,10 +153,41 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <p>Takes you to archive.org’s historical record of your site.</p>
 <p><code>javascript:void(open('http://archive.today/?run=1&amp;url='+encodeURIComponent(document.location)))</code></p>
 <div id="meta">
-<pre><code>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/3/comments</code></pre>
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/3/comments</p>
 </div>
 </section>
     <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/3/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/3/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
         
     </section>
 </main>

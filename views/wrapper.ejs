@@ -125,9 +125,6 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
         const [_, slug] = url.split('repos');
         return `https://github.com${slug.replace('comments', '')}`;
     }
-    const fart = 'queef'
-    const meta = <%= meta %>
-    console.log(meta)
 </script>
 <nav>
     <ul>
@@ -146,7 +143,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     <div class="title">
         <h2><%= title %></h2>
         <% if (createdAt) { %>
-            <small><b>Created:</b> <%= createdAt.toDateString()%></small>
+            <small><b>Created:</b> <%= createdAt%></small>
         <% } %>
         <% if (editedAt) { %>
             <br/><small><b>Edited:</b> <%= editedAt.toDateString() %></small>

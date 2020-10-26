@@ -143,10 +143,8 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
     <div class="title">
         <h2>The Hardest And Easiest Part Of React</h2>
         
-            <small><b>Created:</b> Wed Oct 21 2020</small>
+            <small><b>Created:</b> Mon Oct 26 2020 16:15:01 GMT-0400 (Eastern Daylight Time)</small>
         
-        
-            <br/><small><b>Edited:</b> Mon Oct 26 2020</small>
         
 
     </div>
@@ -246,6 +244,37 @@ const Child = ({ id, onLoad, loading }) => {
 <p>It’s supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that’s the exact moment you should be questioning where things are located in your app, because data shouldn’t move up, but down. Go with the flow.</p>
 </section>
     <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/4/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/4/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
         
     </section>
 </main>
