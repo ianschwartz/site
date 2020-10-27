@@ -9,4 +9,6 @@ Takes you to archive.org's historical record of your site.
 
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/3/comments
+
+TAGS::knowledge,javascript
 </div>

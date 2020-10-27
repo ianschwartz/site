@@ -42,4 +42,6 @@ Someday I'd like to try a project with TypeScript my way, and I think I might li
 
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/1/comments
+
+TAGS::tech,javascript,complaints
 </div>

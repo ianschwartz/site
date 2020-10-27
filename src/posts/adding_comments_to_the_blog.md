@@ -23,4 +23,6 @@ I've updated the build tools for the blog to inlcude Pandoc and JSDom, which giv
 
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/2/comments
+
+TAGS::building_the_blog,nodejs,javascript,hacking
 </div>

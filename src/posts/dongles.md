@@ -11,6 +11,9 @@
         color: darkgreen;
     }
 </style>
+<div id="meta">
+TAGS::tech,complaints
+</div>
 
 I am on the record as being anti-dongle. It's a battle, and I'm losing it.
 

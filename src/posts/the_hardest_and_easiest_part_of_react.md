@@ -1,5 +1,7 @@
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/4/comments
+
+TAGS::tech,javascript,react
 </div>
 <style>
     body {
