@@ -4,7 +4,10 @@ import {JSDOM, rssTemplate} from "../../index.mjs";
 
 export const createRSSFeed = async (entries) => {
     let base = '';
-    for (let entry of entries) {
+    const ents = entries.sort((a, b) => {
+      return new Date(b.pubDate) - new Date(a.pubDate)
+    })
+    for (let entry of ents) {
         const {title, slug, description, pubDate} = entry
 
         const dom = new JSDOM(description);
