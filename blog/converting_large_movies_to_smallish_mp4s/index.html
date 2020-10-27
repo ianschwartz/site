@@ -21,10 +21,16 @@
         body {
             background: lightsalmon;
             color: darkslateblue;
+            max-width: 600px;
+            margin: auto;
+            padding: 0 2rem;
         }
         nav {
             display: flex;
             align-items: center;
+        }
+        small {
+            display: block;
         }
         .navlink {
             display: inline-block;
@@ -170,6 +176,10 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
             <small><b>Created:</b> Mon Oct 26 2020 16:23:03 GMT-0400 (Eastern Daylight Time)</small>
         
         
+           <small><b>Edited:</b> Tue Oct 27 2020</small>
+        
+        
+
 
     </div>
     <section id="main"><style>
@@ -198,16 +208,14 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <pre><code>shrinkmov() {
     for movie in *;
     do;
-        ffmpeg -i $movie -c:v libx264 -crf 18 &quot;$movie.mp4&quot;;
-        rm $movie;
+        ffmpeg -i $movie -c:v libx264 -crf 18 &quot;$movie.mp4&quot; &amp;&amp; rm $movie;
     done;
 }</code></pre>
 <h4 id="zsh">ZSH</h4>
 <pre><code>shrinkmov() {
     for movie in $(ls);
     do;
-        ffmpeg -i $movie -c:v libx264 -crf 18 &quot;$movie.mp4&quot;;
-        rm $movie;
+        ffmpeg -i $movie -c:v libx264 -crf 18 &quot;$movie.mp4&quot; &amp;&amp; rm $movie;
     done;
 }</code></pre>
 <div id="meta">

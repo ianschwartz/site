@@ -50,16 +50,14 @@
 <pre><code>shrinkmov() {
     for movie in *;
     do;
-        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4";
-        rm $movie;
+        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4" &amp;&amp; rm $movie;
     done;
 }</code></pre>
 <h4 id="zsh">ZSH</h4>
 <pre><code>shrinkmov() {
     for movie in $(ls);
     do;
-        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4";
-        rm $movie;
+        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4" &amp;&amp; rm $movie;
     done;
 }</code></pre>
 

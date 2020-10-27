@@ -31,8 +31,7 @@ Warning: This appends `.mp4` to the filename, meaning `some-movie.mkv` becomes `
 shrinkmov() {
     for movie in *;
     do;
-        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4";
-        rm $movie;
+        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4" && rm $movie;
     done;
 }
 ```
@@ -42,8 +41,7 @@ shrinkmov() {
 shrinkmov() {
     for movie in $(ls);
     do;
-        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4";
-        rm $movie;
+        ffmpeg -i $movie -c:v libx264 -crf 18 "$movie.mp4" && rm $movie;
     done;
 }
 ```

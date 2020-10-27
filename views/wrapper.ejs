@@ -21,10 +21,16 @@
         body {
             background: lightsalmon;
             color: darkslateblue;
+            max-width: 600px;
+            margin: auto;
+            padding: 0 2rem;
         }
         nav {
             display: flex;
             align-items: center;
+        }
+        small {
+            display: block;
         }
         .navlink {
             display: inline-block;
@@ -170,8 +176,12 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
             <small><b>Created:</b> <%= createdAt%></small>
         <% } %>
         <% if (editedAt) { %>
-            <br/><small><b>Edited:</b> <%= editedAt.toDateString() %></small>
+           <small><b>Edited:</b> <%= editedAt.toDateString() %></small>
         <% } %>
+        <% if (meta.get('TAGS')) { %>
+           <%- meta.get('TAGS').split(',').map(tag => `<a href='#'>${tag}</a>`) %>
+        <% } %>
+
 
     </div>
     <section id="main"><%- content %></section>
