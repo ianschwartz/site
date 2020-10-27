@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Blog Index</title>
+    <title>schwartz.world - Educational Tv</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -171,70 +171,62 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Blog Index</h2>
+        <h2>Educational Tv</h2>
+        
+            <small><b>Created:</b> Tue Oct 27 2020 06:35:25 GMT-0400 (Eastern Daylight Time)</small>
         
         
-           <small><b>Edited:</b> Tue Oct 27 2020</small>
         
+           <a href='#'>tv</a>,<a href='#'>kids</a>,<a href='#'>muppets</a>,<a href='#'>complaints</a>
         
 
 
     </div>
-    <section id="main"><div>
-    <ul id="links">
-        <li>
-      <a href="/blog/educational_tv">
-        <b>Educational Tv</b>
-      </a> Tue Oct 27 2020
-    </li>
-<li>
-      <a href="/blog/converting_large_movies_to_smallish_mp4s">
-        <b>Converting Large Movies To Smallish Mp4s</b>
-      </a> Tue Oct 27 2020
-    </li>
-<li>
-      <a href="/blog/on_dongles">
-        <b>On Dongles</b>
-      </a> Tue Oct 27 2020
-    </li>
-<li>
-      <a href="/blog/fudgy_brownie_cupcakes">
-        <b>Fudgy Brownie Cupcakes</b>
-      </a> Mon Oct 26 2020
-    </li>
-<li>
-      <a href="/blog/adding_comments_to_the_blog">
-        <b>Adding Comments To The Blog</b>
-      </a> Sat Oct 03 2020
-    </li>
-<li>
-      <a href="/blog/dongles">
-        <b>Dongles</b>
-      </a> Fri Sep 25 2020
-    </li>
-<li>
-      <a href="/blog/archive_bookmarklet">
-        <b>Archive Bookmarklet</b>
-      </a> Wed Sep 23 2020
-    </li>
-<li>
-      <a href="/blog/the_hardest_and_easiest_part_of_react">
-        <b>The Hardest And Easiest Part Of React</b>
-      </a> Wed Sep 23 2020
-    </li>
-<li>
-      <a href="/blog/on_typescript">
-        <b>On Typescript</b>
-      </a> Tue Sep 15 2020
-    </li>
-<li>
-      <a href="/blog/static_site_generators">
-        <b>Static Site Generators</b>
-      </a> Thu Sep 10 2020
-    </li>
-    </ul>
-</div></section>
+    <section id="main"><div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/8/comments</p>
+<p>TAGS::tv,kids,muppets,complaints</p>
+</div>
+<p>I don’t want to be one of those complaining old men, constantly bemoaning every difference that I see between the world of my youth and that of today.I’m not that old anyway; at 38 I consider myself to be just barely reaching adulthood.</p>
+<p>I have two small children of the girl persuasion, ages 2 and 4. The pandemic has changed so much about their lives, but one change is that we all have a lot more screen time than before.</p>
+<p>Children’s programming is shit today. Boring computer-generated animation, interchangeable characters with impossibly cheerful voices. Most of it seems lazy and half-baked. You could take the plots and characters from any number of shows and switch them around and it would all fit fine. I’m talking about shows like <em>PJ Masks</em>, <em>Paw Patrol</em>, and <em>Mickey Mouse Clubhouse</em>.</p>
+<p><em>Mickey Mouse Clubhouse</em> is a particularly bad offender, because I have such strong childhood attachments to the source material. It might be the worst show ever made. It’s weird, but not in a fun way like <em>Yo Gabba Gabba</em>. Completely humorless.</p>
+<p>Even <em>Sesame Street</em>, of which I am a staunch advocate, uses obvious filler sketches like <a href="https://www.youtube.com/watch?v=M6TkpZx1dzQ"><em>Journey to Ernie</em></a>, which is absolute garbage.</p>
+<p>Contrast that to the shows I watched as a kid. We’ve been playing <em>Fraggle Rock</em>, <em>The Elephant Show</em>, <em>Magic Schoolbus</em>, <em>Beakman’s World</em>, <em>Bill Nye the Science Guy</em>. They’re just better.</p>
+<p>The Fraggles are such well-developed characters, and the show does such a good job of showing the fragile beauty of their ecosystem. There are layers of information that can be gleaned on subsequent rewatches. As children mature, there are jokes and nuances they start to grasp. The show is actually entertaining for adults.</p>
+<p>Contrast that to <em>The PJ Masks</em>, a show that makes me want to actually put my head through the TV.</p>
+</section>
     <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/8/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/8/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
         
     </section>
 </main>
