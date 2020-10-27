@@ -3,6 +3,7 @@ import {buildIndex} from "./src/buildIndex.mjs";
 import {createHTMLFile} from "./src/util/createHTMLFile.mjs";
 import {createBlogIndex} from "./src/util/createBlogIndex.mjs";
 import {createRSSFeed} from "./src/util/createRSSFeed.mjs";
+import {createTagsPages} from "./src/util/createTagsPages.mjs";
 
 export const {JSDOM} = jsdom;
 
@@ -23,14 +24,17 @@ const main = async () => {
    const files = await buildIndex()
    for (let f of files) {
      await createHTMLFile(f).then(entry => {
+       console.log(entry.meta.get('TAGS'))
        RSSEntries.push(entry)
      });
    }
    await createBlogIndex(files)
-   return await createRSSFeed(RSSEntries)
+   await createRSSFeed(RSSEntries);
+   await createTagsPages(RSSEntries);
+   return console.log('done')
  } catch (e) {
    console.error('main', e)
  }
 }
-main().then(() => console.log('done'));
+main();
 

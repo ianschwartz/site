@@ -179,7 +179,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
            <small><b>Edited:</b> <%= editedAt.toDateString() %></small>
         <% } %>
         <% if (meta.get('TAGS')) { %>
-           <%- meta.get('TAGS').split(',').map(tag => `<a href='#'>${tag}</a>`) %>
+            <small><b>Tags:</b> <%- meta.get('TAGS').split(',').map(tag => `<a href='/blog/tags/${tag}'>${tag}</a>`) %></small>
         <% } %>
 
 

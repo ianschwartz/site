@@ -39,6 +39,6 @@ Bake for 22-26 minutes until the tops look crinkled and a toothpick centered in 
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/6/comments
 
-TAGS::recipes,dessert,food,knowledge
+TAGS::recipes,dessert,food,knowledge,kids
 </div>
 

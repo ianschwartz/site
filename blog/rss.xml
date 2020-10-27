@@ -29,7 +29,6 @@
 <p>Eventually I’d like to get it working with some sort of attached storage, but at the moment I’m using the MacBook’s HD which is relatively meager once you start filling up the HD with movies. I don’t need much though, since the main purpose is providing my kids with better educational content than is offered on Netlix / Prime / Hulu, as well as allowing us to eliminate our Disney+ subscription. The kids watch the same movies over and over again (he said as he cued up Olaf’s Frozen Adventure for the 10,000th time).</p>
 <p>Warning: It isn’t a fast process, at least not on an old-ass MacBook. Doing a full season of a TV show takes forever since FFMPEG goes through line by line.</p>
 <p>Warning: This appends <code>.mp4</code> to the filename, meaning <code>some-movie.mkv</code> becomes <code>some-movie.mkv.mp4</code>. I’m working on a bulk file renaming tool to run afterward to format the titles into the Plex naming scheme (<code>"MASH s01e09"</code>).</p>
-<p>#feet</p>
 <h4 id="bash">BASH</h4>
 <pre><code>shrinkmov() {
     for movie in *;

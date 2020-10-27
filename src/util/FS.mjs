@@ -10,17 +10,19 @@ export const FS = {
         })
     },
     mkdir: (path) => {
-        const pathArr = path.split('/')
-        const _ = pathArr.pop();
-        const newPath = pathArr.join('/');
-        return new Promise((resolve, reject) => {
-            if (!fs.existsSync(newPath)) {
+      const pathArr = path.split('/')
+      const _ = pathArr.pop();
+
+      const newPath = pathArr.join('/');
+
+      return new Promise((resolve, reject) => {
+        if (!fs.existsSync(newPath)) {
                 return fs.mkdir(newPath, (err, data) => {
-                    if (err) reject(err);
+                    if (err) console.error(err.message);
                     resolve(data)
                 })
             }
-            resolve();
+        resolve();
         })
     },
     readFile: (path) => {
@@ -46,7 +48,7 @@ export const FS = {
       console.log(path)
         return new Promise((resolve, reject) => {
             return fs.writeFile(path, data, (err, res) => {
-                if (err) reject(err);
+                if (err) console.error(err);
                 resolve(res)
             })
         })

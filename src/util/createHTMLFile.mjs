@@ -9,29 +9,28 @@ export const createHTMLFile = async (f) => {
   const dom = new JSDOM(result);
 
   const domMeta = dom.window.document.body.querySelector('#meta');
-    const meta = new Map()
-    if (domMeta) {
-      Array.from(domMeta.children).forEach(child => {
-        const [key, value] = child.innerHTML.split('::');
-        meta.set(key, value);
-      })
-    }
+  const meta = new Map()
+  if (domMeta) {
+    Array.from(domMeta.children).forEach(child => {
+      const [key, value] = child.innerHTML.split('::');
+      meta.set(key, value);
+    })
+  }
 
-    await FS.mkdir(htmlFileName);
+  await FS.mkdir(htmlFileName);
 
-    const wasEdited = Math.abs(createdAt.valueOf() - editedAt.valueOf()) > 2015478
-    const title = toTitleCase(fileName);
-    const str = await EJS.renderFile('./views/wrapper.ejs', {
-        content: result,
-        createdAt,
-        editedAt: wasEdited ? editedAt : null,
-        title,
-        meta
-    });
-    await FS.writeFile(htmlFileName, str);
-    console.log(htmlFileName + " html written")
-    return {title, pubDate: createdAt, description: result, slug: htmlFileName.slice(1)}
-        ;
+  const wasEdited = Math.abs(createdAt.valueOf() - editedAt.valueOf()) > 2015478
+  const title = toTitleCase(fileName);
+  const str = await EJS.renderFile('./views/wrapper.ejs', {
+      content: result,
+      createdAt,
+      editedAt: wasEdited ? editedAt : null,
+      title,
+      meta
+  });
+  await FS.writeFile(htmlFileName, str);
+
+  return {title, pubDate: createdAt, description: result, slug: htmlFileName.slice(1), meta};
 }
 
 export function toTitleCase(string = '') {
