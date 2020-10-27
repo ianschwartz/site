@@ -4,8 +4,10 @@ export const buildIndex = async () => {
   const posts = await FS.readdir('./src/posts');
   const postsArr = []
   for (const postFilename of posts) {
-    const stats = await parsePost(postFilename)
-    postsArr.push(stats)
+    if (postFilename.includes('.md')) {
+      const stats = await parsePost(postFilename)
+      postsArr.push(stats)
+    }
   }
   return postsArr;
 }

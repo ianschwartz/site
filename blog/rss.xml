@@ -7,7 +7,7 @@
     
     <item>
         <title>Adding comments to the blog</title>
-        <pubDate>Mon Oct 26 2020</pubDate>
+        <pubDate>Sat Oct 03 2020</pubDate>
         <link>https://schwartz.world/blog/adding_comments_to_the_blog/index.html</link>
         <description><p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
 <p>I narrowed my options down to these options:</p>
@@ -26,7 +26,7 @@
     
     <item>
         <title>Archive bookmarklet</title>
-        <pubDate>Mon Oct 26 2020</pubDate>
+        <pubDate>Wed Sep 23 2020</pubDate>
         <link>https://schwartz.world/blog/archive_bookmarklet/index.html</link>
         <description><h2 id="a-useful-bookmarklet-i-stumbled-across">A useful Bookmarklet I stumbled across</h2>
 <p><a href="https://news.ycombinator.com/item?id=24809650">Shamelessly lifted from the Hacker News Comment</a></p>
@@ -38,7 +38,7 @@
     
     <item>
         <title>Converting large movies to smallish mp4s</title>
-        <pubDate>Mon Oct 26 2020</pubDate>
+        <pubDate>Tue Oct 27 2020</pubDate>
         <link>https://schwartz.world/blog/converting_large_movies_to_smallish_mp4s/index.html</link>
         <description><h2 id="converting-large-movies-to-smallish-mp4s-using-ffmpeg">Converting Large Movies to Smallish MP4s using FFMPEG</h2>
 <p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
@@ -120,8 +120,15 @@
     </item>
     
     <item>
+        <title>On dongles</title>
+        <pubDate>Tue Oct 27 2020</pubDate>
+        <link>https://schwartz.world/blog/on_dongles/index.html</link>
+        <description></description>
+    </item>
+    
+    <item>
         <title>On typescript</title>
-        <pubDate>Mon Oct 26 2020</pubDate>
+        <pubDate>Tue Sep 15 2020</pubDate>
         <link>https://schwartz.world/blog/on_typescript/index.html</link>
         <description><p>I don’t like it.</p>
 <h3 id="my-experience">My experience</h3>
@@ -154,7 +161,7 @@
     
     <item>
         <title>Static site generators</title>
-        <pubDate>Fri Sep 25 2020</pubDate>
+        <pubDate>Thu Sep 10 2020</pubDate>
         <link>https://schwartz.world/blog/static_site_generators/index.html</link>
         <description><h2 id="static-site-generators">Static Site Generators</h2>
 <p>Some people knit. Some bake. Me? I build static site generators. This site is one of them.</p>
@@ -163,7 +170,7 @@
 <h3 id="diy-is-better">DIY is Better</h3>
 <p>At the end of the day, a static site generator doesn’t need much. You need a way to load and parse some files and then pass that content to an HTML template. It doesn’t need to be particularly performant or secure since it only ever runs on my machine at home. Static files get generated and then pushed up to Netlify.</p>
 <h3 id="planned-features">Planned Features</h3>
-<h4 id="comments">Comments</h4>
+<h4 id="comments-done"><del>Comments</del> <ins>DONE!</ins></h4>
 <p>I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):</p>
 <ul>
 <li>Comments post to node server and are fetched regularly and built into the static blog</li>
@@ -171,7 +178,7 @@
 <li><a href="https://formspree.io/">FormSpree</a> form to comment</li>
 <li>Email to comment</li>
 </ul>
-<h4 id="tags">Tags</h4>
+<h4 id="tags---in-progress">Tags - In Progress</h4>
 <p>I really like the idea of a dynamic tagging system. At build time, I’d like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can’t say there will ever be enough posts here to justify a system like this, but that’s not why I’m doing this. I like building the blog more than I like posting to it. Deeply ironic.</p>
 <p><a href="https://www.jwz.org/blog/">This blog</a> has a fantastic system whereby every post has a list of <code>previously</code> links at the bottom. I’d like my tags to function similarly, allowing an organic link from page to page. Damned if I know how I’m going to implement it, but I have ideas.</p>
 <h4 id="maps">Maps</h4>
@@ -186,7 +193,7 @@
     
     <item>
         <title>The hardest and easiest part of react</title>
-        <pubDate>Mon Oct 26 2020</pubDate>
+        <pubDate>Wed Sep 23 2020</pubDate>
         <link>https://schwartz.world/blog/the_hardest_and_easiest_part_of_react/index.html</link>
         <description>
 
