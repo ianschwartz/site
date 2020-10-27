@@ -19,14 +19,18 @@ export const rssTemplate = (items) => `<?xml version="1.0"?>
 
 const RSSEntries = [];
 const main = async () => {
-  const files = await buildIndex()
-  for (let f of files) {
-    await createHTMLFile(f).then(entry => {
-      RSSEntries.push(entry)
-    });
-  }
-  await createBlogIndex(files)
-  return await createRSSFeed(RSSEntries)
+ try {
+   const files = await buildIndex()
+   for (let f of files) {
+     await createHTMLFile(f).then(entry => {
+       RSSEntries.push(entry)
+     });
+   }
+   await createBlogIndex(files)
+   return await createRSSFeed(RSSEntries)
+ } catch (e) {
+   console.error('main', e)
+ }
 }
 main().then(() => console.log('done'));
 

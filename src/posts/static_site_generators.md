@@ -22,7 +22,7 @@ At the end of the day, a static site generator doesn't need much. You need a way
 
 ### Planned Features
 
-#### Comments
+#### <del>Comments</del> <ins>DONE!</ins>
 
 I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):
 
@@ -31,7 +31,7 @@ I really want to figure out a way to have comments, which seems difficult on a s
 - [FormSpree](https://formspree.io/) form to comment
 - Email to comment
 
-#### Tags
+#### Tags - In Progress
 
 I really like the idea of a dynamic tagging system. At build time, I'd like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can't say there will ever be enough posts here to justify a system like this, but that's not why I'm doing this. I like building the blog more than I like posting to it. Deeply ironic.
 

@@ -4,7 +4,7 @@ import fs from "fs";
 
 export const createBlogIndex = async (files) => {
     const links = files.sort((a, b) => {
-        return b.editedAt.valueOf() - a.editedAt.valueOf();
+        return b.createdAt.valueOf() - a.createdAt.valueOf();
     }).map(f => {
         return `<li>
       <a href="/blog/${f.fileName}">

@@ -6,7 +6,6 @@ import {JSDOM} from "../../index.mjs";
 export const createHTMLFile = async (f) => {
   const {createdAt, editedAt, pathToFile, fileName, htmlFileName} = f;
   const result = await Pandoc(pathToFile)
-
   const dom = new JSDOM(result);
 
   const domMeta = dom.window.document.body.querySelector('#meta');
