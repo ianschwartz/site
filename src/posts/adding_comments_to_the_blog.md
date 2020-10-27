@@ -4,6 +4,7 @@
         color: black;
     }
 </style>
+
 I've been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.
 
 I narrowed my options down to these options:

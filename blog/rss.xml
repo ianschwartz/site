@@ -25,8 +25,7 @@
         <title>Converting large movies to smallish mp4s</title>
         <pubDate>Tue Oct 27 2020</pubDate>
         <link>https://schwartz.world/blog/converting_large_movies_to_smallish_mp4s/index.html</link>
-        <description><h2 id="converting-large-movies-to-smallish-mp4s-using-ffmpeg">Converting Large Movies to Smallish MP4s using FFMPEG</h2>
-<p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
+        <description><p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
 <p>Eventually I’d like to get it working with some sort of attached storage, but at the moment I’m using the MacBook’s HD which is relatively meager once you start filling up the HD with movies. I don’t need much though, since the main purpose is providing my kids with better educational content than is offered on Netlix / Prime / Hulu, as well as allowing us to eliminate our Disney+ subscription. The kids watch the same movies over and over again (he said as he cued up Olaf’s Frozen Adventure for the 10,000th time).</p>
 <p>Warning: It isn’t a fast process, at least not on an old-ass MacBook. Doing a full season of a TV show takes forever since FFMPEG goes through line by line.</p>
 <p>Warning: This appends <code>.mp4</code> to the filename, meaning <code>some-movie.mkv</code> becomes <code>some-movie.mkv.mp4</code>. I’m working on a bulk file renaming tool to run afterward to format the titles into the Plex naming scheme (<code>"MASH s01e09"</code>).</p>
@@ -103,8 +102,7 @@
         <title>Dongles</title>
         <pubDate>Fri Sep 25 2020</pubDate>
         <link>https://schwartz.world/blog/dongles/index.html</link>
-        <description><h2 id="all-the-devices-i-have-that-require-dongles">All the devices I have that require dongles</h2>
-<p>I am on the record as being anti-dongle. It’s a battle, and I’m losing it.</p>
+        <description><p>I am on the record as being anti-dongle. It’s a battle, and I’m losing it.</p>
 <p>Work has provided me with a shiny MacBook pro, which has 4 USB-c ports that have to work for everything.</p>
 <ol type="1">
 <li><p>One port is taken up by the power cable. This is a ridiculous design choice, and I believe many of the flaws with new MacBooks are because of it. Sure, it’s great to plug your laptop in on either side, I guess. Was that ever a problem for anybody?  <b>You know what was a problem for me?</b> Kicking cables by accident. I broke a laptop screen in like 2005. <b>You know what fixed it?</b> MagSafe connectors. RIP.</p></li>

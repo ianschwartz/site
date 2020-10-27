@@ -11,7 +11,6 @@
         color: darkgreen;
     }
 </style>
-## All the devices I have that require dongles
 
 I am on the record as being anti-dongle. It's a battle, and I'm losing it.
 
