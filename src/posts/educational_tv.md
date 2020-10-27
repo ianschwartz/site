@@ -1,3 +1,20 @@
+<style>
+    body {
+      background: #3F4951;
+      color: #C3D0A2;
+    }
+    a {
+      color: #E6CE5F;
+      font-weight: bolder;
+    }
+    h1, h2, h3, h4, h5 {
+        color: #F36635;
+    }
+    code {
+        color: #fc9e76;
+    }
+</style>
+
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/8/comments
 
