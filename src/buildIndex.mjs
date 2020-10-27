@@ -4,6 +4,7 @@ export const buildIndex = async () => {
   const posts = await FS.readdir('./src/posts');
   const postsArr = []
   for (const postFilename of posts) {
+    console.log(postFilename)
     const stats = await parsePost(postFilename)
     postsArr.push(stats)
   }
