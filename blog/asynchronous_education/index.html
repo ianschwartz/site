@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - kids</title>
+    <title>schwartz.world - Asynchronous Education</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -135,6 +135,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,19 +171,85 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"kids"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/asynchronous_education/index.html">Asynchronous Education - Tue Oct 27 2020</a>
-</li><li>
-    <a href="/blog/educational_tv/index.html">Educational Tv - Tue Oct 27 2020</a>
-</li><li>
-    <a href="/blog/fudgy_brownie_cupcakes/index.html">Fudgy Brownie Cupcakes - Mon Oct 26 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>Asynchronous Education</h2>
+        
+            <small><b>Created:</b> Tue Oct 27 2020 13:09:46 GMT-0400 (Eastern Daylight Time)</small>
+        
+        
+           <small><b>Edited:</b> Wed Oct 28 2020</small>
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/kids'>kids</a>,<a href='/blog/tags/covid'>covid</a>,<a href='/blog/tags/big_ideas'>big_ideas</a></small>
+        
 
+
+    </div>
+    <section id="main"><style>
+    body {
+        background: darkkhaki;
+        color: black;
+    }
+</style>
+<p>Apparently, in India during the Covid pandemic, a large number of schools are using Whatsapp for teaching.</p>
+<p>It makes a lot of sense, when you think about it. You wouldn’t necessarily expect every house to have a computer to dedicate to a child’s education (although it would be nice), but phones are supposedly common enough there to make Whatsapp an ideal platform. Phones are even more common here in my little white slice of suburbia. I wouldn’t be surprised if most kids had their own phone. Additionally, Whatsapp provides read receipts, so teachers can check that students are actually viewing the lessons. The downside is that Whatsapp is a Facebook provided service.</p>
+<p>The big thing that Whatsapp™ Edumacation offers that Zoom™ Edumacation doesn’t offer is <code>asynchronousity</code>. As far as I’m concerned a group lesson on Zoom is basically the same thing as watching a video, except without the upsides of video. Teachers have to put as much (or more) time into teaching than in a classroom, while students are expected to pay attention without any of the social pressure to do so that comes with being in a roomful of kids.</p>
+<p>School, as it currently exists in America, heavily rewards a certain type of learner. I am not that type of learner. I know for a fact that if I was in high school right now, I’d be failing. I can barely pay attention during Zoom meetings at Work™, and those typically top out around 45 minutes. But I also know that the <code>async</code> model offered by Whatsapp lessons would have resonated with me, big time.</p>
+<p>I don’t know about other industries, but those who write software for a living are typically well acquainted with lots of different tutorial formats, all of which don’t require an in-person instructor. Obviously there are traditional MOOC’s like Udemy or Pluralsight, but lots of other models are common:</p>
+<h4 id="gamified-learning">Gamified Learning</h4>
+<p>Programs like these teach you by having you solve problems. Reading docs is hard, but you can learn by doing something fun.</p>
+<ul>
+<li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+<li><a href="https://cssgridgarden.com/">CSS Grid Garden</a></li>
+<li><a href="https://www.hackthebox.eu/">Hack the Box</a></li>
+</ul>
+<h4 id="guided-self-study">Guided self-study</h4>
+<p>I don’t know the right term, but there is a model of learning where the lesson consists of a challenge, a mechanism for checking the answer and a short explanation and the rest is up to you and your GoogleFu. These offer an additional layer of education, as they closely resemble the way actual developers do their jobs. They also have online and in-person communities if you require support, and they may be open source.</p>
+<ul>
+<li><a href="https://nodeschool.io/">NodeSchool</a></li>
+<li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+<li><a href="https://www.theodinproject.com/">The Odin Project</a></li>
+</ul>
+<h4 id="recorded-and-supported">Recorded and Supported</h4>
+<p>Anyone who learns to code today will undoubtedly come across video-based courses. The best of these include additional support including forums, Discord communities, possibly even access to the creator. They may offer transcripts of lectures.</p>
+<p>I truly feel for the generation coming of age now. I can’t imagine doing 8th grade in front of a Chromebook. I only hope that by the time my children enter real school (as opposed to preschool) that we’ll have this figured out a little more for them. All the async learning options involve thinking holistically. Instead of planning weekly lessons, you’d have to <em>build</em> the game or prerecord and transcrabe <em>all</em> the lectures, but the payoff would be huge as teachers could share resources and build on them, the same way software does with open source.</p>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/9/comments</p>
+<p>TAGS::kids,covid,big_ideas</p>
+</div>
+</section>
+    <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/9/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/9/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
+        
     </section>
 </main>
 </body>

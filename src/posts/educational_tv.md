@@ -18,7 +18,7 @@
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/8/comments
 
-TAGS::tv,kids,muppets,complaints
+TAGS::tv,kids,muppets,complaints,covid
 </div>
 
 I don't want to be one of those complaining old men, constantly
