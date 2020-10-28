@@ -60,12 +60,15 @@ courses. The best of these include additional support including forums,
 Discord communities, possibly even access to the creator. They may offer
 transcripts of lectures.
 
+- [Front End Masters](https://frontendmasters.com/courses/)
+- [Kent Dodds](https://kentcdodds.com/courses/)
+
 I truly feel for the generation coming of age now. I can't imagine doing
 8th grade in front of a Chromebook. I only hope that by the time my children
 enter real school (as opposed to preschool) that we'll have this figured out
 a little more for them. All the async learning options involve thinking
 holistically. Instead of planning weekly lessons, you'd have to _build_ the game
-or prerecord and transcrabe _all_ the lectures, but the payoff would be huge
+or prerecord and transcribe _all_ the lectures, but the payoff would be huge
 as teachers could share resources and build on them, the same way software does
 with open source.
 
