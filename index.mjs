@@ -24,7 +24,6 @@ const main = async () => {
    const files = await buildIndex()
    for (let f of files) {
      await createHTMLFile(f).then(entry => {
-       console.log(entry.meta.get('TAGS'))
        RSSEntries.push(entry)
      });
    }

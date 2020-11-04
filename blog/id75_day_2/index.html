@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - home_office</title>
+    <title>schwartz.world - Id75 Day 2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,17 +176,71 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"home_office"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/id75_day_2/index.html">Id75 Day 2 - Wed Nov 04 2020</a>
-</li><li>
-    <a href="/blog/new_keyboard_day/index.html">New Keyboard Day - Wed Nov 04 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>Id75 Day 2</h2>
+        
+            <small><b>Created:</b> Wed Nov 04 2020 15:55:01 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/tech'>tech</a>,<a href='/blog/tags/hacking'>hacking</a>,<a href='/blog/tags/keyboard'>keyboard</a>,<a href='/blog/tags/computing'>computing</a>,<a href='/blog/tags/home_office'>home_office</a></small>
+        
 
+
+    </div>
+    <section id="main"><style>
+    body {
+        background: #3a1700;
+        color: #f8943b;
+    }
+    a {
+      color: #ff5900;
+    }
+    a:visited {
+      color: #ff4000;
+    }
+</style>
+<p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
+<p><a href='https://www.typingtest.com/'><img src='/img/typetest-2020-11-3.png' alt='Typing Test Screen Shot - 18wpm, 2 typos' /></a></p>
+<p>I’m absolutely loving QMK though, and I can’t believe the power is offers. On layer 1 (not 0), I have set the arrow keys to emit mouse events. I can move the pointer using them as well as left and right click. Additionally, with all the typos, I got pretty sick of reaching for the <code>backspace</code> key, so I remapped <code>j</code> and <code>k</code> to work as <code>backspace</code> and <code>enter</code> respectively. There are a lot of keys I never use, so I’d like to relegate them to lower layers (I’m looking at you <code>ins</code> and <code>scroll lock</code>) and use the extra real estate for macros.</p>
+<p>I also split the bottom row, and put a key for toggling between levels in between <code>b</code> and <code>v</code>.</p>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/11/comments</p>
+<p>TAGS::tech,hacking,keyboard,computing,home_office</p>
+</div>
+</section>
+    <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/11/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/11/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
+        
     </section>
 </main>
 </body>

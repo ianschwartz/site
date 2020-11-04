@@ -22,6 +22,12 @@ export const createRSSFeed = async (entries) => {
         removables.forEach(r => {
           if (r) r.remove()
         });
+
+        body.querySelectorAll('img').forEach(img => {
+          const node = dom.window.document.createTextNode(img.alt);
+          img.parentNode.appendChild(node)
+          img.remove()
+        })
         base += `
     <item>
         <title>${toTitleCase(title)}</title>
