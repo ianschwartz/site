@@ -24,7 +24,7 @@ export const createRSSFeed = async (entries) => {
         });
 
         body.querySelectorAll('img').forEach(img => {
-          const node = dom.window.document.createTextNode(img.alt);
+          const node = dom.window.document.createTextNode(`Inline image: ${img.alt} (${img.src}`);
           img.parentNode.appendChild(node)
           img.remove()
         })

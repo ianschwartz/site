@@ -10,7 +10,7 @@
         <pubDate>Wed Nov 04 2020</pubDate>
         <link>https://schwartz.world/blog/id75_day_2/index.html</link>
         <description><p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
-<p><a href="https://www.typingtest.com/">Typing Test Screen Shot - 18wpm, 2 typos</a></p>
+<p><a href="https://www.typingtest.com/">Inline image: Typing Test Screen Shot - 18wpm, 2 typos (/img/typetest-2020-11-3.png</a></p>
 <p>I’m absolutely loving QMK though, and I can’t believe the power is offers. On layer 1 (not 0), I have set the arrow keys to emit mouse events. I can move the pointer using them as well as left and right click. Additionally, with all the typos, I got pretty sick of reaching for the <code>backspace</code> key, so I remapped <code>j</code> and <code>k</code> to work as <code>backspace</code> and <code>enter</code> respectively. There are a lot of keys I never use, so I’d like to relegate them to lower layers (I’m looking at you <code>ins</code> and <code>scroll lock</code>) and use the extra real estate for macros.</p>
 <p>I also split the bottom row, and put a key for toggling between levels in between <code>b</code> and <code>v</code>.</p>
 
@@ -33,7 +33,7 @@
 <p>I’ve tried remapping keys, but without QMK support, it’s a challenge, especially on macos. Maybe if I was a Real Programmer™, but I’m just a werb derv, and I couldn’t do it. Too bad really, because the lighting (which is programmable) is amazing. I may return to this keyboard after my journey into ortholinear-land.</p>
 <h3 id="my-new-keyboard">My New Keyboard</h3>
 <p>When trying to find a larger, small keyboard (70-75%) you inevitably find that most of the options require soldering. That sent me down this keyboard rabbit-hole, the culmination of which was the purchase of the following monstrosity:</p>
-<p></p>
+<p>Inline image:  (/img/id75.png</p>
 <p>This is the ID75 (aka Idobo). Gateron Green switches, frankenkeys for now until I decide on a working layout. Remapping is a cinch with <a href="https://config.qmk.fm/">QMK Configurator</a> and <a href="https://github.com/qmk/qmk_toolbox">QMK Toolbox</a>. A big part of my decision to buy it was the lack of soldering invovled in the assembly.</p>
 <p>So here I am after half a day of working on the damn thing, and I can’t decide if I see the potential and love it or if I’m unnecessarily complicating my life for no reason. Sure, I love endlessly tweaking my setup, but my typing just went from 80wpm to like 20wpm.</p>
 <p>I think the real power in this keyboard lies in frequently tweaking the mapping. I keep overshooting the <code>backspace</code> key, but I can remap it to go in the place I expect it to, instead of forcing my body to retrain.</p>
