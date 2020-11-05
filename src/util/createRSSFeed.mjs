@@ -39,6 +39,6 @@ export const createRSSFeed = async (entries) => {
     }
     fs.writeFileSync('./blog/rss.xml', rssTemplate(base), (e) => {
         if (e) console.error(e);
-        console.log("rss donerss donerss donerss donerss donerss donerss donerss donerss donerss done")
+        console.log("rss done")
     });
 }
