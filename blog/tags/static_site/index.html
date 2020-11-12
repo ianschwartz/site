@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Blog Index</title>
+    <title>schwartz.world - static_site</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,8 +43,9 @@
         #meta {
             display: none;
         }
-        img {
-            max-width: 100%;
+        body {
+            background: lightsalmon;
+            color: darkslateblue;
         }
         nav {
             display: flex;
@@ -64,12 +65,6 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
-        }
-        pre {
-            width: 100%;
-        }
-        code {
-            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -140,26 +135,6 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
-
-    function parseMarkdown(markdownText) {
-        const htmlText = markdownText
-            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-            .replace(/\*(.*)\*/gim, '<i>$1</i>')
-            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
-            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
-            .replace(/\n$/gim, '<br />')
-
-        return htmlText.trim()
-    }
-
-    const toRealUrl = (url = '') => {
-        const [_, slug] = url.split('repos');
-        return `https://github.com${slug.replace('comments', '')}`;
-    }
 </script>
 <nav>
     <ul>
@@ -176,91 +151,19 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Blog Index</h2>
-        
-        
-           <small><b>Edited:</b> Thu Nov 12 2020</small>
-        
-        
-
-
+        <h2>Posts tagged <i>"static_site"</i></h2>
     </div>
-    <section id="main"><div>
-    <ul id="links">
+    <ul>
         <li>
-      <a href="/blog/raspberry_pi_timelapse_cam_pt1">
-        <b>Raspberry Pi Timelapse Cam Pt1</b>
-      </a> Thu Nov 12 2020
-    </li>
-<li>
-      <a href="/blog/self-censorship">
-        <b>Self-censorship</b>
-      </a> Thu Nov 05 2020
-    </li>
-<li>
-      <a href="/blog/id75_day_2">
-        <b>Id75 Day 2</b>
-      </a> Wed Nov 04 2020
-    </li>
-<li>
-      <a href="/blog/new_keyboard_day">
-        <b>New Keyboard Day</b>
-      </a> Wed Nov 04 2020
-    </li>
-<li>
-      <a href="/blog/asynchronous_education">
-        <b>Asynchronous Education</b>
-      </a> Tue Oct 27 2020
-    </li>
-<li>
-      <a href="/blog/educational_tv">
-        <b>Educational Tv</b>
-      </a> Tue Oct 27 2020
-    </li>
-<li>
-      <a href="/blog/converting_large_movies_to_smallish_mp4s">
-        <b>Converting Large Movies To Smallish Mp4s</b>
-      </a> Tue Oct 27 2020
-    </li>
-<li>
-      <a href="/blog/fudgy_brownie_cupcakes">
-        <b>Fudgy Brownie Cupcakes</b>
-      </a> Mon Oct 26 2020
-    </li>
-<li>
-      <a href="/blog/adding_comments_to_the_blog">
-        <b>Adding Comments To The Blog</b>
-      </a> Sat Oct 03 2020
-    </li>
-<li>
-      <a href="/blog/dongles">
-        <b>Dongles</b>
-      </a> Fri Sep 25 2020
-    </li>
-<li>
-      <a href="/blog/archive_bookmarklet">
-        <b>Archive Bookmarklet</b>
-      </a> Wed Sep 23 2020
-    </li>
-<li>
-      <a href="/blog/the_hardest_and_easiest_part_of_react">
-        <b>The Hardest And Easiest Part Of React</b>
-      </a> Wed Sep 23 2020
-    </li>
-<li>
-      <a href="/blog/on_typescript">
-        <b>On Typescript</b>
-      </a> Tue Sep 15 2020
-    </li>
-<li>
-      <a href="/blog/static_site_generators">
-        <b>Static Site Generators</b>
-      </a> Thu Sep 10 2020
-    </li>
+    <a href="/blog/raspberry_pi_timelapse_cam_pt1/index.html">Raspberry Pi Timelapse Cam Pt1 - Thu Nov 12 2020</a>
+</li><li>
+    <a href="/blog/adding_comments_to_the_blog/index.html">Adding Comments To The Blog - Sat Oct 03 2020</a>
+</li><li>
+    <a href="/blog/static_site_generators/index.html">Static Site Generators - Thu Sep 10 2020</a>
+</li>
     </ul>
-</div></section>
-    <section id="comments">
-        
+    <section id="main">
+
     </section>
 </main>
 </body>

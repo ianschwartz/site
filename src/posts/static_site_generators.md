@@ -52,5 +52,5 @@ Maybe lots of things. Maybe nothing. Maybe I'll tear the whole thing down next m
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/1/comments
 
-TAGS::building_the_blog,tech,javascript
+TAGS::building_the_blog,tech,javascript,static_site
 </div>
