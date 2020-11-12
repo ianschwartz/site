@@ -1,3 +1,17 @@
+<style>
+    body {
+      background: #480028;
+      color: #fc54ff;
+    }
+    a {
+      color: #df0064;
+      font-weight: bolder;
+    }
+    code {
+        color: #e8a7f8;
+        background: #000;
+    }
+</style>
 <div id="meta">
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/12/comments
 
@@ -13,7 +27,7 @@ to maintain a server. JAMStack, baby!
 But how far can we take it?
 
 I have this idea I've been mulling over for a while. I recently got the new
-Raspberry Pi High Quality camera, and it's pretty nice. I'm using the cheapest lens
+`Raspberry Pi High Quality camera`, and it's pretty nice. I'm using the cheapest lens
 I could get, and the images are pretty good. Eventually, I'd love to invest in
 a nicer lens, but experience has taught me to build first and then buy later. I've
 got a whole pile of Arduino and Pi boards to remind me, lest I forget.
@@ -32,12 +46,12 @@ can be saved as a file or whatever.
 
 I did it this way because I really don't want to have to write code on the Pi. I don't want
 to SSH, I don't want to hook up a monitor. I just want to have a machine I can send an HTTP request
-to and get a picture back and keep all the actual business code on my laptop or 'server' (also a laptop).
+to and get a picture back and keep all the actual business code on my laptop or `server` (also a laptop).
 
 ### Image Client
 
 The client is also very minimal. I'm using NodeJS at the moment, but it could just as easily
-be any other language, even just a cron job that calls curl and pipes the output to a jpg.
+be any other language, even just a cron job that calls `curl` and pipes the output to a jpg.
 The code is barely interesting enough to post (although I eventually will).
 
 Right now the picture just uses the default settings, but eventually I would like
@@ -46,7 +60,7 @@ for daytime pics and one for nighttime, and the client can decide which kind of 
 
 ### Build Server
 
-A third program on the client machine will make a call to FFMPEG at regular intervals to
+A third program on the client machine will make a call to `FFMPEG` at regular intervals to
 stitch all the individual files into a video or gif, and then push the resulting file up
 to Github. The idea is that you could go to the URL and see the current version of the timelapse,
 which gets longer every time you visit the URL, as you keep loading the latest version.
