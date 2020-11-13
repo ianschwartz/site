@@ -72,7 +72,7 @@ as viewed from my office window. As this is a POC, I haven't done the following:
 
 - focus the image
 - take the screen off the window
-- [gotten a better lens](/#experience);
+- <a href='#experience'>gotten a better lens</a>
 
 Without further ado:
 
