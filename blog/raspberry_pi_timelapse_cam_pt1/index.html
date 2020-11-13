@@ -181,7 +181,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
             <small><b>Created:</b> Thu Nov 12 2020 18:23:05 GMT-0500 (Eastern Standard Time)</small>
         
         
-           <small><b>Edited:</b> Thu Nov 12 2020</small>
+           <small><b>Edited:</b> Fri Nov 13 2020</small>
         
         
             <small><b>Tags:</b> <a href='/blog/tags/raspberry_pi'>raspberry_pi</a>,<a href='/blog/tags/computer_photography'>computer_photography</a>,<a href='/blog/tags/ffmpeg'>ffmpeg</a>,<a href='/blog/tags/nodejs'>nodejs</a>,<a href='/blog/tags/javascript'>javascript</a>,<a href='/blog/tags/hacking'>hacking</a>,<a href='/blog/tags/static_site'>static_site</a>,<a href='/blog/tags/jamstack'>jamstack</a></small>
@@ -209,7 +209,7 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 </div>
 <p>I’m a front-end dev by trade, and while I am comfortable whipping up a server in a few different frameworks, I really prefer to avoid exposing any of my server-side code to the open internet. <a href="https://schwartz.world/blog/static_site_generators/">For example, this site generates a build on my local machine, then pushes it to Github.</a> The content is then served by Netlify with no need to maintain a server. JAMStack, baby!</p>
 <p>But how far can we take it?</p>
-<p>I have this idea I’ve been mulling over for a while. I recently got the new <code>Raspberry Pi High Quality camera</code>, and it’s pretty nice. I’m using the cheapest lens I could get, and the images are pretty good. Eventually, I’d love to invest in a nicer lens, but experience has taught me to build first and then buy later. I’ve got a whole pile of Arduino and Pi boards to remind me, lest I forget.</p>
+<p>I have this idea I’ve been mulling over for a while. I recently got the new <code>Raspberry Pi High Quality camera</code>, and it’s pretty nice. I’m using the cheapest lens I could get, and the images are pretty good. Eventually, I’d love to invest in a nicer lens, but <span id="experience">experience has taught me to build first and then buy later.</span> I’ve got a whole pile of Arduino and Pi boards to remind me, lest I forget.</p>
 <p>The idea is to create a timelapse camera, which is a common enough use-case for the Pi. The program I’m going to write is real Unix-y, because each piece is responsible for so little. There are three components:</p>
 <h3 id="image-server">Image Server</h3>
 <p>Most of the time when people use the Pi as a webcam / security cam, they configure it to actively snap photos regularly and then push those photos to an external server or possibly just stream them over the network. I’ve done the opposite, the Pi runs a simple Flask app. When it receives a connection, it snaps a picture and returns the picture over HTTP where it can be saved as a file or whatever.</p>
@@ -219,6 +219,19 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 <p>Right now the picture just uses the default settings, but eventually I would like to configure settings so it takes longer exposures as the sun goes down. Maybe one endpoint for daytime pics and one for nighttime, and the client can decide which kind of picture to take.</p>
 <h3 id="build-server">Build Server</h3>
 <p>A third program on the client machine will make a call to <code>FFMPEG</code> at regular intervals to stitch all the individual files into a video or gif, and then push the resulting file up to Github. The idea is that you could go to the URL and see the current version of the timelapse, which gets longer every time you visit the URL, as you keep loading the latest version.</p>
+<h3 id="proof-of-concept">Proof of Concept</h3>
+<p>I’m not nearly ready to show the world the code, but I did whip up a quick video of the “sunrise” as viewed from my office window. As this is a POC, I haven’t done the following:</p>
+<ul>
+<li>focus the image</li>
+<li>take the screen off the window</li>
+<li><a href="/#experience">gotten a better lens</a>;</li>
+</ul>
+<p>Without further ado:</p>
+<video controls width="250">
+<source src="/video/sunrise-2020-11-13.mp4"
+            type="video/mp4">
+<pre><code>Sorry, your browser doesn&#39;t support embedded videos.</code></pre>
+</video>
 </section>
     <section id="comments">
         

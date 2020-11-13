@@ -29,7 +29,7 @@ But how far can we take it?
 I have this idea I've been mulling over for a while. I recently got the new
 `Raspberry Pi High Quality camera`, and it's pretty nice. I'm using the cheapest lens
 I could get, and the images are pretty good. Eventually, I'd love to invest in
-a nicer lens, but experience has taught me to build first and then buy later. I've
+a nicer lens, but <span id='experience'>experience has taught me to build first and then buy later.</span> I've
 got a whole pile of Arduino and Pi boards to remind me, lest I forget.
 
 The idea is to create a timelapse camera, which is a common enough use-case
@@ -64,3 +64,22 @@ A third program on the client machine will make a call to `FFMPEG` at regular in
 stitch all the individual files into a video or gif, and then push the resulting file up
 to Github. The idea is that you could go to the URL and see the current version of the timelapse,
 which gets longer every time you visit the URL, as you keep loading the latest version.
+
+### Proof of Concept
+
+I'm not nearly ready to show the world the code, but I did whip up a quick video of the "sunrise"
+as viewed from my office window. As this is a POC, I haven't done the following:
+
+- focus the image
+- take the screen off the window
+- [gotten a better lens](/#experience);
+
+Without further ado:
+
+<video controls width="250">
+    <source src="/video/sunrise-2020-11-13.mp4"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</video>
+

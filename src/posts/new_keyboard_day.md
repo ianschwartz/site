@@ -45,7 +45,6 @@ When trying to find a larger, small keyboard (70-75%) you inevitably find
 that most of the options require soldering. That sent me down this keyboard
 rabbit-hole, the culmination of which was the purchase of the following monstrosity:
 
-<img src='/img/id75.png' />
 
 This is the ID75 (aka Idobo). Gateron Green switches, frankenkeys for now until
 I decide on a working layout. Remapping is a cinch with [QMK Configurator](https://config.qmk.fm/)
