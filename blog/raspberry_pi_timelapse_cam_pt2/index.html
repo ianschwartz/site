@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>schwartz.world - Raspberry Pi Timelapse Cam Pt2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="alternate" type="application/rss+xml"
+          href="/blog/rss.xml" title="RSS feed for My Page">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="apple-touch-icon" href="../icon.png">
+    <link rel="stylesheet" href="/blog/css/main.css">
+    <!-- Place favicon.ico in the root directory -->
+    <style>
+        body {
+            background: lightsalmon;
+            color: darkslateblue;
+            max-width: 600px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        small {
+            display: block;
+        }
+        .navlink {
+            display: inline-block;
+            height: 2rem;
+        }
+        .icon {
+            height: 1rem;
+            width: 1rem;
+        }
+        #meta {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .navlink {
+            display: inline-block;
+            height: 2rem;
+        }
+        .icon {
+            height: 1rem;
+            width: 1rem;
+        }
+        .comment{
+            list-style: none;
+        }
+        .gravatar {
+            height: 2rem;
+            width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
+        }
+    </style>
+
+</head>
+
+<body>
+<h1><a href="/">Schwartz.World!</a></h1>
+<script>
+    const maddie = `
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkkOOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkkOkOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkOOOOkkkkkkOOkkkOOOOOOOkOOkkkOOkkkkkxddxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkOOOOOkxddoollooodxkO0KK0Okdl;,'',,;:cldxkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkxolc:;;;;cldxxO0KKKKK0kdl;,...........,:coxkkkkkkkkxxxxxxxkkkkkxkkxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkOOOOOOOOOOkdoc:;;;:cldxO0KKKXXXKK0Oxoc;,.................';:ccllc:;,,;cccllllloooddxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkxlc:;:cldxO00KKXXXXXXXKKOxoc;,'.......................................''''',:ldxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkdc;;coxkO0KKKKXXXXXXXXK0kxo:;,''.....................................'''''......,cdxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkoc;:cdOKXXXXXXXXXXXXXX0Okoc:,,'....................................',,,''',,,'......:dxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxo:::ldOKXXXXXXNNNNXXXKK0dlc;,'.....................................',;;;,''............cdxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOko::cldk0XNNNNNNNNNNXXXXKOdc;;''......................................''''.''.............,oxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxlcclodkKXXNNNNNNNNNNXXK0kdc:;,,,'..........................................................lxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxdddddk0KXNNNNNNNNNNNXKKOkxdlcc::::;''.......................................................:dxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkxkOkk0XXXXNNNNNNNNNNXKOxdoooooollcc;,,'................................. ....................,oxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkOkkOKKKXXXXXXNNNNNNNNNX0kdoc::clooolllc:,'............................      ....................,oxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkxxkO0KXNNNXXXNNNNNNNNNXKOdl:,,;:cccccclllc;,,'.........................   ...   .................,oxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOdlok0KXNNNNXNNNNNNNNNNXKOxoc;,,,,,,,,,',,,,,,,','......................    .       ...............'lxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkl;:d0XXNNNNNNNNNNNNXXKKOxo:;'......'''......'''''........    ............      ...  ...............cxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOd:,lkKXNNNXNNNNNNNK00OOdc;'.....,'.........................  ...... ...       ..;. ................:dx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOx:';d0XNNXXNNNNNXKOkkkdc'.................................  ...........       .'ll;'...............cxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxc,:d0XXXXNNNXNXKOxxxdl;...................';;;'........... ..........       ..,ldxxdolc;,'.......:dxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkc;oOXXK0XNNXXXKOxxxxo:,.................',;:,'.......................     ..'',;lxxxxxxxxdolc:;:ldxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkllOXNXKXNXXXKKOxxxxoc;;,'......'',,,,;;;;:,'.........................    .',;;;;:oxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkk0XXXKXXXK000Oxoddolc:::::;;::::ccc:::;,''................ ........... ..',;;;;::lxkxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOkkkkOKXXKKXXXX0OOkOkddolllccc:::cccc::;;,''................... ...............',;;,,::coxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOkOKXXXKXXXK0OOOOOOkdlccllccc:::;;;,''''....................................',;;;,;::clxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOkOOkkO0KXXKKK000OkkOkxkkxlccccc::::;,,'''....................  ................,,;;;;;:::clxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOOkkO00OO00000OOkkOkdloddlcllcc:::;;,''''..................   ................',,;;;;:::::ldxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOOOOOkO00OxxxkO0OOkxxkkxlcooollllccc:::;,''',,,,,'''..........       ............',,,,;;;:::::lxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOOkkOOO00kxxkkO000OOkxdolc:loodollllllcc:,,,;:::;,''............        ..........,;;;;,,;;::::oxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOOkkkO00OkkkkkO0000Okdocc::cloddollllllllc:;::c::;,'.............   .  . .........,;;;;;,,;::::coxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOOkkOOOOkxxxxxxk00Oxdlcc::::cllolllc:::ccccc:::c:;;'....................... ......,;;;;;;,;;::::coxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOkkO00kxddxddddddxxdlccclc:ccllllcccc:;;;::ccccc:;,,'''................  ........',;;,,;:;;;;::;;cdxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOkOO00Okkxxddolllccc::::clccccccc::::::;;,;:c:;;,,'''''''''''..........    .....',,;,,,,;:;;;::;;;oxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOOOOOOO000Okolllll:;;;;,,,;::::::;;,,,;:::;;;;:;,'..''''''''',,,''''............'',,,,'''',;;;,;::;;cdxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOOOO0kxxO0Okxoc:colc:;;;;;,,;:::::;;,,,,;:::;;;;:;,''''',,,,,,,;;;,''........'',,,,,,,,,''',;;;,;;;;::cdxxxxxxxxxxxxxxxxxxx
+OOOOOOOOOOOkdddddddolccccloool;;:;;;;::c:::;;;;;;;:::;;;:::;;,,,,,,,;;;;;;;;,',,,,'',,,,,,,,,,,'''',,,;;,,;;;;::ldxxxxxxxxxxxkkkkxxxx
+OOOOOOOOkxoc::llccc::::cooc:c:,,;;;;::::::;;:::::::::;;::::;,,,,;;;;;;::::;;;;;;;;;,,,,,,,,,,,''',,,'',,',,,,;::lxkkkkkkkkkkkkkkkkkkk
+kkOOkxdl:;,,,,,,'',;;;;;::;,,,',;;;;::::::::::::::::::::::;;,,;;,,;;;;;:::;::;;;;;,,,,,,,,,,,''',,'''','',,,;;::oxkkkkkkkkkkkkkkkkkkk
+oool:,''''.........'','.....''',,;::ccc:::::;:::::;;;;:::;;,,,,,''',,;;:::::;;;;;,,,;;;;;,,'''''.....',,',,;;;:coxkkkkkkkkkkkkkkkkkkk
+::;,'''......................'',;;;:::::;;;;;;;;;;;;;;;:;;;,,,'..''',:::::;;;;;;,,,,,,,,,,'''''.....'',''',;;::coxkkkkkkkkkkkkkkkkkkk
+;,,,,;;,'...................''',,,;;;;;;;,,,;;;;;;;;;;;;,,''''',,;;:ccc::;;,,,,,,,,,,,,''''''''''''''','',,;:::coxxkkkkkkkkkkkkkkkkkk
+;..''',,'...................',,,,,,;,,,;;,;;;;;;;;;:;;,'...',,;:clooddol:;;,,'''''',,,,'''''''''''''',,,,,;;:;:coxxxxxkkkkkkkkkkkkkkk
+l;'........................'',,,,,,,,,,,,,;;;;;;;;;;,'''',,;:coddxxxxddolc;;,''...''''''''''''',,,,,,,',,,;;;;::ldxxxxxxxxxxxxxxxxxxx
+ol:,......................'''''''''',,,,,,,;;;;;;;,,,;;:cloxkOkkxxxxxddooll:,''.....''',,,,,''''''''',,,,;;;;;::ccoxxxxxxxxxxxxxxxxxx
+lllc,........................''''''''',,,,,,;;;;;;;:cldkOkk0000Okkxxddddddoc;,''.....''',,,''''''''',,,,;;;;;;::::codxxxxxxxxxxxxxxxx
+llccc,..........................''''''''',,,,,,;:coxO0KK0Okk0KK0Oxdddddxxxdl:,,'''.....''','''''''',,,,,;;;;;;::::::ldxxxxxxxxxxxxxxx
+llcccc;,''......................''''........';:ldk00000KKK0000K0kxddddddxxdl:;;,,'........''''''''',,,,,,,,,;;:::::::oxxxxxxxxxxxxxxx
+lllcccccccc:::c::;;::,..................'',;:oO000OOOO00KKKK00O0Okxxxdddddolc:;;;,'.........'''''''',,,,,,;,,;::::::;cdxxxxxxxxxxxxxx
+oolccccccccclloolcccc:,'..........'',,;::::::oOKK0OkOOOOkO0K000000OOxollooolc::;;;,''''......''''''',,;;,,;,,;;;:::;;:ldxxxxxxxxxxxxx
+llccccccccllooollccc:;;,,:cc::;;;::::cccc:;;;:o0XK0O0OkxxdxO00K00000kdoooooollc::;;;,;;;,'''''''''''',;;;;;;;;;;::;;;;:ldxxxxxxxxxxxx
+lccccccccllooollcccc:;,';cllcccclooolclooc;;;,;dKXKK0K0kxxkkOO0KKKK0Okddoloolllc:;;clccc:;,,,,'''''..',;;;;;;;:::;;,,;;coxxxxxxxxxxxx
+ccccccccllooolcccccc:,',:lllcccclooolclool:;,,,:d0XKKKK0Okkkkkk0000K00kddddoollc:::coollcc:;,'''...''',;;;,,;:::;;;;,;;:cdxxxxxxxxxxx
+cccccccclooollccccc::,',:llcccccloolccloooc;,,,,;oOKK0KK0OkkkkkkkOOOO0Oxxxddolc:::;:cclllc:;,'''...'',,,;,,,;::;;;,,,,;:cldxxxxxxxxxx
+cccccccclooollccccc:;,',cllcccccclllccloool:;;,,,;cdO0KK0000O0OOkxxxxkkxxxxdollccl:;;::clc:;,'''''',,;,,,,,,;;;;,,,,,,;::coxxxxxxxxxx
+cccccccclooollccccc:;,';cllccccccccccclodool:;;;;,,;cxO0000KKK000OOkxdxxxdddoollllc;,;;;:::;;,,,,,,,;,''',,,,,,,,,,,;;::ccldddddddddd
+lllccccclllllcllllc::;,,cllcccccccccccloooool:;;;,,,,:okO0KKKK000000kddddooddoccclc;,,,,,::;;,,,,,,,,'...''''',,''',,;;::cccloooooooo
+ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:clc;,,,',;:;;,,'',,,'......'',,,,''',,,;:::,;:ccccccc
+ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
+`;
+    console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
+</script>
+<nav>
+    <ul>
+        <li class="navlink"><a href="/">home</a></li>
+        <li class="navlink"><a href="/blog">blog</a></li>
+        <li class="navlink"><a href="/faq">faq</a></li>
+        <li class="navlink">
+            <a type="application/rss+xml" href="/blog/rss.xml">
+                <img class='icon' src="/img/feed.png" alt="">
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="title">
+        <h2>Raspberry Pi Timelapse Cam Pt2</h2>
+        
+            <small><b>Created:</b> Tue Nov 17 2020 13:18:38 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/raspberry_pi'>raspberry_pi</a>,<a href='/blog/tags/computer_photography'>computer_photography</a>,<a href='/blog/tags/ffmpeg'>ffmpeg</a>,<a href='/blog/tags/nodejs'>nodejs</a>,<a href='/blog/tags/javascript'>javascript</a>,<a href='/blog/tags/hacking'>hacking</a>,<a href='/blog/tags/static_site'>static_site</a>,<a href='/blog/tags/jamstack'>jamstack</a></small>
+        
+
+
+    </div>
+    <section id="main"><style>
+    body {
+      background: #004823;
+      color: #d2ffd7;
+    }
+    a {
+      color: #86df00;
+      font-weight: bolder;
+    }
+    code {
+        color: #153e1f;
+        background: #cefcd3;
+    }
+</style>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/12/comments</p>
+<p>TAGS::raspberry_pi,computer_photography,ffmpeg,nodejs,javascript,hacking,static_site,jamstack</p>
+</div>
+<p>I’ve been trying to improve the quality of the timelapse videos I’m taking with the Pi. I’ll be honest, I don’t know much about photography, but I went through and tried each of the <a href="https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes">sensor modes</a> one by one. Mode #1 seems to be the best so far, although I think I’ll inevitably have to learn to use the settings (shutter speed, ISO, etc) manually.</p>
+<p>The images come back decently sharp, but far from what you’d expect from a product called the “High Quality Camera”. In fairness, I’m using the cheapest lens I could get, so I don’t know what to expect. Eventually I’d like the camera to take either ambient light level (with a sensor) or the time of sunset (from an API) into account and do longer exposures when it’s dark out.</p>
+<p>The next step is actually going to try the same process using a Pi Zero W with the 5MP camera module and see how those pictures come out in comparison. I’d like to use the cheaper hardware for the eventual permanent camera setup. With winter coming, I’d love to have a timelapse pointed at the backyard full-time. I’m probably going to use the crappier camera for this so I can save the HQ one for other experiments.</p>
+<p>Anyway, without further ado, here’s the latest timelapse.</p>
+<h3 id="ice">Ice</h3>
+<video controls width="250">
+<source src="/video/ice.mp4"
+            type="video/mp4">
+<pre><code>Sorry, your browser doesn&#39;t support embedded videos.</code></pre>
+</video>
+</section>
+    <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/12/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/12/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
+        
+    </section>
+</main>
+</body>
+
+</html>
