@@ -30,8 +30,8 @@ export const createRSSFeed = async (entries) => {
         })
         body.querySelectorAll('video').forEach(vid => {
           const node = dom.window.document.createTextNode(`Inline video: ${vid.alt} (https://schwartz.world${vid.src})`);
-          img.parentNode.appendChild(node)
-          img.remove()
+          vid.parentNode.appendChild(node)
+          vid.remove()
         })
         base += `
     <item>
