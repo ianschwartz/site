@@ -39,7 +39,7 @@ export const createRSSFeed = async (entries) => {
         <pubDate>${new Date(pubDate).toDateString()}</pubDate>
         <link>https://schwartz.world${slug}</link>
         <description>${toTitleCase(title)} posted on ${new Date(pubDate).toDateString()}</description>
-        <content>${body.innerHTML}</content>
+        <content:encoded>${body.innerHTML}</content:encoded>
     </item>
     `
     }
