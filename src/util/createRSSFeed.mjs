@@ -28,12 +28,18 @@ export const createRSSFeed = async (entries) => {
           img.parentNode.appendChild(node)
           img.remove()
         })
+        body.querySelectorAll('video').forEach(vid => {
+          const node = dom.window.document.createTextNode(`Inline video: ${vid.alt} (https://schwartz.world${vid.src})`);
+          img.parentNode.appendChild(node)
+          img.remove()
+        })
         base += `
     <item>
         <title>${toTitleCase(title)}</title>
         <pubDate>${new Date(pubDate).toDateString()}</pubDate>
         <link>https://schwartz.world${slug}</link>
-        <description>${body.innerHTML}</description>
+        <description>${toTitleCase(title)} posted on ${new Date(pubDate).toDateString()}</description>
+        <content>${body.innerHTML}</content>
     </item>
     `
     }
