@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - javascript</title>
+    <title>schwartz.world - The Sad State Of Software For Kids</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,27 +176,78 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"javascript"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/raspberry_pi_timelapse_cam_pt2/index.html">Raspberry Pi Timelapse Cam Pt2 - Tue Dec 08 2020</a>
-</li><li>
-    <a href="/blog/raspberry_pi_timelapse_cam_pt1/index.html">Raspberry Pi Timelapse Cam Pt1 - Tue Dec 08 2020</a>
-</li><li>
-    <a href="/blog/adding_comments_to_the_blog/index.html">Adding Comments To The Blog - Sat Oct 03 2020</a>
-</li><li>
-    <a href="/blog/archive_bookmarklet/index.html">Archive Bookmarklet - Wed Sep 23 2020</a>
-</li><li>
-    <a href="/blog/the_hardest_and_easiest_part_of_react/index.html">The Hardest And Easiest Part Of React - Wed Sep 23 2020</a>
-</li><li>
-    <a href="/blog/on_typescript/index.html">On Typescript - Tue Sep 15 2020</a>
-</li><li>
-    <a href="/blog/static_site_generators/index.html">Static Site Generators - Thu Sep 10 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>The Sad State Of Software For Kids</h2>
+        
+            <small><b>Created:</b> Tue Dec 08 2020 11:06:16 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+           <small><b>Edited:</b> Tue Dec 08 2020</small>
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/tv'>tv</a>,<a href='/blog/tags/kids'>kids</a>,<a href='/blog/tags/software'>software</a>,<a href='/blog/tags/parenting'>parenting</a></small>
+        
 
+
+    </div>
+    <section id="main"><style>
+    body {
+      background: #340046;
+      color: #efd4ff;
+    }
+    a {
+      color: #ffaefc;
+      font-weight: bolder;
+    }
+</style>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/13/comments</p>
+<p>TAGS::tv,kids,software,parenting</p>
+</div>
+<p>I have two small children, a 4.5 year old and a 2.5 year old, both girls. Since the pandemic began, screen time has become more of a thing for both of them. It’s unfortunate, but I know few parents who haven’t had to do the same. It’s just too many hours a day to be <em>on</em>.</p>
+<p>So we have screen time, but <a href="https://schwartz.world/blog/educational_tv/">all screen time is not created equally</a>. At the bottom of the heirarchy is clips from childrens shows on YouTube (the only free way to stream Peppa Pig), then PBS Kids Shows (I’ll do a <em>Pinkalicious</em> rant on here someday), then classic (not new)</p>
+<p>Sesame Street, then PBS Kids games, then <em>Educational</em> games. I think it’s not controversial to state that interactive media like games are better than mindless screen time.</p>
+<p>Unfortunately, the quality of a lot of children’s media has really declined. Watching older shows and movies, it’s not just nostalgia. Modern Sesame Street episodes are 30 minutes instead of an hour. The show has much less time to devote to numbers and alphabet, instead choosing to focus on social lessons. I still love and respect the project, but the old show was a much more effective tool. Luckily there is access to older material online.</p>
+<p>In the same vein, software for little kids just sucks. There are a few standout projects, <a href="https://gcompris.net/index-en.html">GCompris</a> and <a href="https://learn.khanacademy.org/khan-academy-kids/">Kahn Academy Kids</a> come to mind. But for every good app, there are a lot of bad ones. In-App purchases and upgrades are very common, and subscription models are becoming common as well. <a href="https://www.abcmouse.com/">Renting</a> an app by the <a href="https://learnwithhomer.com/">month</a> is garbage.</p>
+<p>Most software development for kids seems to be in the mobile / tablet space, and that’s the worst one for small children. My younger daughter accidentally navigates to a different app, 100% of the time, and my older daughter knows how to send texts (although not to whom she is sending them). Anything browser based has a different problem, you can’t whack the keys without eventually closing the tab, opening some menu or just navigating away. And kids inevitably whack the menu.</p>
+<p>The first computer I had was an Apple II. It ran one program at a time. This was better for kids.</p>
+<p>The second computer I had ran DOS. Since there was no GUI, there were no conventional shortcuts. You could launch a game from a CD-ROM. You couldn’t run two programs at once on that either without launching Windows, or maybe you could but I never learned how. We could set my little sister up with a <em>Berenstein Bears</em> game and her two options were <code>play that game</code>, or <code>go find another activity</code>. This was better for kids.</p>
+<p>I wonder if a retrocomputer (or a reasonable emulation of one) is the solution for me. I just set up my old G3 iMac. There’s a ton of abandonware for it online, almost all of it as higher quality than today, or at least not full of the horrible UX patterns we’ve all gotten used to in the last couple of decades.</p>
+<p><img src='/img/imac.jpg' alt='Picture of my G3 iMac' /></p>
+<p>This is the ideal computer for a kid, I think. I’m not going to hook it up to the network, so security isn’t a concern. I can load it with enough software to keep them interested as they get older. It’s completely GUI based with no command line, but that’s not important for a kid who can’t read yet. Maybe even better. And it has a working CD/DVD drive, which is good because I really think physical media are better for children. Maybe I’ll do my next post on that.</p>
+</section>
+    <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/13/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/13/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
+        
     </section>
 </main>
 </body>
