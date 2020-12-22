@@ -6,10 +6,10 @@
     <description>JS Developer, Dad, Slacker</description>
     
     <item>
-        <title>Whoops also camera shenanigans</title>
+        <title>A whoops and an update</title>
         <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/whoops_also_camera_shenanigans/index.html</link>
-        <description>Whoops also camera shenanigans posted on Tue Dec 22 2020</description>
+        <link>https://schwartz.world/blog/a_whoops_and_an_update/index.html</link>
+        <description>A whoops and an update posted on Tue Dec 22 2020</description>
         <content>
 <h2 id="whoops">Whoops</h2>
 <p>If you’re looking at my RSS feed, you’re probably wondering why all my past posts are showing up as today’s date. That’s because I moved development of the blog off my work machine and onto my Dell XPS 15 running Ubuntu. I’m trying to learn more about Unix and systems programming, and I cloned the repo onto this machine to write this post. No problem.</p>
