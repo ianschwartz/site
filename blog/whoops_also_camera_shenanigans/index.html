@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - unixtools</title>
+    <title>schwartz.world - Whoops Also Camera Shenanigans</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,17 +176,78 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"unixtools"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/whoops_also_camera_shenanigans/index.html">Whoops Also Camera Shenanigans - Tue Dec 22 2020</a>
-</li><li>
-    <a href="/blog/converting_large_movies_to_smallish_mp4s/index.html">Converting Large Movies To Smallish Mp4s - Tue Dec 22 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>Whoops Also Camera Shenanigans</h2>
+        
+            <small><b>Created:</b> Tue Dec 22 2020 10:43:06 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/software'>software</a>,<a href='/blog/tags/computing'>computing</a>,<a href='/blog/tags/building_the_blog'>building_the_blog</a>,<a href='/blog/tags/rust'>rust</a>,<a href='/blog/tags/hacking'>hacking</a>,<a href='/blog/tags/unixtools'>unixtools</a></small>
+        
 
+
+    </div>
+    <section id="main"><style>
+    body {
+      background: #ebebeb;
+      color: #690606;
+    }
+    a {
+      color: #ad0505;
+      font-weight: bolder;
+    }
+</style>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/15/comments</p>
+<p>TAGS::software,computing,building_the_blog,rust,hacking,unixtools</p>
+</div>
+<h2 id="whoops">Whoops</h2>
+<p>If you’re looking at my RSS feed, you’re probably wondering why all my past posts are showing up as today’s date. That’s because I moved development of the blog off my work machine and onto my Dell XPS 15 running Ubuntu. I’m trying to learn more about Unix and systems programming, and I cloned the repo onto this machine to write this post. No problem.</p>
+<p>Well, slight problem, as the blog posts here use file metadata to store their <code>created_at</code> and <code>edited_at</code> information. New machine, all new files. It’s a major flaw in the system, and one I’ll have to rectify. For now, dear reader, ignore the other blog posts. This is the only new one. Or read the old ones. That’s also a choice.</p>
+<p>The question is, do I change the entire system, or add a step to the first build to set the proper dates? This is the fun part of RYO software, I think.</p>
+<h2 id="systems-programming">Systems Programming</h2>
+<p>That’s right, kiddos. I’ve been called a hipster before, and what the hell, I ride a fixie and enjoy a cortado as much as the next guy. I’m jumping on the Rust bandwagon.</p>
+<p>I’ve been writing React professionally for close to three years now and I’m just so bored of it. The browser is still a great platform to develop for, possibly the most truely portable software you can write at this point, but I can’t bring myself to write ReactJS outside of work hours anymore. I used to feel really good when I figured out how to use a new NPM module or browser API, but I think I’m getting good enough at JS to where these things aren’t so cryptic anymore. I’m not trying to brag, because I know I still have a lot to learn, but I recognize that I’ve hit a plateau.</p>
+<p>Rust feels like the right choice for me. A lot the syntax is similar enough to JavaScript and Lua that I can read other people’s code, but there are also a ton of new concepts to internalize. Functional-ish JavaScript actually feels like great training for the Rust ownership model. And the type system feels much more intuitive to me than the sad, misguided blurp that is TypeScript.</p>
+<p>I’ve written a simple cowsay clone, and my next project is going to be <a href="https://letter-press.netlify.app/scooper/">porting my MineSweeper clone</a> to the terminal using <a href="https://github.com/redox-os/termion">Termion</a>. It would be fun to try porting someone else’s software too. I bet I could figure out how to implement <code>gorilla.bas</code> in Rust. Hmmm…. Does this bring me one step closer to my goal of writing children’s software?</p>
+<p>The other big reason for learning Rust is that I’ve been using Unix tools a lot more lately. Most of the node scripts I write call shell commands and then just grab the output. For example, I’ve been trying to figure out how to take a screenshot from a USB webcam in Node. Node doesn’t have a built-in API, so the easiest method is to spin up a browser instance, access the webcam through the DOM, take a pic then return the data. OK, great, but what if I want to do the same thing in a Python app? Every computer I own comes with ffmpeg pre-installed, so it makes a lot more sense to figure out the FFMPEG command one time, save it somewhere (or better yet alias it), and then just call it from any script that needs to take a screenshot.</p>
+<p>So here I am writing little one-off scripts and tools for myself in Node and Python, but I don’t really know what I’m doing. As I get more into Unix tools, I need to learn more about the system. It’s time to learn a low-level language, and for some reason I’m just less scared of Rust than I am C.</p>
+<p>Lastly, there are no jobs in Rust really. A few, but not many. I know what it’s like to start learning a language years before you anticipate having a job writing it, and I think Rust is a good investment in the long term. I could use it to write internal tooling to support developers, or create NPM modules that call Rust code to access low-level APIs. I don’t know. Whatever.</p>
+<p>Anyway, I’m enjoying it, and these little forays into other languages always make me a stronger JS dev, so even if I don’t become a master Rustacean, it’s still time well spent.</p>
+</section>
+    <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/15/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/15/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
+        
     </section>
 </main>
 </body>
