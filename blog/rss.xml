@@ -6,6 +6,20 @@
     <description>JS Developer, Dad, Slacker</description>
     
     <item>
+        <title>Garfsay</title>
+        <pubDate>Wed Dec 23 2020</pubDate>
+        <link>https://schwartz.world/blog/garfsay/index.html</link>
+        <description>Garfsay posted on Wed Dec 23 2020</description>
+        <content>
+<p>So here I am, a week or so into being a Rustacean™. To experiment, I whipped up a little program that takes a string and then reprints it to the console with an ascii drawing of a popular cartoon cat. Basically <code>cowsay</code> but less <code>moo moo</code> and more <code>meow meow</code>.</p>
+<p>It might seem like a silly project, but I think it was a better first project than a number guessing game or a to-do list. You can say what you want about JavaScript, but there is a lot less mental overhead required for this kind of thing in a scripting language.</p>
+<p>I was all set to walk away when a friend submitted a PR to allow the use of <code>args</code>. My original implementation only supported piping, but now <code>garfsay</code> is a full-on <code>cowsay</code> clone. Then, I thought, why keep the fun for myself, and I bundled that bad boy up and pushed it to <code>crates.io</code> where it awaits installation by anyone who has a use for a program with no use.</p>
+<p>If you have Rust installed on your machine, feel free to <code>cargo install garfsay</code>, or otherwise <a href="/garfsay">stay tuned here</a> and eventually I’ll post a binary.</p>
+<p>Anyway, feel free to check the project out at it’s new home</p>
+</content>
+    </item>
+    
+    <item>
         <title>A whoops and an update</title>
         <pubDate>Tue Dec 22 2020</pubDate>
         <link>https://schwartz.world/blog/a_whoops_and_an_update/index.html</link>
