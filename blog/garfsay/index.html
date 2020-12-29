@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - building_the_blog</title>
+    <title>schwartz.world - Garfsay</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,19 +176,70 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"building_the_blog"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/a_whoops_and_an_update/index.html">A Whoops And An Update - Mon Dec 28 2020</a>
-</li><li>
-    <a href="/blog/adding_comments_to_the_blog/index.html">Adding Comments To The Blog - Sat Oct 03 2020</a>
-</li><li>
-    <a href="/blog/static_site_generators/index.html">Static Site Generators - Thu Sep 10 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>Garfsay</h2>
+        
+            <small><b>Created:</b> Mon Dec 28 2020 19:29:27 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/software'>software</a>,<a href='/blog/tags/computing'>computing</a>,<a href='/blog/tags/rust'>rust</a>,<a href='/blog/tags/hacking'>hacking</a>,<a href='/blog/tags/unixtools'>unixtools</a></small>
+        
 
+
+    </div>
+    <section id="main"><style>
+    body {
+      background: #ebebeb;
+      color: #690606;
+    }
+    a {
+      color: #ad0505;
+      font-weight: bolder;
+    }
+</style>
+<div id="meta">
+<p>COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/16/comments</p>
+<p>TAGS::software,computing,rust,hacking,unixtools</p>
+</div>
+<p>So here I am, a week or so into being a Rustacean™. To experiment, I whipped up a little program that takes a string and then reprints it to the console with an ascii drawing of a popular cartoon cat. Basically <code>cowsay</code> but less <code>moo moo</code> and more <code>meow meow</code>.</p>
+<p>It might seem like a silly project, but I think it was a better first project than a number guessing game or a to-do list. You can say what you want about JavaScript, but there is a lot less mental overhead required for this kind of thing in a scripting language.</p>
+<p>I was all set to walk away when a friend submitted a PR to allow the use of <code>args</code>. My original implementation only supported piping, but now <code>garfsay</code> is a full-on <code>cowsay</code> clone. Then, I thought, why keep the fun for myself, and I bundled that bad boy up and pushed it to <code>crates.io</code> where it awaits installation by anyone who has a use for a program with no use.</p>
+<p>If you have Rust installed on your machine, feel free to <code>cargo install garfsay</code>, or otherwise <a href="/garfsay">stay tuned here</a> and eventually I’ll post a binary.</p>
+<p>Anyway, feel free to check the project out at it’s new home</p>
+</section>
+    <section id="comments">
+        
+            <script>
+                const getComment = async () => {
+                    const data = await fetch('https://api.github.com/repos/ianschwartz/site/issues/16/comments');
+                    const comments = await data.json();
+                    console.log(comments)
+                    const comms = comments.length ? comments : [];
+                    const commentsHTML = comms.map(comment => {
+                        const isAuthor = comment.author_association === 'COLLABORATOR'
+                        || comment.author_association === 'AUTHOR' ?
+                            'isAuthor' : '';
+                        return `<li class='comment'>
+<div class='commentUser ${isAuthor}'>
+<img src='${comment.user.avatar_url}' class='gravatar' alt='${comment.user} gravatar' />
+<b>${comment.user.login}&nbsp;</b>
+<span>${new Date(comment.created_at).toLocaleDateString()}:</span>
+</div>
+<p>${parseMarkdown(comment.body)}</p>
+<small><a href='${comment.html_url}'>link to comment</a></small>
+</li>`
+                    })
+                    const wrapper = `
+<h3>Comments:</h3>
+<ul>${commentsHTML.join('')}</ul>
+<a href="${toRealUrl('https://api.github.com/repos/ianschwartz/site/issues/16/comments')}">Leave a comment on GitHub</a>`
+
+                    document.querySelector('#comments').innerHTML = wrapper;
+
+                }
+                getComment()
+            </script>
+        
     </section>
 </main>
 </body>

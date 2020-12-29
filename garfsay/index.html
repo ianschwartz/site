@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - building_the_blog</title>
+    <title>schwartz.world - Blog Index</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,19 +176,34 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"building_the_blog"</i></h2>
+        <h2>Garfsay</h2>
+        <small><b>not moo moo! meow meow!</small>
     </div>
-    <ul>
-        <li>
-    <a href="/blog/a_whoops_and_an_update/index.html">A Whoops And An Update - Mon Dec 28 2020</a>
-</li><li>
-    <a href="/blog/adding_comments_to_the_blog/index.html">Adding Comments To The Blog - Sat Oct 03 2020</a>
-</li><li>
-    <a href="/blog/static_site_generators/index.html">Static Site Generators - Thu Sep 10 2020</a>
-</li>
-    </ul>
     <section id="main">
+      <p>This is a toy project to learn Rust. It is a clone of cowsay but uses a fat cat instead of a cow. Happy Lasagna!</p>
+      <h2 id="installation">Installation</h2>
+      <p>At present the primary method of installation is to use <code>cargo</code>. Make sure you have <code>cargo</code> and <code>rust</code> installed and run the following command:</p>
+      <p><code>cargo install garfsay</code></p>
+      <p>Eventually I will make binaries available at <a href="https://schwartz.world/garfsay">schwartz.world</a>, but <a href="#Contributions">that day is not today</a>.</p>
+      <h2 id="usage">Usage</h2>
+      <p><code>Garfsay</code> can be called two ways.</p>
+      <h3 id="command-line-arguments">Command line arguments</h3>
+      <p><code>$ garfsay Somebody once told me the world was gonna roll me</code></p>
+      <h3 id="piping-from-stdout">Piping from stdout</h3>
+      <p><code>echo I aint the sharpest tool in the shed | garfsay</code></p>
+      <h2 id="contributions">Contributions</h2>
+      <p>This is very much a learning project, so please feel free to contribute in any way possible. Code contributions are welcome, as are bug reports, feature requests and help packaging the app for whatever package manager you think it should be in.</p>
 
+      <ul>
+        <li>
+          <a href="https://crates.io/crates/garfsay">crates.io/crates/garfsay</a>
+        </li>
+        <li>
+           <a href="https://github.com/schwartzworld/garfsay">github.com/schwartzworld/garfsay</a>
+        </li>
+      </ul>
+    </section>
+    <section id="comments">
     </section>
 </main>
 </body>
