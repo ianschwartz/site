@@ -12,7 +12,7 @@
     }
 </style>
 <div id="meta">
-TAGS::tech,complaints
+TAGS::tech,javascript,refactoring,thoughts
 COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/18/comments
 </div>
 
