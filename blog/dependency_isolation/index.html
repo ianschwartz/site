@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - tech</title>
+    <title>schwartz.world - Dependency Isolation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,29 +176,61 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"tech"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/dependency_isolation/index.html">Dependency Isolation - Mon Feb 01 2021</a>
-</li><li>
-    <a href="/blog/id75_day_2/index.html">Id75 Day 2 - Wed Nov 04 2020</a>
-</li><li>
-    <a href="/blog/new_keyboard_day/index.html">New Keyboard Day - Wed Nov 04 2020</a>
-</li><li>
-    <a href="/blog/converting_large_movies_to_smallish_mp4s/index.html">Converting Large Movies To Smallish Mp4s - Tue Oct 27 2020</a>
-</li><li>
-    <a href="/blog/dongles/index.html">Dongles - Fri Sep 25 2020</a>
-</li><li>
-    <a href="/blog/the_hardest_and_easiest_part_of_react/index.html">The Hardest And Easiest Part Of React - Wed Sep 23 2020</a>
-</li><li>
-    <a href="/blog/on_typescript/index.html">On Typescript - Tue Sep 15 2020</a>
-</li><li>
-    <a href="/blog/static_site_generators/index.html">Static Site Generators - Thu Sep 10 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>Dependency Isolation</h2>
+        
+            <small><b>Created:</b> Mon Feb 01 2021 10:56:23 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+        
+            <small><b>Tags:</b> <a href='/blog/tags/tech'>tech</a>,<a href='/blog/tags/javascript'>javascript</a>,<a href='/blog/tags/refactoring'>refactoring</a>,<a href='/blog/tags/thoughts COMMENTS'>thoughts COMMENTS</a></small>
+        
 
+
+    </div>
+    <section id="main"><pre><code>                           &lt;style&gt;
+body {
+  background: steelblue;
+  color: lightgoldenrodyellow;
+}
+a {
+  color: firebrick;
+  font-weight: bolder;
+}
+h1, h2, h3, h4, h5 {
+    color: darkgreen;
+}</code></pre>
+</style>
+<div id="meta">
+<p>TAGS::tech,javascript,refactoring,thoughts COMMENTS::https://api.github.com/repos/ianschwartz/site/issues/18/comments</p>
+</div>
+<h3 id="refactoring-driven-development">Refactoring Driven Development</h3>
+<p>I’m a big believer in <code>code fast, refactor often</code>. You learn more about the product you are trying to build by building it than you do by thinking, and your best bet is to just get it built and then rebuild the broken parts with the knowledge you’ve gained. This philosophy extends beyond just development, as design and product priorities are likely to change as well.</p>
+<p>When I first read an explanation of the term <code>refactoring</code>, I remember thinking that it sounded insane. Coding seemed so hard. How could someone get code working and then go back and rewrite it a different way? Why would you do the same work twice? Turns out that refactoring is necessary and fun, so you should just stop worrying and learn to love it. And the number one proven way to not hate refactors, is to code defensively against them. Every line of code you write is either wrong, or eventually going to be wrong. Scripting is different, we’re talking about application development. Code that needs to be supported long-term.</p>
+<h3 id="an-experiment-in-rdd">An Experiment in RDD</h3>
+<p>I’m working on a NodeJS project right now (another static site generator, yes how did you know?), and I’m trying something I’ve been toying with for a long time. Let me explain the problem:</p>
+<p>You build an app, and you need some date functionality, so you bring in <code>DateLib</code> (not a real library). Its hardly a controversial decision, but it might be the right one for you. <code>DateLib</code> is great and quickly it becomes woven into the fabric of your code. Every React component or function with date needs imports <code>DateLib</code>. It’s no big deal.</p>
+<p><code>&lt;Foo&gt;{DateLib(bar).format("dddd, MMMM Do YYYY, h:mm:ss a")}&lt;/Foo&gt;</code></p>
+<p>Some problems I can foresee:</p>
+<ul>
+<li><p>Multiple devs not being aligned on date handling: Are your date formats consistent across your app?</p></li>
+<li><p>Eventually <code>DateLib</code> is likely to require an upgrade, or perhaps it may not always meet your needs and you will feel trapped.</p></li>
+<li><p>Feature development requires searching through the codebase for patterns to copy.</p></li>
+</ul>
+<p>What if you only called each dependency in one file in your entire app. One dependency per file, one file per dependency. I believe this would encourage code that is easier to refactor and build upon. In a new file create some sort of container (object, class, closure, doesn’t matter), and re-export the functionality you actually need in your app. When the time comes to refactor, there will be a clear path. One file with changes to make. Even if that file has 40 methods, they are all in one clear place and not scattered throughout the codebase.</p>
+<p>More than that, this pattern encourages better abstractions. Code that is important to your app shouldn’t be reimplemented everywhere. I’m not talking about functions like <code>const getFirstLetter = (str) =&gt; str[0];</code>. I couldn’t care less about that stuff becuase your method for getting the first letter is never going to need rethinking.</p>
+<p>When you call <code>DateLib().format('MM-DD-YYYY)</code>, what are you actually trying to do? There probably is a semantic meaning to that date, which you are failing to express, and because you are failing to express it, you’re never going to reuse it even if you wrap it in a cute reusable function. Crafting meaningful abstractions is a present to future you.</p>
+<h3 id="make-abstractions-introspectable">Make Abstractions Introspectable</h3>
+<p>So, to beat our example to death here, it’s likely that you only need a handful of date formats for a single app. What are you doing that you have 40 different date formats? It increases the cognitive load for using your software, and exponentially increases the cognitive load for developing it. Loading all interactions with <code>DateLib</code> into a single container with methods on it, means that devs can introspect that container, logging it to the console or a debugger and poking at the different methods. This is much simpler than having to go through the <code>DateLib</code> docs all the time.</p>
+<h3 id="make-abstractions-reusable-across-projects">Make Abstractions Reusable Across Projects</h3>
+<p>If you find yourself actually creating reusable abstractions, you may find that you are able to pull those out and use them across projects, even if it’s by copy-pasting a single file. How can you reuse 10,000 disparate calls to <code>DateLib().format()</code>?</p>
+<h3 id="make-abstractions-testable">Make Abstractions Testable</h3>
+<p>Tests aren’t just <code>is this code doing what its supposed to</code>. I mean they are, obviously, but for me there is a contract between the name of a method and what it’s supposed to be doing. Tests confirm this contract is being held up. Using this method, I can ensure that 100% of my date-formatting functionality is covered in a single test file. Testing this way is actually fun.</p>
+<p>Anyway, I’m trying it now, but I’m not ready to open source the code just yet. Curious about other people’s thoughts.</p>
+<p>&lt;3</p>
+<p>schwartz</p>
+</section>
+    <section id="comments">
+        
     </section>
 </main>
 </body>

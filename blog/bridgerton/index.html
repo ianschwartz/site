@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - tech</title>
+    <title>schwartz.world - Bridgerton</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,8 @@
         #meta {
             display: none;
         }
-        body {
-            background: lightsalmon;
-            color: darkslateblue;
+        img {
+            max-width: 100%;
         }
         nav {
             display: flex;
@@ -65,6 +64,12 @@
         .gravatar {
             height: 2rem;
             width: 2rem;
+        }
+        pre {
+            width: 100%;
+        }
+        code {
+            background: rgba(240, 255, 143, 0.05);
         }
     </style>
 
@@ -135,6 +140,26 @@ ooolccccccccccloolcc:;,,:llcllcccccccccccllooc;;,,,,,,;lx0KKK0000000kxddolllolc:
 ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;:::;,,',,;;;;;,,','''...''',,;;;;;,,,;,,;::'.,;:;::::
 `;
     console.log(maddie);
+
+    function parseMarkdown(markdownText) {
+        const htmlText = markdownText
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+            .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+            .replace(/\n$/gim, '<br />')
+
+        return htmlText.trim()
+    }
+
+    const toRealUrl = (url = '') => {
+        const [_, slug] = url.split('repos');
+        return `https://github.com${slug.replace('comments', '')}`;
+    }
 </script>
 <nav>
     <ul>
@@ -151,29 +176,21 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Posts tagged <i>"tech"</i></h2>
-    </div>
-    <ul>
-        <li>
-    <a href="/blog/dependency_isolation/index.html">Dependency Isolation - Mon Feb 01 2021</a>
-</li><li>
-    <a href="/blog/id75_day_2/index.html">Id75 Day 2 - Wed Nov 04 2020</a>
-</li><li>
-    <a href="/blog/new_keyboard_day/index.html">New Keyboard Day - Wed Nov 04 2020</a>
-</li><li>
-    <a href="/blog/converting_large_movies_to_smallish_mp4s/index.html">Converting Large Movies To Smallish Mp4s - Tue Oct 27 2020</a>
-</li><li>
-    <a href="/blog/dongles/index.html">Dongles - Fri Sep 25 2020</a>
-</li><li>
-    <a href="/blog/the_hardest_and_easiest_part_of_react/index.html">The Hardest And Easiest Part Of React - Wed Sep 23 2020</a>
-</li><li>
-    <a href="/blog/on_typescript/index.html">On Typescript - Tue Sep 15 2020</a>
-</li><li>
-    <a href="/blog/static_site_generators/index.html">Static Site Generators - Thu Sep 10 2020</a>
-</li>
-    </ul>
-    <section id="main">
+        <h2>Bridgerton</h2>
+        
+            <small><b>Created:</b> Mon Feb 01 2021 10:57:40 GMT-0500 (Eastern Standard Time)</small>
+        
+        
+        
 
+
+    </div>
+    <section id="main"><p>What is to follow is an honest review of the Netflix series <em>Bridgerton</em>. My wife watched the series while I alternately played on my phone, worked on some code, slept and occasionally I joined her as well. I missed a lot, and I don’t care.</p>
+<p>Bridgerton is apparently the story of Daphne, a 21-year-old debuntante, and The Duke, a rich guy she likes. Early in the series, the Duke pledges to his dying father that he will never sire children, as revenge for the dad having been so terrible. As someone who has sired children, this is a perfectly acceptable choice to make. Kids are wonderful but hard, and if you are worried about perpetuating a pattern of abuse, that makes it harder. The Duke is also like 25? I also did not want to have kids at 25, although I did not pledge it on my father’s deathbed (something about linear time and his still being alive and also a great dad).</p>
+<p>Daphne and the Duke do not want to court anybody, so they pledge to court each other. They are young, sexy and really repressed. They are also both whiny bitches. This is very hot and you are expected to really feel the sexual tension here.</p>
+</section>
+    <section id="comments">
+        
     </section>
 </main>
 </body>
