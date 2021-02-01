@@ -6,24 +6,10 @@
     <description>JS Developer, Dad, Slacker</description>
     
     <item>
-        <title>Garfsay</title>
-        <pubDate>Wed Dec 23 2020</pubDate>
-        <link>https://schwartz.world/blog/garfsay/index.html</link>
-        <description>Garfsay posted on Wed Dec 23 2020</description>
-        <content>
-<p>So here I am, a week or so into being a Rustacean™. To experiment, I whipped up a little program that takes a string and then reprints it to the console with an ascii drawing of a popular cartoon cat. Basically <code>cowsay</code> but less <code>moo moo</code> and more <code>meow meow</code>.</p>
-<p>It might seem like a silly project, but I think it was a better first project than a number guessing game or a to-do list. You can say what you want about JavaScript, but there is a lot less mental overhead required for this kind of thing in a scripting language.</p>
-<p>I was all set to walk away when a friend submitted a PR to allow the use of <code>args</code>. My original implementation only supported piping, but now <code>garfsay</code> is a full-on <code>cowsay</code> clone. Then, I thought, why keep the fun for myself, and I bundled that bad boy up and pushed it to <code>crates.io</code> where it awaits installation by anyone who has a use for a program with no use.</p>
-<p>If you have Rust installed on your machine, feel free to <code>cargo install garfsay</code>, or otherwise <a href="/garfsay">stay tuned here</a> and eventually I’ll post a binary.</p>
-<p>Anyway, feel free to check the project out at it’s new home</p>
-</content>
-    </item>
-    
-    <item>
         <title>A whoops and an update</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
+        <pubDate>Mon Dec 28 2020</pubDate>
         <link>https://schwartz.world/blog/a_whoops_and_an_update/index.html</link>
-        <description>A whoops and an update posted on Tue Dec 22 2020</description>
+        <description>A whoops and an update posted on Mon Dec 28 2020</description>
         <content>
 <h2 id="whoops">Whoops</h2>
 <p>If you’re looking at my RSS feed, you’re probably wondering why all my past posts are showing up as today’s date. That’s because I moved development of the blog off my work machine and onto my Dell XPS 15 running Ubuntu. I’m trying to learn more about Unix and systems programming, and I cloned the repo onto this machine to write this post. No problem.</p>
@@ -42,10 +28,157 @@
     </item>
     
     <item>
+        <title>Garfsay</title>
+        <pubDate>Mon Dec 28 2020</pubDate>
+        <link>https://schwartz.world/blog/garfsay/index.html</link>
+        <description>Garfsay posted on Mon Dec 28 2020</description>
+        <content>
+<p>So here I am, a week or so into being a Rustacean™. To experiment, I whipped up a little program that takes a string and then reprints it to the console with an ascii drawing of a popular cartoon cat. Basically <code>cowsay</code> but less <code>moo moo</code> and more <code>meow meow</code>.</p>
+<p>It might seem like a silly project, but I think it was a better first project than a number guessing game or a to-do list. You can say what you want about JavaScript, but there is a lot less mental overhead required for this kind of thing in a scripting language.</p>
+<p>I was all set to walk away when a friend submitted a PR to allow the use of <code>args</code>. My original implementation only supported piping, but now <code>garfsay</code> is a full-on <code>cowsay</code> clone. Then, I thought, why keep the fun for myself, and I bundled that bad boy up and pushed it to <code>crates.io</code> where it awaits installation by anyone who has a use for a program with no use.</p>
+<p>If you have Rust installed on your machine, feel free to <code>cargo install garfsay</code>, or otherwise <a href="/garfsay">stay tuned here</a> and eventually I’ll post a binary.</p>
+<p>Anyway, feel free to check the project out at it’s new home</p>
+</content>
+    </item>
+    
+    <item>
+        <title>Bring back physical media</title>
+        <pubDate>Tue Dec 15 2020</pubDate>
+        <link>https://schwartz.world/blog/bring_back_physical_media/index.html</link>
+        <description>Bring back physical media posted on Tue Dec 15 2020</description>
+        <content>
+<p>My first computer (Apple IIe) used 5-inch floppy disks. If a program didn’t fit on a single floppy, you might need to spread it across multiples, but otherwise this solution was fine. Floppy disks could hold the application AND the user data, be easily backed up or shared, and storing them was easy enough. The computer was old when I got it, and the former owner included something like 500 programs on floppy disk, an endlessly discoverable mountain of software.</p>
+<p>My next computer (90s era IBM clone) had multiple media drives, a 3.5-inch floppy drive and a CD drive. The floppies held more data than the old 5-inchers, and had all the same upsides. I could work on something at home, bring it to a computer at school and just keep going. The CD drive was a big game changer though. A CD can hold 700mb of data, and my hard drive at the time was 600mb. A really common pattern was to run software off a CD, but save your user data on floppies or hard drive. There was internet, initially in the AOL and later dial-up, but bandwidth was expensive and transfer speeds were slow. So slow.</p>
+<p>My next computer, a G3 Graphite iMac, had an optical drive that could read and write CDs and read DVDs. I used to rent movies from the Blockbuster where I worked and watch them on the tiny CRT screen. This was in the Napster days, and burning CDs was a boon. I could make mixes for friends or girlfriends, or even share my own music. I burned a lot of CDs in those days. The 100gb hard drive was enough that I didn’t miss my floppy drive, plus we had the internet everywhere by then.</p>
+<p>Then came the MacBook Pro, a beast of a machine with a SuperDrive (burns CDs and DVDs), USBs galore and even an SD card reader. I owned two incarnations of this machine, one of which is still in service to this day. Around this time, my college started using Iomega Zip Disks, although I never bought a drive for myself, I did own several of the disks.</p>
+<p>Now I have two computers I switch between, but neither accepts any form of physical media beyond a USB stick without the inclusion of an external drive. The Mac (my reluctant work machine), can’t even use these without a dongle. These computers are designed to rely on the internet as a means of installing programs and sharing data, which obviously works fine since everybody in the world is doing it that way.</p>
+<h3 id="so-what">So what?</h3>
+<p>I miss removeable physical media. I miss having a drawer of disks or CDs. Yes, I can still burn CDs, and do, but the subtle advantages of physical media are hard to fully grasp without an ecosystem.</p>
+<p>In high school, every kid had a CD book in their backpack. We would ride the bus on field trips and look through each other’s collections to listen to them on the way. I discovered a lot of great music this way. I guess you could look through someone’s iTunes library or Spotify history, but it wouldn’t be the same.</p>
+<p>On the same note, a lot of my early musical tastes were formed by listening to my parents old records. I can play songs I like for my children, but without a physical media library they are unlikely to discover my music on their own, especially without album art. I remember seeing the cover of <code>Eat A Peach</code> and thinking that I really wanted to listen to it.</p>
+<p>As a parent I have a lot of pictures of my kids, many of which are precious to me. We’ve printed some out, stored others on a SSD, and the rest are in the cloud. Yes, we could print more/all of them, but we all know this is no longer the norm, and I’m probably never going to meander through the folders on our storage drive the way I used to through old family albums.</p>
+<p>I think there was a lot of value in being able to run software directly off a CD instead of kludging up your internal storage with installed apps or relying on the cloud. Most software today is designed with the assumption that you have lots of memory, lots of storage and lots of cloud access. Can I even run a MacOS app directly off a CD? Maybe I should try. Look at your own Applications folder and tell me you really need all that installed on your machine. How easy is all that to uninstall if you want to? How big of a SSD would you actually need if you only stored your user data on your machine? How much less worried would you be about security if your computer didn’t require internet access to function? If, in 10 years I want to fire up an old computer or phone, could I even get software onto it?</p>
+</content>
+    </item>
+    
+    <item>
+        <title>The sad state of software for kids</title>
+        <pubDate>Tue Dec 08 2020</pubDate>
+        <link>https://schwartz.world/blog/the_sad_state_of_software_for_kids/index.html</link>
+        <description>The sad state of software for kids posted on Tue Dec 08 2020</description>
+        <content>
+<p>I have two small children, a 4.5 year old and a 2.5 year old, both girls. Since the pandemic began, screen time has become more of a thing for both of them. It’s unfortunate, but I know few parents who haven’t had to do the same. It’s just too many hours a day to be <em>on</em>.</p>
+<p>So we have screen time, but <a href="https://schwartz.world/blog/educational_tv/">all screen time is not created equally</a>. At the bottom of the heirarchy is clips from childrens shows on YouTube (the only free way to stream Peppa Pig), then PBS Kids Shows (I’ll do a <em>Pinkalicious</em> rant on here someday), then classic (not new)</p>
+<p>Sesame Street, then PBS Kids games, then <em>Educational</em> games. I think it’s not controversial to state that interactive media like games are better than mindless screen time.</p>
+<p>Unfortunately, the quality of a lot of children’s media has really declined. Watching older shows and movies, it’s not just nostalgia. Modern Sesame Street episodes are 30 minutes instead of an hour. The show has much less time to devote to numbers and alphabet, instead choosing to focus on social lessons. I still love and respect the project, but the old show was a much more effective tool. Luckily there is access to older material online.</p>
+<p>In the same vein, software for little kids just sucks. There are a few standout projects, <a href="https://gcompris.net/index-en.html">GCompris</a> and <a href="https://learn.khanacademy.org/khan-academy-kids/">Kahn Academy Kids</a> come to mind. But for every good app, there are a lot of bad ones. In-App purchases and upgrades are very common, and subscription models are becoming common as well. <a href="https://www.abcmouse.com/">Renting</a> an app by the <a href="https://learnwithhomer.com/">month</a> is garbage.</p>
+<p>Most software development for kids seems to be in the mobile / tablet space, and that’s the worst one for small children. My younger daughter accidentally navigates to a different app, 100% of the time, and my older daughter knows how to send texts (although not to whom she is sending them). Anything browser based has a different problem, you can’t whack the keys without eventually closing the tab, opening some menu or just navigating away. And kids inevitably whack the menu.</p>
+<p>The first computer I had was an Apple II. It ran one program at a time. This was better for kids.</p>
+<p>The second computer I had ran DOS. Since there was no GUI, there were no conventional shortcuts. You could launch a game from a CD-ROM. You couldn’t run two programs at once on that either without launching Windows, or maybe you could but I never learned how. We could set my little sister up with a <em>Berenstein Bears</em> game and her two options were <code>play that game</code>, or <code>go find another activity</code>. This was better for kids.</p>
+<p>I wonder if a retrocomputer (or a reasonable emulation of one) is the solution for me. I just set up my old G3 iMac. There’s a ton of abandonware for it online, almost all of it as higher quality than today, or at least not full of the horrible UX patterns we’ve all gotten used to in the last couple of decades.</p>
+<p>Inline image: Picture of my G3 iMac (https://schwartz.world/img/imac.jpg)</p>
+<p>This is the ideal computer for a kid, I think. I’m not going to hook it up to the network, so security isn’t a concern. I can load it with enough software to keep them interested as they get older. It’s completely GUI based with no command line, but that’s not important for a kid who can’t read yet. Maybe even better. And it has a working CD/DVD drive, which is good because I really think physical media are better for children. Maybe I’ll do my next post on that.</p>
+</content>
+    </item>
+    
+    <item>
+        <title>Raspberry pi timelapse cam pt2</title>
+        <pubDate>Tue Dec 08 2020</pubDate>
+        <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt2/index.html</link>
+        <description>Raspberry pi timelapse cam pt2 posted on Tue Dec 08 2020</description>
+        <content>
+<p>I’ve been trying to improve the quality of the timelapse videos I’m taking with the Pi. I’ll be honest, I don’t know much about photography, but I went through and tried each of the <a href="https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes">sensor modes</a> one by one. Mode #1 seems to be the best so far, although I think I’ll inevitably have to learn to use the settings (shutter speed, ISO, etc) manually.</p>
+<p>The images come back decently sharp, but far from what you’d expect from a product called the “High Quality Camera”. In fairness, I’m using the cheapest lens I could get, so I don’t know what to expect. Eventually I’d like the camera to take either ambient light level (with a sensor) or the time of sunset (from an API) into account and do longer exposures when it’s dark out.</p>
+<p>The next step is actually going to try the same process using a Pi Zero W with the 5MP camera module and see how those pictures come out in comparison. I’d like to use the cheaper hardware for the eventual permanent camera setup. With winter coming, I’d love to have a timelapse pointed at the backyard full-time. I’m probably going to use the crappier camera for this so I can save the HQ one for other experiments.</p>
+<p>Anyway, without further ado, here’s the latest timelapse.</p>
+<h3 id="ice">Ice</h3>
+
+Inline video: undefined (https://schwartz.world)</content>
+    </item>
+    
+    <item>
+        <title>Raspberry pi timelapse cam pt1</title>
+        <pubDate>Tue Dec 08 2020</pubDate>
+        <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt1/index.html</link>
+        <description>Raspberry pi timelapse cam pt1 posted on Tue Dec 08 2020</description>
+        <content>
+<p>I’m a front-end dev by trade, and while I am comfortable whipping up a server in a few different frameworks, I really prefer to avoid exposing any of my server-side code to the open internet. <a href="https://schwartz.world/blog/static_site_generators/">For example, this site generates a build on my local machine, then pushes it to Github.</a> The content is then served by Netlify with no need to maintain a server. JAMStack, baby!</p>
+<p>But how far can we take it?</p>
+<p>I have this idea I’ve been mulling over for a while. I recently got the new <code>Raspberry Pi High Quality camera</code>, and it’s pretty nice. I’m using the cheapest lens I could get, and the images are pretty good. Eventually, I’d love to invest in a nicer lens, but <span id="experience">experience has taught me to build first and then buy later.</span> I’ve got a whole pile of Arduino and Pi boards to remind me, lest I forget.</p>
+<p>The idea is to create a timelapse camera, which is a common enough use-case for the Pi. The program I’m going to write is real Unix-y, because each piece is responsible for so little. There are three components:</p>
+<h3 id="image-server">Image Server</h3>
+<p>Most of the time when people use the Pi as a webcam / security cam, they configure it to actively snap photos regularly and then push those photos to an external server or possibly just stream them over the network. I’ve done the opposite, the Pi runs a simple Flask app. When it receives a connection, it snaps a picture and returns the picture over HTTP where it can be saved as a file or whatever.</p>
+<p>I did it this way because I really don’t want to have to write code on the Pi. I don’t want to SSH, I don’t want to hook up a monitor. I just want to have a machine I can send an HTTP request to and get a picture back and keep all the actual business code on my laptop or <code>server</code> (also a laptop).</p>
+<h3 id="image-client">Image Client</h3>
+<p>The client is also very minimal. I’m using NodeJS at the moment, but it could just as easily be any other language, even just a cron job that calls <code>curl</code> and pipes the output to a jpg. The code is barely interesting enough to post (although I eventually will).</p>
+<p>Right now the picture just uses the default settings, but eventually I would like to configure settings so it takes longer exposures as the sun goes down. Maybe one endpoint for daytime pics and one for nighttime, and the client can decide which kind of picture to take.</p>
+<h3 id="build-server">Build Server</h3>
+<p>A third program on the client machine will make a call to <code>FFMPEG</code> at regular intervals to stitch all the individual files into a video or gif, and then push the resulting file up to Github. The idea is that you could go to the URL and see the current version of the timelapse, which gets longer every time you visit the URL, as you keep loading the latest version.</p>
+<h3 id="proof-of-concept">Proof of Concept</h3>
+<p>I’m not nearly ready to show the world the code, but I did whip up a quick video of the “sunrise” as viewed from my office window. As this is a POC, I haven’t done the following:</p>
+<ul>
+<li>focus the image</li>
+<li>take the screen off the window</li>
+<li><a href="#experience">gotten a better lens</a></li>
+</ul>
+<p>Without further ado:</p>
+
+Inline video: undefined (https://schwartz.world)</content>
+    </item>
+    
+    <item>
+        <title>Self-censorship</title>
+        <pubDate>Thu Nov 05 2020</pubDate>
+        <link>https://schwartz.world/blog/self-censorship/index.html</link>
+        <description>Self-censorship posted on Thu Nov 05 2020</description>
+        <content><p>As a child, I was unafraid to create. I wrote stories and songs without fear of embarrassment. I can’t say when this changed, but it did, to be sure. There have been a few times when I’ve written things that really impressed myself, but most of the time I make myself cringe. It’s possible that all first drafts are cringey, that I should polish my turds into gleaming gems, but the first cheesy rhyme and I send myself spiraling.</p>
+<p>The irony is that I love lyrics that are unabashedly cheesy. I respect writers who can write an imperfect line and just move on, rather than obsessing over each comma until it becomes a masterpiece (or gets too frustrating to continue).</p>
+</content>
+    </item>
+    
+    <item>
+        <title>Id75 day 2</title>
+        <pubDate>Wed Nov 04 2020</pubDate>
+        <link>https://schwartz.world/blog/id75_day_2/index.html</link>
+        <description>Id75 day 2 posted on Wed Nov 04 2020</description>
+        <content><p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
+<p><a href="https://www.typingtest.com/">Inline image: Typing Test Screen Shot - 18wpm, 2 typos (https://schwartz.world/img/typetest-2020-11-3.png)</a></p>
+<p>I’m absolutely loving QMK though, and I can’t believe the power is offers. On layer 1 (not 0), I have set the arrow keys to emit mouse events. I can move the pointer using them as well as left and right click. Additionally, with all the typos, I got pretty sick of reaching for the <code>backspace</code> key, so I remapped <code>j</code> and <code>k</code> to work as <code>backspace</code> and <code>enter</code> respectively. There are a lot of keys I never use, so I’d like to relegate them to lower layers (I’m looking at you <code>ins</code> and <code>scroll lock</code>) and use the extra real estate for macros.</p>
+<p>I also split the bottom row, and put a key for toggling between levels in between <code>b</code> and <code>v</code>.</p>
+
+</content>
+    </item>
+    
+    <item>
+        <title>New keyboard day</title>
+        <pubDate>Wed Nov 04 2020</pubDate>
+        <link>https://schwartz.world/blog/new_keyboard_day/index.html</link>
+        <description>New keyboard day posted on Wed Nov 04 2020</description>
+        <content><p>It’s new keyboard day in the <code>schwartz</code> household. I’ve been a mechanical keyboard user for the last 2.5 years, pretty much since I stopped cosplaying as a software dev and actually became one. At my last job I somehow wound up with a friend’s <a href="https://codekeyboards.com/">Code keyboard</a> when he left.</p>
+<h3 id="tweaking-the-setup">Tweaking the Setup</h3>
+<p>I use this phrase a lot, because I do it a lot. One vertical monitor and a laptop; two horizontal monitors, laptop closed; one vertical, one horizontal <em>and</em> laptop screen. The only part of my workstation that is non-negotiable is the <a href="https://www.kensington.com/en-ca/p/products/control/trackballs/expert-mouse-optical-trackball/">Kensington Expert Trackball</a>. Everything else is fair game. There is no ideal arrangement, the act of fiddling is its own reward. I never did this before I was a professional werb derv. In fact, I learned to code on a sub-$200 Chromebook with no external peripherals.</p>
+<h3 id="my-old-keyboard">My Old Keyboard</h3>
+<p>For the last year, I’ve been using an <a href="https://asceny.com/">Asceny One</a> 60% keyboard with Gateron Blue switches. There are only two things I don’t like about it:</p>
+<ul>
+<li><code>fn</code> button required to use arrow keys</li>
+<li><code>fn</code> button required for backticks</li>
+</ul>
+<p>I’ve tried remapping keys, but without QMK support, it’s a challenge, especially on macos. Maybe if I was a Real Programmer™, but I’m just a werb derv, and I couldn’t do it. Too bad really, because the lighting (which is programmable) is amazing. I may return to this keyboard after my journey into ortholinear-land.</p>
+<h3 id="my-new-keyboard">My New Keyboard</h3>
+<p>When trying to find a larger, small keyboard (70-75%) you inevitably find that most of the options require soldering. That sent me down this keyboard rabbit-hole, the culmination of which was the purchase of the following monstrosity:</p>
+<p>This is the ID75 (aka Idobo). Gateron Green switches, frankenkeys for now until I decide on a working layout. Remapping is a cinch with <a href="https://config.qmk.fm/">QMK Configurator</a> and <a href="https://github.com/qmk/qmk_toolbox">QMK Toolbox</a>. A big part of my decision to buy it was the lack of soldering invovled in the assembly.</p>
+<p>So here I am after half a day of working on the damn thing, and I can’t decide if I see the potential and love it or if I’m unnecessarily complicating my life for no reason. Sure, I love endlessly tweaking my setup, but my typing just went from 80wpm to like 20wpm.</p>
+<p>I think the real power in this keyboard lies in frequently tweaking the mapping. I keep overshooting the <code>backspace</code> key, but I can remap it to go in the place I expect it to, instead of forcing my body to retrain.</p>
+<p>I think I may separate out the letters into two halves with the arrow/fn keys in the middle. There’s a lot more keys than I’m used to, and I’d like to program in some macros for when I’m writing code. I wonder if I can hit a key and have it input <code>const x = () =&gt; {};</code>. I know I can do it with Hammerspoon but having it built into the keyboard would mean the behavior would exist when I work on a Raspberry Pi or my laptop-repurposed-as-a-server. There is absolutely a chance I will use the ID75 for a few months and decide to go back to a regular staggered keyboard.</p>
+
+</content>
+    </item>
+    
+    <item>
         <title>Asynchronous education</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
+        <pubDate>Tue Oct 27 2020</pubDate>
         <link>https://schwartz.world/blog/asynchronous_education/index.html</link>
-        <description>Asynchronous education posted on Tue Dec 22 2020</description>
+        <description>Asynchronous education posted on Tue Oct 27 2020</description>
         <content><p>Apparently, in India during the Covid pandemic, a large number of schools are using Whatsapp for teaching.</p>
 <p>It makes a lot of sense, when you think about it. You wouldn’t necessarily expect every house to have a computer to dedicate to a child’s education (although it would be nice), but phones are supposedly common enough there to make Whatsapp an ideal platform. Phones are even more common here in my little white slice of suburbia. I wouldn’t be surprised if most kids had their own phone. Additionally, Whatsapp provides read receipts, so teachers can check that students are actually viewing the lessons. The downside is that Whatsapp is a Facebook provided service.</p>
 <p>The big thing that Whatsapp™ Edumacation offers that Zoom™ Edumacation doesn’t offer is <code>asynchronousity</code>. As far as I’m concerned a group lesson on Zoom is basically the same thing as watching a video, except without the upsides of video. Teachers have to put as much (or more) time into teaching than in a classroom, while students are expected to pay attention without any of the social pressure to do so that comes with being in a roomful of kids.</p>
@@ -77,30 +210,27 @@
     </item>
     
     <item>
-        <title>Bring back physical media</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/bring_back_physical_media/index.html</link>
-        <description>Bring back physical media posted on Tue Dec 22 2020</description>
+        <title>Educational tv</title>
+        <pubDate>Tue Oct 27 2020</pubDate>
+        <link>https://schwartz.world/blog/educational_tv/index.html</link>
+        <description>Educational tv posted on Tue Oct 27 2020</description>
         <content>
-<p>My first computer (Apple IIe) used 5-inch floppy disks. If a program didn’t fit on a single floppy, you might need to spread it across multiples, but otherwise this solution was fine. Floppy disks could hold the application AND the user data, be easily backed up or shared, and storing them was easy enough. The computer was old when I got it, and the former owner included something like 500 programs on floppy disk, an endlessly discoverable mountain of software.</p>
-<p>My next computer (90s era IBM clone) had multiple media drives, a 3.5-inch floppy drive and a CD drive. The floppies held more data than the old 5-inchers, and had all the same upsides. I could work on something at home, bring it to a computer at school and just keep going. The CD drive was a big game changer though. A CD can hold 700mb of data, and my hard drive at the time was 600mb. A really common pattern was to run software off a CD, but save your user data on floppies or hard drive. There was internet, initially in the AOL and later dial-up, but bandwidth was expensive and transfer speeds were slow. So slow.</p>
-<p>My next computer, a G3 Graphite iMac, had an optical drive that could read and write CDs and read DVDs. I used to rent movies from the Blockbuster where I worked and watch them on the tiny CRT screen. This was in the Napster days, and burning CDs was a boon. I could make mixes for friends or girlfriends, or even share my own music. I burned a lot of CDs in those days. The 100gb hard drive was enough that I didn’t miss my floppy drive, plus we had the internet everywhere by then.</p>
-<p>Then came the MacBook Pro, a beast of a machine with a SuperDrive (burns CDs and DVDs), USBs galore and even an SD card reader. I owned two incarnations of this machine, one of which is still in service to this day. Around this time, my college started using Iomega Zip Disks, although I never bought a drive for myself, I did own several of the disks.</p>
-<p>Now I have two computers I switch between, but neither accepts any form of physical media beyond a USB stick without the inclusion of an external drive. The Mac (my reluctant work machine), can’t even use these without a dongle. These computers are designed to rely on the internet as a means of installing programs and sharing data, which obviously works fine since everybody in the world is doing it that way.</p>
-<h3 id="so-what">So what?</h3>
-<p>I miss removeable physical media. I miss having a drawer of disks or CDs. Yes, I can still burn CDs, and do, but the subtle advantages of physical media are hard to fully grasp without an ecosystem.</p>
-<p>In high school, every kid had a CD book in their backpack. We would ride the bus on field trips and look through each other’s collections to listen to them on the way. I discovered a lot of great music this way. I guess you could look through someone’s iTunes library or Spotify history, but it wouldn’t be the same.</p>
-<p>On the same note, a lot of my early musical tastes were formed by listening to my parents old records. I can play songs I like for my children, but without a physical media library they are unlikely to discover my music on their own, especially without album art. I remember seeing the cover of <code>Eat A Peach</code> and thinking that I really wanted to listen to it.</p>
-<p>As a parent I have a lot of pictures of my kids, many of which are precious to me. We’ve printed some out, stored others on a SSD, and the rest are in the cloud. Yes, we could print more/all of them, but we all know this is no longer the norm, and I’m probably never going to meander through the folders on our storage drive the way I used to through old family albums.</p>
-<p>I think there was a lot of value in being able to run software directly off a CD instead of kludging up your internal storage with installed apps or relying on the cloud. Most software today is designed with the assumption that you have lots of memory, lots of storage and lots of cloud access. Can I even run a MacOS app directly off a CD? Maybe I should try. Look at your own Applications folder and tell me you really need all that installed on your machine. How easy is all that to uninstall if you want to? How big of a SSD would you actually need if you only stored your user data on your machine? How much less worried would you be about security if your computer didn’t require internet access to function? If, in 10 years I want to fire up an old computer or phone, could I even get software onto it?</p>
+<p>I don’t want to be one of those complaining old men, constantly bemoaning every difference that I see between the world of my youth and that of today.I’m not that old anyway; at 38 I consider myself to be just barely reaching adulthood.</p>
+<p>I have two small children of the girl persuasion, ages 2 and 4. The pandemic has changed so much about their lives, but one change is that we all have a lot more screen time than before.</p>
+<p>Children’s programming is shit today. Boring computer-generated animation, interchangeable characters with impossibly cheerful voices. Most of it seems lazy and half-baked. You could take the plots and characters from any number of shows and switch them around and it would all fit fine. I’m talking about shows like <em>PJ Masks</em>, <em>Paw Patrol</em>, and <em>Mickey Mouse Clubhouse</em>.</p>
+<p><em>Mickey Mouse Clubhouse</em> is a particularly bad offender, because I have such strong childhood attachments to the source material. It might be the worst show ever made. It’s weird, but not in a fun way like <em>Yo Gabba Gabba</em>. Completely humorless.</p>
+<p>Even <em>Sesame Street</em>, of which I am a staunch advocate, uses obvious filler sketches like <a href="https://www.youtube.com/watch?v=M6TkpZx1dzQ"><em>Journey to Ernie</em></a>, which is absolute garbage.</p>
+<p>Contrast that to the shows I watched as a kid. We’ve been playing <em>Fraggle Rock</em>, <em>The Elephant Show</em>, <em>Magic Schoolbus</em>, <em>Beakman’s World</em>, <em>Bill Nye the Science Guy</em>. They’re just better.</p>
+<p>The Fraggles are such well-developed characters, and the show does such a good job of showing the fragile beauty of their ecosystem. There are layers of information that can be gleaned on subsequent rewatches. As children mature, there are jokes and nuances they start to grasp. The show is actually entertaining for adults.</p>
+<p>Contrast that to <em>The PJ Masks</em>, a show that makes me want to actually put my head through the TV.</p>
 </content>
     </item>
     
     <item>
         <title>Converting large movies to smallish mp4s</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
+        <pubDate>Tue Oct 27 2020</pubDate>
         <link>https://schwartz.world/blog/converting_large_movies_to_smallish_mp4s/index.html</link>
-        <description>Converting large movies to smallish mp4s posted on Tue Dec 22 2020</description>
+        <description>Converting large movies to smallish mp4s posted on Tue Oct 27 2020</description>
         <content><p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
 <p>Eventually I’d like to get it working with some sort of attached storage, but at the moment I’m using the MacBook’s HD which is relatively meager once you start filling up the HD with movies. I don’t need much though, since the main purpose is providing my kids with better educational content than is offered on Netlix / Prime / Hulu, as well as allowing us to eliminate our Disney+ subscription. The kids watch the same movies over and over again (he said as he cued up Olaf’s Frozen Adventure for the 10,000th time).</p>
 <p>Warning: It isn’t a fast process, at least not on an old-ass MacBook. Doing a full season of a TV show takes forever since FFMPEG goes through line by line.</p>
@@ -124,10 +254,55 @@
     </item>
     
     <item>
+        <title>Fudgy brownie cupcakes</title>
+        <pubDate>Mon Oct 26 2020</pubDate>
+        <link>https://schwartz.world/blog/fudgy_brownie_cupcakes/index.html</link>
+        <description>Fudgy brownie cupcakes posted on Mon Oct 26 2020</description>
+        <content><h2 id="brownie-cupcakes-recipe"><a href="https://www.alsothecrumbsplease.com/brownie-cupcakes-recipe/">Brownie Cupcakes Recipe</a></h2>
+<h3 id="ingredients">Ingredients</h3>
+<ul>
+<li>1 cup butter, melted and cooled (226g)</li>
+<li>2 cups granulated white sugar (400g)</li>
+<li>4 large eggs</li>
+<li>2 vanilla beans* (or 2 tsp pure vanilla extract)</li>
+<li>1 cup dutch-processed cocoa powder (84g)</li>
+<li>1 cup all-purpose flour (120g)</li>
+<li>1 tsp salt</li>
+</ul>
+<h3 id="instructions">Instructions</h3>
+<p>Preheat oven to 350°F / 175°C. Line two 12 cup muffin pans with 13-14 cupcake liners. Set aside.</p>
+<p>Stir together butter, sugar, eggs, and vanilla just until combined. Don’t use a hand or stand mixer otherwise you have too much air pockets in the batter, and this makes them cakey instead of fudgy. Stir by hand with a whisk. Sift in flour, cocoa, and salt and stir just until combined.</p>
+<p>Spoon batter with an ice cream scoop into the liners and fill almost full.</p>
+<p>Bake for 22-26 minutes until the tops look crinkled and a toothpick centered in the middle comes out slightly dirty. Don’t overbake them or they are getting cakey. I baked mine for exactly 25 minutes. Remove from the oven and let cool for 10 minutes. Then carefully remove from pan and transfer to a wire rack and let cool completely before frosting.</p>
+
+</content>
+    </item>
+    
+    <item>
+        <title>Adding comments to the blog</title>
+        <pubDate>Sat Oct 03 2020</pubDate>
+        <link>https://schwartz.world/blog/adding_comments_to_the_blog/index.html</link>
+        <description>Adding comments to the blog posted on Sat Oct 03 2020</description>
+        <content><p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
+<p>I narrowed my options down to these options:</p>
+<ul>
+<li>Users email their comments. A Node script checks the email once per day and adds the comments to a DB. I generate the HTML at build time.</li>
+<li>Build a separate app that sits in <code>the cloud</code> and receives comments posted from the browser. At build time, the static site generator pulls down any new comments and generates the HTML.</li>
+<li>Host comments on a third party service not necessarily meant for this purpose (Reddit, Lemmy, <del>Hacker News</del> <ins>The Orange Site</ins>).</li>
+</ul>
+<p>I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.</p>
+<p>It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.</p>
+<h3 id="update-2020-26-10">Update: 2020-26-10</h3>
+<p>I’ve updated the build tools for the blog to inlcude Pandoc and JSDom, which gives me the ability to manipulate the generated HTML. Previously, I was parsing the MD with JavaScript and having a heck of a time of it. That means that our links to <code>meta</code> data (like where comments are located), can be left in the HTML with <code>display: none;</code>. If you view the source of this page, you’ll see it right there.</p>
+
+</content>
+    </item>
+    
+    <item>
         <title>Dongles</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
+        <pubDate>Fri Sep 25 2020</pubDate>
         <link>https://schwartz.world/blog/dongles/index.html</link>
-        <description>Dongles posted on Tue Dec 22 2020</description>
+        <description>Dongles posted on Fri Sep 25 2020</description>
         <content>
 <p>I am on the record as being anti-dongle. It’s a battle, and I’m losing it.</p>
 <p>Work has provided me with a shiny MacBook pro, which has 4 USB-c ports that have to work for everything.</p>
@@ -156,212 +331,23 @@
     </item>
     
     <item>
-        <title>Educational tv</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/educational_tv/index.html</link>
-        <description>Educational tv posted on Tue Dec 22 2020</description>
-        <content>
-<p>I don’t want to be one of those complaining old men, constantly bemoaning every difference that I see between the world of my youth and that of today.I’m not that old anyway; at 38 I consider myself to be just barely reaching adulthood.</p>
-<p>I have two small children of the girl persuasion, ages 2 and 4. The pandemic has changed so much about their lives, but one change is that we all have a lot more screen time than before.</p>
-<p>Children’s programming is shit today. Boring computer-generated animation, interchangeable characters with impossibly cheerful voices. Most of it seems lazy and half-baked. You could take the plots and characters from any number of shows and switch them around and it would all fit fine. I’m talking about shows like <em>PJ Masks</em>, <em>Paw Patrol</em>, and <em>Mickey Mouse Clubhouse</em>.</p>
-<p><em>Mickey Mouse Clubhouse</em> is a particularly bad offender, because I have such strong childhood attachments to the source material. It might be the worst show ever made. It’s weird, but not in a fun way like <em>Yo Gabba Gabba</em>. Completely humorless.</p>
-<p>Even <em>Sesame Street</em>, of which I am a staunch advocate, uses obvious filler sketches like <a href="https://www.youtube.com/watch?v=M6TkpZx1dzQ"><em>Journey to Ernie</em></a>, which is absolute garbage.</p>
-<p>Contrast that to the shows I watched as a kid. We’ve been playing <em>Fraggle Rock</em>, <em>The Elephant Show</em>, <em>Magic Schoolbus</em>, <em>Beakman’s World</em>, <em>Bill Nye the Science Guy</em>. They’re just better.</p>
-<p>The Fraggles are such well-developed characters, and the show does such a good job of showing the fragile beauty of their ecosystem. There are layers of information that can be gleaned on subsequent rewatches. As children mature, there are jokes and nuances they start to grasp. The show is actually entertaining for adults.</p>
-<p>Contrast that to <em>The PJ Masks</em>, a show that makes me want to actually put my head through the TV.</p>
-</content>
-    </item>
-    
-    <item>
-        <title>Fudgy brownie cupcakes</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/fudgy_brownie_cupcakes/index.html</link>
-        <description>Fudgy brownie cupcakes posted on Tue Dec 22 2020</description>
-        <content><h2 id="brownie-cupcakes-recipe"><a href="https://www.alsothecrumbsplease.com/brownie-cupcakes-recipe/">Brownie Cupcakes Recipe</a></h2>
-<h3 id="ingredients">Ingredients</h3>
-<ul>
-<li>1 cup butter, melted and cooled (226g)</li>
-<li>2 cups granulated white sugar (400g)</li>
-<li>4 large eggs</li>
-<li>2 vanilla beans* (or 2 tsp pure vanilla extract)</li>
-<li>1 cup dutch-processed cocoa powder (84g)</li>
-<li>1 cup all-purpose flour (120g)</li>
-<li>1 tsp salt</li>
-</ul>
-<h3 id="instructions">Instructions</h3>
-<p>Preheat oven to 350°F / 175°C. Line two 12 cup muffin pans with 13-14 cupcake liners. Set aside.</p>
-<p>Stir together butter, sugar, eggs, and vanilla just until combined. Don’t use a hand or stand mixer otherwise you have too much air pockets in the batter, and this makes them cakey instead of fudgy. Stir by hand with a whisk. Sift in flour, cocoa, and salt and stir just until combined.</p>
-<p>Spoon batter with an ice cream scoop into the liners and fill almost full.</p>
-<p>Bake for 22-26 minutes until the tops look crinkled and a toothpick centered in the middle comes out slightly dirty. Don’t overbake them or they are getting cakey. I baked mine for exactly 25 minutes. Remove from the oven and let cool for 10 minutes. Then carefully remove from pan and transfer to a wire rack and let cool completely before frosting.</p>
-
-</content>
-    </item>
-    
-    <item>
-        <title>Id75 day 2</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/id75_day_2/index.html</link>
-        <description>Id75 day 2 posted on Tue Dec 22 2020</description>
-        <content><p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
-<p><a href="https://www.typingtest.com/">Inline image: Typing Test Screen Shot - 18wpm, 2 typos (https://schwartz.world/img/typetest-2020-11-3.png)</a></p>
-<p>I’m absolutely loving QMK though, and I can’t believe the power is offers. On layer 1 (not 0), I have set the arrow keys to emit mouse events. I can move the pointer using them as well as left and right click. Additionally, with all the typos, I got pretty sick of reaching for the <code>backspace</code> key, so I remapped <code>j</code> and <code>k</code> to work as <code>backspace</code> and <code>enter</code> respectively. There are a lot of keys I never use, so I’d like to relegate them to lower layers (I’m looking at you <code>ins</code> and <code>scroll lock</code>) and use the extra real estate for macros.</p>
-<p>I also split the bottom row, and put a key for toggling between levels in between <code>b</code> and <code>v</code>.</p>
-
-</content>
-    </item>
-    
-    <item>
-        <title>New keyboard day</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/new_keyboard_day/index.html</link>
-        <description>New keyboard day posted on Tue Dec 22 2020</description>
-        <content><p>It’s new keyboard day in the <code>schwartz</code> household. I’ve been a mechanical keyboard user for the last 2.5 years, pretty much since I stopped cosplaying as a software dev and actually became one. At my last job I somehow wound up with a friend’s <a href="https://codekeyboards.com/">Code keyboard</a> when he left.</p>
-<h3 id="tweaking-the-setup">Tweaking the Setup</h3>
-<p>I use this phrase a lot, because I do it a lot. One vertical monitor and a laptop; two horizontal monitors, laptop closed; one vertical, one horizontal <em>and</em> laptop screen. The only part of my workstation that is non-negotiable is the <a href="https://www.kensington.com/en-ca/p/products/control/trackballs/expert-mouse-optical-trackball/">Kensington Expert Trackball</a>. Everything else is fair game. There is no ideal arrangement, the act of fiddling is its own reward. I never did this before I was a professional werb derv. In fact, I learned to code on a sub-$200 Chromebook with no external peripherals.</p>
-<h3 id="my-old-keyboard">My Old Keyboard</h3>
-<p>For the last year, I’ve been using an <a href="https://asceny.com/">Asceny One</a> 60% keyboard with Gateron Blue switches. There are only two things I don’t like about it:</p>
-<ul>
-<li><code>fn</code> button required to use arrow keys</li>
-<li><code>fn</code> button required for backticks</li>
-</ul>
-<p>I’ve tried remapping keys, but without QMK support, it’s a challenge, especially on macos. Maybe if I was a Real Programmer™, but I’m just a werb derv, and I couldn’t do it. Too bad really, because the lighting (which is programmable) is amazing. I may return to this keyboard after my journey into ortholinear-land.</p>
-<h3 id="my-new-keyboard">My New Keyboard</h3>
-<p>When trying to find a larger, small keyboard (70-75%) you inevitably find that most of the options require soldering. That sent me down this keyboard rabbit-hole, the culmination of which was the purchase of the following monstrosity:</p>
-<p>This is the ID75 (aka Idobo). Gateron Green switches, frankenkeys for now until I decide on a working layout. Remapping is a cinch with <a href="https://config.qmk.fm/">QMK Configurator</a> and <a href="https://github.com/qmk/qmk_toolbox">QMK Toolbox</a>. A big part of my decision to buy it was the lack of soldering invovled in the assembly.</p>
-<p>So here I am after half a day of working on the damn thing, and I can’t decide if I see the potential and love it or if I’m unnecessarily complicating my life for no reason. Sure, I love endlessly tweaking my setup, but my typing just went from 80wpm to like 20wpm.</p>
-<p>I think the real power in this keyboard lies in frequently tweaking the mapping. I keep overshooting the <code>backspace</code> key, but I can remap it to go in the place I expect it to, instead of forcing my body to retrain.</p>
-<p>I think I may separate out the letters into two halves with the arrow/fn keys in the middle. There’s a lot more keys than I’m used to, and I’d like to program in some macros for when I’m writing code. I wonder if I can hit a key and have it input <code>const x = () =&gt; {};</code>. I know I can do it with Hammerspoon but having it built into the keyboard would mean the behavior would exist when I work on a Raspberry Pi or my laptop-repurposed-as-a-server. There is absolutely a chance I will use the ID75 for a few months and decide to go back to a regular staggered keyboard.</p>
-
-</content>
-    </item>
-    
-    <item>
-        <title>On typescript</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/on_typescript/index.html</link>
-        <description>On typescript posted on Tue Dec 22 2020</description>
-        <content><p>I don’t like it.</p>
-<h3 id="my-experience">My experience</h3>
-<p>I work on a large and tangled React codebase. We have two linter rules related to <code>any</code> types:</p>
-<ul>
-<li>no implicit any</li>
-<li>no explicit any</li>
-</ul>
-<p>The end result is that every function, component has to have a type declaration.</p>
-<h3 id="i-dont-like-writing-code-just-to-suit-the-compiler">I don’t like writing code just to suit the compiler</h3>
-<div id="description">
-<p>There are two types of people who write TypeScript. For those who come from statically typed languages, Typescript is a way of writing JavaScript without some of the pains of JavaScript. These reluctant JS devs are forced into it because browsers don’t speak Java anymore. You can’t build a front end in C#.</p>
-<p>Then there is me. I started as a JS dev. It’s my <em>lingua materna</em>. I learned in a web browser console and built websites the old fashioned way without compilers or tooling or anything like that. Just Sublime Text, <code>python -m SimpleHTTPServer</code> and a browser window. Later I moved on to React and through my exposure to React I got comfortable in NodeJS.</p>
-</div>
-<p>For me and, I assume, others like me, there is a particular frustration wherein I write perfectly usable code that will work fine in the environment it is destined for, but the compiler won’t accept it. Alternatively, I struggle to come up with flexible typing when needed. The only way to make this stuff work is to write pointless code to appease the tyrannical robot <del>overlord</del><ins>I mean protector</ins> that is the typescript compiler.</p>
-<h3 id="large-codebases-may-have-too-many-similar-types">Large codebases may have too many similar types</h3>
-<p>This is self explanatory, but similar types leave you with three options: write glue code to toggle the types back and forth (bad), add more similar types / duplicated code to avoid the similar types or refactor which could be easier said than done in a large codebase.</p>
-<h3 id="typescript-is-best-used-with-oop">Typescript is best used with OOP</h3>
-<p>Typescript seems to work best when you type your data, not your functions. The language has a lot of little things that work really well with classes. For example, if you are trying to manually check a type, you can use <code>instanceof</code>if the type is an instance of a class. If it’s just an object with an interface though, you lose that capability.</p>
-<p>Unfortunately, classes are not en vogue in the React community. React pushes a functional model which is great, but the result is that everybody I work with things of typing in terms of input but not output.</p>
-<p>React developers often delegate too much responsibility to React. All of their code lives in the body of components, maybe with some hooks and helper functions scattered around. React works best, in my opinion, when most of the work lives outside of React. Instead of continually adding props to components, I want to build a thing and send it tumbling down the React tree with all the information needed to work on it included. Classes are a solid abstraction in JS, and you can make them pure functions just fine.</p>
-<p>So the point of this is, the React community largely follows a paradigm that doesn’t really work well with TypeScript. It could, but it doesn’t. Admittedly I can write the code the way I want, but the whole reason for a language like TS is to make it easier to work with other people’s code.</p>
-<h3 id="typing-feels-like-an-afterthought">Typing feels like an afterthought</h3>
-<p>Unlike Elm, where the types are really a first class feature of the language, types in TypeScript feel like they are stapled on, and for me that translates into the code I write. The simplest route to productivity seems to be writing the code first, then fighting with the type system for half a day to appease it. Is there a better way?</p>
-<h3 id="in-summation">In Summation</h3>
-<p>Someday I’d like to try a project with TypeScript my way, and I think I might like that. I’d prefer to use the types conservatively, leaving most code <em>un</em>typed except the most important bits. I probably won’t do that unless Deno becomes mainstream enough to seriously contend with Node.</p>
-
-</content>
-    </item>
-    
-    <item>
-        <title>Raspberry pi timelapse cam pt1</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt1/index.html</link>
-        <description>Raspberry pi timelapse cam pt1 posted on Tue Dec 22 2020</description>
-        <content>
-<p>I’m a front-end dev by trade, and while I am comfortable whipping up a server in a few different frameworks, I really prefer to avoid exposing any of my server-side code to the open internet. <a href="https://schwartz.world/blog/static_site_generators/">For example, this site generates a build on my local machine, then pushes it to Github.</a> The content is then served by Netlify with no need to maintain a server. JAMStack, baby!</p>
-<p>But how far can we take it?</p>
-<p>I have this idea I’ve been mulling over for a while. I recently got the new <code>Raspberry Pi High Quality camera</code>, and it’s pretty nice. I’m using the cheapest lens I could get, and the images are pretty good. Eventually, I’d love to invest in a nicer lens, but <span id="experience">experience has taught me to build first and then buy later.</span> I’ve got a whole pile of Arduino and Pi boards to remind me, lest I forget.</p>
-<p>The idea is to create a timelapse camera, which is a common enough use-case for the Pi. The program I’m going to write is real Unix-y, because each piece is responsible for so little. There are three components:</p>
-<h3 id="image-server">Image Server</h3>
-<p>Most of the time when people use the Pi as a webcam / security cam, they configure it to actively snap photos regularly and then push those photos to an external server or possibly just stream them over the network. I’ve done the opposite, the Pi runs a simple Flask app. When it receives a connection, it snaps a picture and returns the picture over HTTP where it can be saved as a file or whatever.</p>
-<p>I did it this way because I really don’t want to have to write code on the Pi. I don’t want to SSH, I don’t want to hook up a monitor. I just want to have a machine I can send an HTTP request to and get a picture back and keep all the actual business code on my laptop or <code>server</code> (also a laptop).</p>
-<h3 id="image-client">Image Client</h3>
-<p>The client is also very minimal. I’m using NodeJS at the moment, but it could just as easily be any other language, even just a cron job that calls <code>curl</code> and pipes the output to a jpg. The code is barely interesting enough to post (although I eventually will).</p>
-<p>Right now the picture just uses the default settings, but eventually I would like to configure settings so it takes longer exposures as the sun goes down. Maybe one endpoint for daytime pics and one for nighttime, and the client can decide which kind of picture to take.</p>
-<h3 id="build-server">Build Server</h3>
-<p>A third program on the client machine will make a call to <code>FFMPEG</code> at regular intervals to stitch all the individual files into a video or gif, and then push the resulting file up to Github. The idea is that you could go to the URL and see the current version of the timelapse, which gets longer every time you visit the URL, as you keep loading the latest version.</p>
-<h3 id="proof-of-concept">Proof of Concept</h3>
-<p>I’m not nearly ready to show the world the code, but I did whip up a quick video of the “sunrise” as viewed from my office window. As this is a POC, I haven’t done the following:</p>
-<ul>
-<li>focus the image</li>
-<li>take the screen off the window</li>
-<li><a href="#experience">gotten a better lens</a></li>
-</ul>
-<p>Without further ado:</p>
-
-Inline video: undefined (https://schwartz.world)</content>
-    </item>
-    
-    <item>
-        <title>Raspberry pi timelapse cam pt2</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt2/index.html</link>
-        <description>Raspberry pi timelapse cam pt2 posted on Tue Dec 22 2020</description>
-        <content>
-<p>I’ve been trying to improve the quality of the timelapse videos I’m taking with the Pi. I’ll be honest, I don’t know much about photography, but I went through and tried each of the <a href="https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes">sensor modes</a> one by one. Mode #1 seems to be the best so far, although I think I’ll inevitably have to learn to use the settings (shutter speed, ISO, etc) manually.</p>
-<p>The images come back decently sharp, but far from what you’d expect from a product called the “High Quality Camera”. In fairness, I’m using the cheapest lens I could get, so I don’t know what to expect. Eventually I’d like the camera to take either ambient light level (with a sensor) or the time of sunset (from an API) into account and do longer exposures when it’s dark out.</p>
-<p>The next step is actually going to try the same process using a Pi Zero W with the 5MP camera module and see how those pictures come out in comparison. I’d like to use the cheaper hardware for the eventual permanent camera setup. With winter coming, I’d love to have a timelapse pointed at the backyard full-time. I’m probably going to use the crappier camera for this so I can save the HQ one for other experiments.</p>
-<p>Anyway, without further ado, here’s the latest timelapse.</p>
-<h3 id="ice">Ice</h3>
-
-Inline video: undefined (https://schwartz.world)</content>
-    </item>
-    
-    <item>
-        <title>Self-censorship</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/self-censorship/index.html</link>
-        <description>Self-censorship posted on Tue Dec 22 2020</description>
-        <content><p>As a child, I was unafraid to create. I wrote stories and songs without fear of embarrassment. I can’t say when this changed, but it did, to be sure. There have been a few times when I’ve written things that really impressed myself, but most of the time I make myself cringe. It’s possible that all first drafts are cringey, that I should polish my turds into gleaming gems, but the first cheesy rhyme and I send myself spiraling.</p>
-<p>The irony is that I love lyrics that are unabashedly cheesy. I respect writers who can write an imperfect line and just move on, rather than obsessing over each comma until it becomes a masterpiece (or gets too frustrating to continue).</p>
-</content>
-    </item>
-    
-    <item>
-        <title>Static site generators</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/static_site_generators/index.html</link>
-        <description>Static site generators posted on Tue Dec 22 2020</description>
-        <content><h2 id="static-site-generators">Static Site Generators</h2>
-<p>Some people knit. Some bake. Me? I build static site generators. This site is one of them.</p>
-<p>My introduction to static site generators was the incredible <a href="www.gatsbyjs.com">Gatsby JS</a>, and this site was built with Gatsby originally. Gatsby is an amazing product, but I don’t want to write React in my off-time.</p>
-<p>Even worse, I couldn’t make Gatsby work with Leaflet. At the time, I was very interested in JavaScript maps, and there was a quirk where Leaflet would bind itself to the <code>window</code> object before it was instatiated. This may have been fixed since then.</p>
-<h3 id="diy-is-better">DIY is Better</h3>
-<p>At the end of the day, a static site generator doesn’t need much. You need a way to load and parse some files and then pass that content to an HTML template. It doesn’t need to be particularly performant or secure since it only ever runs on my machine at home. Static files get generated and then pushed up to Netlify.</p>
-<h3 id="planned-features">Planned Features</h3>
-<h4 id="comments-done"><del>Comments</del> <ins>DONE!</ins></h4>
-<p>I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):</p>
-<ul>
-<li>Comments post to node server and are fetched regularly and built into the static blog</li>
-<li>Comments post to AWS Lambda and ???</li>
-<li><a href="https://formspree.io/">FormSpree</a> form to comment</li>
-<li>Email to comment</li>
-</ul>
-<h4 id="tags---in-progress">Tags - In Progress</h4>
-<p>I really like the idea of a dynamic tagging system. At build time, I’d like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can’t say there will ever be enough posts here to justify a system like this, but that’s not why I’m doing this. I like building the blog more than I like posting to it. Deeply ironic.</p>
-<p><a href="https://www.jwz.org/blog/">This blog</a> has a fantastic system whereby every post has a list of <code>previously</code> links at the bottom. I’d like my tags to function similarly, allowing an organic link from page to page. Damned if I know how I’m going to implement it, but I have ideas.</p>
-<h4 id="maps">Maps</h4>
-<p>There will be maps. Oh yes. There will be maps.</p>
-<h4 id="rss">RSS</h4>
-<p>I’d like to generate an RSS feed as well. It’s only considerate.</p>
-<h3 id="what-will-you-write-about">What will you write about?</h3>
-<p>Maybe lots of things. Maybe nothing. Maybe I’ll tear the whole thing down next month and try again.</p>
+        <title>Archive bookmarklet</title>
+        <pubDate>Wed Sep 23 2020</pubDate>
+        <link>https://schwartz.world/blog/archive_bookmarklet/index.html</link>
+        <description>Archive bookmarklet posted on Wed Sep 23 2020</description>
+        <content><h2 id="a-useful-bookmarklet-i-stumbled-across">A useful Bookmarklet I stumbled across</h2>
+<p><a href="https://news.ycombinator.com/item?id=24809650">Shamelessly lifted from the Hacker News Comment</a></p>
+<p>Takes you to archive.org’s historical record of your site.</p>
+<p><code>javascript:void(open('http://archive.today/?run=1&amp;url='+encodeURIComponent(document.location)))</code></p>
 
 </content>
     </item>
     
     <item>
         <title>The hardest and easiest part of react</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
+        <pubDate>Wed Sep 23 2020</pubDate>
         <link>https://schwartz.world/blog/the_hardest_and_easiest_part_of_react/index.html</link>
-        <description>The hardest and easiest part of react posted on Tue Dec 22 2020</description>
+        <description>The hardest and easiest part of react posted on Wed Sep 23 2020</description>
         <content>
 
 <h2 id="the-hardest-and-easiest-part-of-reactjs">The Hardest and Easiest Part of ReactJS</h2>
@@ -449,54 +435,68 @@ const Child = ({ id, onLoad, loading }) =&gt; {
     </item>
     
     <item>
-        <title>The sad state of software for kids</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/the_sad_state_of_software_for_kids/index.html</link>
-        <description>The sad state of software for kids posted on Tue Dec 22 2020</description>
-        <content>
-<p>I have two small children, a 4.5 year old and a 2.5 year old, both girls. Since the pandemic began, screen time has become more of a thing for both of them. It’s unfortunate, but I know few parents who haven’t had to do the same. It’s just too many hours a day to be <em>on</em>.</p>
-<p>So we have screen time, but <a href="https://schwartz.world/blog/educational_tv/">all screen time is not created equally</a>. At the bottom of the heirarchy is clips from childrens shows on YouTube (the only free way to stream Peppa Pig), then PBS Kids Shows (I’ll do a <em>Pinkalicious</em> rant on here someday), then classic (not new)</p>
-<p>Sesame Street, then PBS Kids games, then <em>Educational</em> games. I think it’s not controversial to state that interactive media like games are better than mindless screen time.</p>
-<p>Unfortunately, the quality of a lot of children’s media has really declined. Watching older shows and movies, it’s not just nostalgia. Modern Sesame Street episodes are 30 minutes instead of an hour. The show has much less time to devote to numbers and alphabet, instead choosing to focus on social lessons. I still love and respect the project, but the old show was a much more effective tool. Luckily there is access to older material online.</p>
-<p>In the same vein, software for little kids just sucks. There are a few standout projects, <a href="https://gcompris.net/index-en.html">GCompris</a> and <a href="https://learn.khanacademy.org/khan-academy-kids/">Kahn Academy Kids</a> come to mind. But for every good app, there are a lot of bad ones. In-App purchases and upgrades are very common, and subscription models are becoming common as well. <a href="https://www.abcmouse.com/">Renting</a> an app by the <a href="https://learnwithhomer.com/">month</a> is garbage.</p>
-<p>Most software development for kids seems to be in the mobile / tablet space, and that’s the worst one for small children. My younger daughter accidentally navigates to a different app, 100% of the time, and my older daughter knows how to send texts (although not to whom she is sending them). Anything browser based has a different problem, you can’t whack the keys without eventually closing the tab, opening some menu or just navigating away. And kids inevitably whack the menu.</p>
-<p>The first computer I had was an Apple II. It ran one program at a time. This was better for kids.</p>
-<p>The second computer I had ran DOS. Since there was no GUI, there were no conventional shortcuts. You could launch a game from a CD-ROM. You couldn’t run two programs at once on that either without launching Windows, or maybe you could but I never learned how. We could set my little sister up with a <em>Berenstein Bears</em> game and her two options were <code>play that game</code>, or <code>go find another activity</code>. This was better for kids.</p>
-<p>I wonder if a retrocomputer (or a reasonable emulation of one) is the solution for me. I just set up my old G3 iMac. There’s a ton of abandonware for it online, almost all of it as higher quality than today, or at least not full of the horrible UX patterns we’ve all gotten used to in the last couple of decades.</p>
-<p>Inline image: Picture of my G3 iMac (https://schwartz.world/img/imac.jpg)</p>
-<p>This is the ideal computer for a kid, I think. I’m not going to hook it up to the network, so security isn’t a concern. I can load it with enough software to keep them interested as they get older. It’s completely GUI based with no command line, but that’s not important for a kid who can’t read yet. Maybe even better. And it has a working CD/DVD drive, which is good because I really think physical media are better for children. Maybe I’ll do my next post on that.</p>
-</content>
-    </item>
-    
-    <item>
-        <title>Adding comments to the blog</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/adding_comments_to_the_blog/index.html</link>
-        <description>Adding comments to the blog posted on Tue Dec 22 2020</description>
-        <content><p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
-<p>I narrowed my options down to these options:</p>
+        <title>On typescript</title>
+        <pubDate>Tue Sep 15 2020</pubDate>
+        <link>https://schwartz.world/blog/on_typescript/index.html</link>
+        <description>On typescript posted on Tue Sep 15 2020</description>
+        <content><p>I don’t like it.</p>
+<h3 id="my-experience">My experience</h3>
+<p>I work on a large and tangled React codebase. We have two linter rules related to <code>any</code> types:</p>
 <ul>
-<li>Users email their comments. A Node script checks the email once per day and adds the comments to a DB. I generate the HTML at build time.</li>
-<li>Build a separate app that sits in <code>the cloud</code> and receives comments posted from the browser. At build time, the static site generator pulls down any new comments and generates the HTML.</li>
-<li>Host comments on a third party service not necessarily meant for this purpose (Reddit, Lemmy, <del>Hacker News</del> <ins>The Orange Site</ins>).</li>
+<li>no implicit any</li>
+<li>no explicit any</li>
 </ul>
-<p>I did a little searching and found a blog post on using GitHub issues as a backend for a comments system. The GitHub API allows you to request issue comments in JSON format, which makes them very easy to display.</p>
-<p>It’s all very crude at the moment, but it works. The markdown parsing is the weakest point right now. I figured half-baked comments are better than no comments. But I really need the markdown to be parsed identically to GitHub’s.</p>
-<h3 id="update-2020-26-10">Update: 2020-26-10</h3>
-<p>I’ve updated the build tools for the blog to inlcude Pandoc and JSDom, which gives me the ability to manipulate the generated HTML. Previously, I was parsing the MD with JavaScript and having a heck of a time of it. That means that our links to <code>meta</code> data (like where comments are located), can be left in the HTML with <code>display: none;</code>. If you view the source of this page, you’ll see it right there.</p>
+<p>The end result is that every function, component has to have a type declaration.</p>
+<h3 id="i-dont-like-writing-code-just-to-suit-the-compiler">I don’t like writing code just to suit the compiler</h3>
+<div id="description">
+<p>There are two types of people who write TypeScript. For those who come from statically typed languages, Typescript is a way of writing JavaScript without some of the pains of JavaScript. These reluctant JS devs are forced into it because browsers don’t speak Java anymore. You can’t build a front end in C#.</p>
+<p>Then there is me. I started as a JS dev. It’s my <em>lingua materna</em>. I learned in a web browser console and built websites the old fashioned way without compilers or tooling or anything like that. Just Sublime Text, <code>python -m SimpleHTTPServer</code> and a browser window. Later I moved on to React and through my exposure to React I got comfortable in NodeJS.</p>
+</div>
+<p>For me and, I assume, others like me, there is a particular frustration wherein I write perfectly usable code that will work fine in the environment it is destined for, but the compiler won’t accept it. Alternatively, I struggle to come up with flexible typing when needed. The only way to make this stuff work is to write pointless code to appease the tyrannical robot <del>overlord</del><ins>I mean protector</ins> that is the typescript compiler.</p>
+<h3 id="large-codebases-may-have-too-many-similar-types">Large codebases may have too many similar types</h3>
+<p>This is self explanatory, but similar types leave you with three options: write glue code to toggle the types back and forth (bad), add more similar types / duplicated code to avoid the similar types or refactor which could be easier said than done in a large codebase.</p>
+<h3 id="typescript-is-best-used-with-oop">Typescript is best used with OOP</h3>
+<p>Typescript seems to work best when you type your data, not your functions. The language has a lot of little things that work really well with classes. For example, if you are trying to manually check a type, you can use <code>instanceof</code>if the type is an instance of a class. If it’s just an object with an interface though, you lose that capability.</p>
+<p>Unfortunately, classes are not en vogue in the React community. React pushes a functional model which is great, but the result is that everybody I work with things of typing in terms of input but not output.</p>
+<p>React developers often delegate too much responsibility to React. All of their code lives in the body of components, maybe with some hooks and helper functions scattered around. React works best, in my opinion, when most of the work lives outside of React. Instead of continually adding props to components, I want to build a thing and send it tumbling down the React tree with all the information needed to work on it included. Classes are a solid abstraction in JS, and you can make them pure functions just fine.</p>
+<p>So the point of this is, the React community largely follows a paradigm that doesn’t really work well with TypeScript. It could, but it doesn’t. Admittedly I can write the code the way I want, but the whole reason for a language like TS is to make it easier to work with other people’s code.</p>
+<h3 id="typing-feels-like-an-afterthought">Typing feels like an afterthought</h3>
+<p>Unlike Elm, where the types are really a first class feature of the language, types in TypeScript feel like they are stapled on, and for me that translates into the code I write. The simplest route to productivity seems to be writing the code first, then fighting with the type system for half a day to appease it. Is there a better way?</p>
+<h3 id="in-summation">In Summation</h3>
+<p>Someday I’d like to try a project with TypeScript my way, and I think I might like that. I’d prefer to use the types conservatively, leaving most code <em>un</em>typed except the most important bits. I probably won’t do that unless Deno becomes mainstream enough to seriously contend with Node.</p>
 
 </content>
     </item>
     
     <item>
-        <title>Archive bookmarklet</title>
-        <pubDate>Tue Dec 22 2020</pubDate>
-        <link>https://schwartz.world/blog/archive_bookmarklet/index.html</link>
-        <description>Archive bookmarklet posted on Tue Dec 22 2020</description>
-        <content><h2 id="a-useful-bookmarklet-i-stumbled-across">A useful Bookmarklet I stumbled across</h2>
-<p><a href="https://news.ycombinator.com/item?id=24809650">Shamelessly lifted from the Hacker News Comment</a></p>
-<p>Takes you to archive.org’s historical record of your site.</p>
-<p><code>javascript:void(open('http://archive.today/?run=1&amp;url='+encodeURIComponent(document.location)))</code></p>
+        <title>Static site generators</title>
+        <pubDate>Thu Sep 10 2020</pubDate>
+        <link>https://schwartz.world/blog/static_site_generators/index.html</link>
+        <description>Static site generators posted on Thu Sep 10 2020</description>
+        <content><h2 id="static-site-generators">Static Site Generators</h2>
+<p>Some people knit. Some bake. Me? I build static site generators. This site is one of them.</p>
+<p>My introduction to static site generators was the incredible <a href="www.gatsbyjs.com">Gatsby JS</a>, and this site was built with Gatsby originally. Gatsby is an amazing product, but I don’t want to write React in my off-time.</p>
+<p>Even worse, I couldn’t make Gatsby work with Leaflet. At the time, I was very interested in JavaScript maps, and there was a quirk where Leaflet would bind itself to the <code>window</code> object before it was instatiated. This may have been fixed since then.</p>
+<h3 id="diy-is-better">DIY is Better</h3>
+<p>At the end of the day, a static site generator doesn’t need much. You need a way to load and parse some files and then pass that content to an HTML template. It doesn’t need to be particularly performant or secure since it only ever runs on my machine at home. Static files get generated and then pushed up to Netlify.</p>
+<h3 id="planned-features">Planned Features</h3>
+<h4 id="comments-done"><del>Comments</del> <ins>DONE!</ins></h4>
+<p>I really want to figure out a way to have comments, which seems difficult on a static html site. Possibilities (in reverse order of preference):</p>
+<ul>
+<li>Comments post to node server and are fetched regularly and built into the static blog</li>
+<li>Comments post to AWS Lambda and ???</li>
+<li><a href="https://formspree.io/">FormSpree</a> form to comment</li>
+<li>Email to comment</li>
+</ul>
+<h4 id="tags---in-progress">Tags - In Progress</h4>
+<p>I really like the idea of a dynamic tagging system. At build time, I’d like to link the tags to allow links to relevant posts. Tags are better than categories as they allow for discoverability and browsing. I can’t say there will ever be enough posts here to justify a system like this, but that’s not why I’m doing this. I like building the blog more than I like posting to it. Deeply ironic.</p>
+<p><a href="https://www.jwz.org/blog/">This blog</a> has a fantastic system whereby every post has a list of <code>previously</code> links at the bottom. I’d like my tags to function similarly, allowing an organic link from page to page. Damned if I know how I’m going to implement it, but I have ideas.</p>
+<h4 id="maps">Maps</h4>
+<p>There will be maps. Oh yes. There will be maps.</p>
+<h4 id="rss">RSS</h4>
+<p>I’d like to generate an RSS feed as well. It’s only considerate.</p>
+<h3 id="what-will-you-write-about">What will you write about?</h3>
+<p>Maybe lots of things. Maybe nothing. Maybe I’ll tear the whole thing down next month and try again.</p>
 
 </content>
     </item>
