@@ -1,4 +1,4 @@
-                               <style>
+<style>
     body {
       background: steelblue;
       color: lightgoldenrodyellow;

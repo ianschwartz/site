@@ -6,35 +6,11 @@
     <description>JS Developer, Dad, Slacker</description>
     
     <item>
-        <title>Bridgerton</title>
-        <pubDate>Mon Feb 01 2021</pubDate>
-        <link>https://schwartz.world/blog/bridgerton/index.html</link>
-        <description>Bridgerton posted on Mon Feb 01 2021</description>
-        <content><p>What is to follow is an honest review of the Netflix series <em>Bridgerton</em>. My wife watched the series while I alternately played on my phone, worked on some code, slept and occasionally I joined her as well. I missed a lot, and I don’t care.</p>
-<p>Bridgerton is apparently the story of Daphne, a 21-year-old debuntante, and The Duke, a rich guy she likes. Early in the series, the Duke pledges to his dying father that he will never sire children, as revenge for the dad having been so terrible. As someone who has sired children, this is a perfectly acceptable choice to make. Kids are wonderful but hard, and if you are worried about perpetuating a pattern of abuse, that makes it harder. The Duke is also like 25? I also did not want to have kids at 25, although I did not pledge it on my father’s deathbed (something about linear time and his still being alive and also a great dad).</p>
-<p>Daphne and the Duke do not want to court anybody, so they pledge to court each other. They are young, sexy and really repressed. They are also both whiny bitches. This is very hot and you are expected to really feel the sexual tension here.</p>
-</content>
-    </item>
-    
-    <item>
         <title>Dependency isolation</title>
         <pubDate>Mon Feb 01 2021</pubDate>
         <link>https://schwartz.world/blog/dependency_isolation/index.html</link>
         <description>Dependency isolation posted on Mon Feb 01 2021</description>
-        <content><pre><code>                           &lt;style&gt;
-body {
-  background: steelblue;
-  color: lightgoldenrodyellow;
-}
-a {
-  color: firebrick;
-  font-weight: bolder;
-}
-h1, h2, h3, h4, h5 {
-    color: darkgreen;
-}</code></pre>
-
-
+        <content>
 <h3 id="refactoring-driven-development">Refactoring Driven Development</h3>
 <p>I’m a big believer in <code>code fast, refactor often</code>. You learn more about the product you are trying to build by building it than you do by thinking, and your best bet is to just get it built and then rebuild the broken parts with the knowledge you’ve gained. This philosophy extends beyond just development, as design and product priorities are likely to change as well.</p>
 <p>When I first read an explanation of the term <code>refactoring</code>, I remember thinking that it sounded insane. Coding seemed so hard. How could someone get code working and then go back and rewrite it a different way? Why would you do the same work twice? Turns out that refactoring is necessary and fun, so you should just stop worrying and learn to love it. And the number one proven way to not hate refactors, is to code defensively against them. Every line of code you write is either wrong, or eventually going to be wrong. Scripting is different, we’re talking about application development. Code that needs to be supported long-term.</p>
