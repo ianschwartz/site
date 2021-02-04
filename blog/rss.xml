@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>schwartz.world blog</title>
     <link>https://schwartz.world/blog/</link>
     <description>JS Developer, Dad, Slacker</description>
-    
+      
     <item>
         <title>Sleep apnea</title>
-        <pubDate>Wed Feb 03 2021</pubDate>
+        <pubDate>Wed, 03 Feb 2021 16:02:07 GMT</pubDate>
         <link>https://schwartz.world/blog/sleep_apnea/index.html</link>
         <description>Sleep apnea posted on Wed Feb 03 2021</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>I have debated writing about my recent sleep apnea diagnosis. I don’t want this blog to be a personal blog, per se. In the past, I’ve struggled with blogging because it’s very public, and my goal with this site has always been to keep it about hacking. However, the last few months have been transitional for me, and as I learn more about sleep apnea and its treatment, I see that it <em>is</em> relevant to the interests of this blog. For one, a considerable amount of attention that I used to devote to side projects is now devoted to getting some fucking sleep.</p>
 <p>I believe I have had sleep apnea for a long time. I have always woken up alert and early, often before the sun rises, and I always pee right away. Sorry if it’s TMI, but apparently getting up to urinate and sleep apnea are very heavily correlated. Your brain, experiencing a drop in oxygen assumes you are drowning and orders your body to eliminate excess fluid. I’ve always had this morning routine, regardless of how late I stay up or what else is going on. I attributed it to having a regular internal clock, and saw it as a gift. But in light of the diagnosis, I question whether my gift was just a symptom of an ongoing problem.</p>
 <h3 id="children">Children</h3>
@@ -45,15 +45,15 @@
 <p>I’m very motivated because I would like to not feel like a tired piece of shit every second of the day, and get back to the things I love: writing, music, running. Also because the list of side effects for untreated apnea are very scary.</p>
 <p>Stay tuned for more about my night breathing than you probably wanted to know in future installments.</p>
 <p>ML, Schwartz</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Dependency isolation</title>
-        <pubDate>Mon Feb 01 2021</pubDate>
+        <pubDate>Mon, 01 Feb 2021 15:56:23 GMT</pubDate>
         <link>https://schwartz.world/blog/dependency_isolation/index.html</link>
         <description>Dependency isolation posted on Mon Feb 01 2021</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <h3 id="refactoring-driven-development">Refactoring Driven Development</h3>
 <p>I’m a big believer in <code>code fast, refactor often</code>. You learn more about the product you are trying to build by building it than you do by thinking, and your best bet is to just get it built and then rebuild the broken parts with the knowledge you’ve gained. This philosophy extends beyond just development, as design and product priorities are likely to change as well.</p>
 <p>When I first read an explanation of the term <code>refactoring</code>, I remember thinking that it sounded insane. Coding seemed so hard. How could someone get code working and then go back and rewrite it a different way? Why would you do the same work twice? Turns out that refactoring is necessary and fun, so you should just stop worrying and learn to love it. And the number one proven way to not hate refactors, is to code defensively against them. Every line of code you write is either wrong, or eventually going to be wrong. Scripting is different, we’re talking about application development. Code that needs to be supported long-term.</p>
@@ -79,15 +79,15 @@
 <p>Anyway, I’m trying it now, but I’m not ready to open source the code just yet. Curious about other people’s thoughts.</p>
 <p>&lt;3</p>
 <p>schwartz</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>A whoops and an update</title>
-        <pubDate>Mon Dec 28 2020</pubDate>
+        <pubDate>Tue, 29 Dec 2020 00:29:27 GMT</pubDate>
         <link>https://schwartz.world/blog/a_whoops_and_an_update/index.html</link>
         <description>A whoops and an update posted on Mon Dec 28 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <h2 id="whoops">Whoops</h2>
 <p>If you’re looking at my RSS feed, you’re probably wondering why all my past posts are showing up as today’s date. That’s because I moved development of the blog off my work machine and onto my Dell XPS 15 running Ubuntu. I’m trying to learn more about Unix and systems programming, and I cloned the repo onto this machine to write this post. No problem.</p>
 <p>Well, slight problem, as the blog posts here use file metadata to store their <code>created_at</code> and <code>edited_at</code> information. New machine, all new files. It’s a major flaw in the system, and one I’ll have to rectify. For now, dear reader, ignore the other blog posts. This is the only new one. Or read the old ones. That’s also a choice.</p>
@@ -101,29 +101,29 @@
 <p>So here I am writing little one-off scripts and tools for myself in Node and Python, but I don’t really know what I’m doing. As I get more into Unix tools, I need to learn more about the system. It’s time to learn a low-level language, and for some reason I’m just less scared of Rust than I am C.</p>
 <p>Lastly, there are no jobs in Rust really. A few, but not many. I know what it’s like to start learning a language years before you anticipate having a job writing it, and I think Rust is a good investment in the long term. I could use it to write internal tooling to support developers, or create NPM modules that call Rust code to access low-level APIs. I don’t know. Whatever.</p>
 <p>Anyway, I’m enjoying it, and these little forays into other languages always make me a stronger JS dev, so even if I don’t become a master Rustacean, it’s still time well spent.</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Garfsay</title>
-        <pubDate>Mon Dec 28 2020</pubDate>
+        <pubDate>Tue, 29 Dec 2020 00:29:27 GMT</pubDate>
         <link>https://schwartz.world/blog/garfsay/index.html</link>
         <description>Garfsay posted on Mon Dec 28 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>So here I am, a week or so into being a Rustacean™. To experiment, I whipped up a little program that takes a string and then reprints it to the console with an ascii drawing of a popular cartoon cat. Basically <code>cowsay</code> but less <code>moo moo</code> and more <code>meow meow</code>.</p>
 <p>It might seem like a silly project, but I think it was a better first project than a number guessing game or a to-do list. You can say what you want about JavaScript, but there is a lot less mental overhead required for this kind of thing in a scripting language.</p>
 <p>I was all set to walk away when a friend submitted a PR to allow the use of <code>args</code>. My original implementation only supported piping, but now <code>garfsay</code> is a full-on <code>cowsay</code> clone. Then, I thought, why keep the fun for myself, and I bundled that bad boy up and pushed it to <code>crates.io</code> where it awaits installation by anyone who has a use for a program with no use.</p>
 <p>If you have Rust installed on your machine, feel free to <code>cargo install garfsay</code>, or otherwise <a href="/garfsay">stay tuned here</a> and eventually I’ll post a binary.</p>
 <p>Anyway, feel free to check the project out at it’s new home</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Bring back physical media</title>
-        <pubDate>Tue Dec 15 2020</pubDate>
+        <pubDate>Tue, 15 Dec 2020 15:30:35 GMT</pubDate>
         <link>https://schwartz.world/blog/bring_back_physical_media/index.html</link>
         <description>Bring back physical media posted on Tue Dec 15 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>My first computer (Apple IIe) used 5-inch floppy disks. If a program didn’t fit on a single floppy, you might need to spread it across multiples, but otherwise this solution was fine. Floppy disks could hold the application AND the user data, be easily backed up or shared, and storing them was easy enough. The computer was old when I got it, and the former owner included something like 500 programs on floppy disk, an endlessly discoverable mountain of software.</p>
 <p>My next computer (90s era IBM clone) had multiple media drives, a 3.5-inch floppy drive and a CD drive. The floppies held more data than the old 5-inchers, and had all the same upsides. I could work on something at home, bring it to a computer at school and just keep going. The CD drive was a big game changer though. A CD can hold 700mb of data, and my hard drive at the time was 600mb. A really common pattern was to run software off a CD, but save your user data on floppies or hard drive. There was internet, initially in the AOL and later dial-up, but bandwidth was expensive and transfer speeds were slow. So slow.</p>
 <p>My next computer, a G3 Graphite iMac, had an optical drive that could read and write CDs and read DVDs. I used to rent movies from the Blockbuster where I worked and watch them on the tiny CRT screen. This was in the Napster days, and burning CDs was a boon. I could make mixes for friends or girlfriends, or even share my own music. I burned a lot of CDs in those days. The 100gb hard drive was enough that I didn’t miss my floppy drive, plus we had the internet everywhere by then.</p>
@@ -135,15 +135,15 @@
 <p>On the same note, a lot of my early musical tastes were formed by listening to my parents old records. I can play songs I like for my children, but without a physical media library they are unlikely to discover my music on their own, especially without album art. I remember seeing the cover of <code>Eat A Peach</code> and thinking that I really wanted to listen to it.</p>
 <p>As a parent I have a lot of pictures of my kids, many of which are precious to me. We’ve printed some out, stored others on a SSD, and the rest are in the cloud. Yes, we could print more/all of them, but we all know this is no longer the norm, and I’m probably never going to meander through the folders on our storage drive the way I used to through old family albums.</p>
 <p>I think there was a lot of value in being able to run software directly off a CD instead of kludging up your internal storage with installed apps or relying on the cloud. Most software today is designed with the assumption that you have lots of memory, lots of storage and lots of cloud access. Can I even run a MacOS app directly off a CD? Maybe I should try. Look at your own Applications folder and tell me you really need all that installed on your machine. How easy is all that to uninstall if you want to? How big of a SSD would you actually need if you only stored your user data on your machine? How much less worried would you be about security if your computer didn’t require internet access to function? If, in 10 years I want to fire up an old computer or phone, could I even get software onto it?</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>The sad state of software for kids</title>
-        <pubDate>Tue Dec 08 2020</pubDate>
+        <pubDate>Tue, 08 Dec 2020 16:06:16 GMT</pubDate>
         <link>https://schwartz.world/blog/the_sad_state_of_software_for_kids/index.html</link>
         <description>The sad state of software for kids posted on Tue Dec 08 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>I have two small children, a 4.5 year old and a 2.5 year old, both girls. Since the pandemic began, screen time has become more of a thing for both of them. It’s unfortunate, but I know few parents who haven’t had to do the same. It’s just too many hours a day to be <em>on</em>.</p>
 <p>So we have screen time, but <a href="https://schwartz.world/blog/educational_tv/">all screen time is not created equally</a>. At the bottom of the heirarchy is clips from childrens shows on YouTube (the only free way to stream Peppa Pig), then PBS Kids Shows (I’ll do a <em>Pinkalicious</em> rant on here someday), then classic (not new)</p>
 <p>Sesame Street, then PBS Kids games, then <em>Educational</em> games. I think it’s not controversial to state that interactive media like games are better than mindless screen time.</p>
@@ -155,30 +155,30 @@
 <p>I wonder if a retrocomputer (or a reasonable emulation of one) is the solution for me. I just set up my old G3 iMac. There’s a ton of abandonware for it online, almost all of it as higher quality than today, or at least not full of the horrible UX patterns we’ve all gotten used to in the last couple of decades.</p>
 <p>Inline image: Picture of my G3 iMac (https://schwartz.world/img/imac.jpg)</p>
 <p>This is the ideal computer for a kid, I think. I’m not going to hook it up to the network, so security isn’t a concern. I can load it with enough software to keep them interested as they get older. It’s completely GUI based with no command line, but that’s not important for a kid who can’t read yet. Maybe even better. And it has a working CD/DVD drive, which is good because I really think physical media are better for children. Maybe I’ll do my next post on that.</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Raspberry pi timelapse cam pt2</title>
-        <pubDate>Tue Dec 08 2020</pubDate>
+        <pubDate>Tue, 08 Dec 2020 16:05:35 GMT</pubDate>
         <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt2/index.html</link>
         <description>Raspberry pi timelapse cam pt2 posted on Tue Dec 08 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>I’ve been trying to improve the quality of the timelapse videos I’m taking with the Pi. I’ll be honest, I don’t know much about photography, but I went through and tried each of the <a href="https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes">sensor modes</a> one by one. Mode #1 seems to be the best so far, although I think I’ll inevitably have to learn to use the settings (shutter speed, ISO, etc) manually.</p>
 <p>The images come back decently sharp, but far from what you’d expect from a product called the “High Quality Camera”. In fairness, I’m using the cheapest lens I could get, so I don’t know what to expect. Eventually I’d like the camera to take either ambient light level (with a sensor) or the time of sunset (from an API) into account and do longer exposures when it’s dark out.</p>
 <p>The next step is actually going to try the same process using a Pi Zero W with the 5MP camera module and see how those pictures come out in comparison. I’d like to use the cheaper hardware for the eventual permanent camera setup. With winter coming, I’d love to have a timelapse pointed at the backyard full-time. I’m probably going to use the crappier camera for this so I can save the HQ one for other experiments.</p>
 <p>Anyway, without further ado, here’s the latest timelapse.</p>
 <h3 id="ice">Ice</h3>
 
-Inline video: undefined (https://schwartz.world)</content>
+Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     </item>
     
     <item>
         <title>Raspberry pi timelapse cam pt1</title>
-        <pubDate>Tue Dec 08 2020</pubDate>
+        <pubDate>Tue, 08 Dec 2020 16:05:35 GMT</pubDate>
         <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt1/index.html</link>
         <description>Raspberry pi timelapse cam pt1 posted on Tue Dec 08 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>I’m a front-end dev by trade, and while I am comfortable whipping up a server in a few different frameworks, I really prefer to avoid exposing any of my server-side code to the open internet. <a href="https://schwartz.world/blog/static_site_generators/">For example, this site generates a build on my local machine, then pushes it to Github.</a> The content is then served by Netlify with no need to maintain a server. JAMStack, baby!</p>
 <p>But how far can we take it?</p>
 <p>I have this idea I’ve been mulling over for a while. I recently got the new <code>Raspberry Pi High Quality camera</code>, and it’s pretty nice. I’m using the cheapest lens I could get, and the images are pretty good. Eventually, I’d love to invest in a nicer lens, but <span id="experience">experience has taught me to build first and then buy later.</span> I’ve got a whole pile of Arduino and Pi boards to remind me, lest I forget.</p>
@@ -200,38 +200,38 @@ Inline video: undefined (https://schwartz.world)</content>
 </ul>
 <p>Without further ado:</p>
 
-Inline video: undefined (https://schwartz.world)</content>
+Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     </item>
     
     <item>
         <title>Self-censorship</title>
-        <pubDate>Thu Nov 05 2020</pubDate>
+        <pubDate>Thu, 05 Nov 2020 20:23:12 GMT</pubDate>
         <link>https://schwartz.world/blog/self-censorship/index.html</link>
         <description>Self-censorship posted on Thu Nov 05 2020</description>
-        <content><p>As a child, I was unafraid to create. I wrote stories and songs without fear of embarrassment. I can’t say when this changed, but it did, to be sure. There have been a few times when I’ve written things that really impressed myself, but most of the time I make myself cringe. It’s possible that all first drafts are cringey, that I should polish my turds into gleaming gems, but the first cheesy rhyme and I send myself spiraling.</p>
+        <content:encoded><![CDATA[ <p>As a child, I was unafraid to create. I wrote stories and songs without fear of embarrassment. I can’t say when this changed, but it did, to be sure. There have been a few times when I’ve written things that really impressed myself, but most of the time I make myself cringe. It’s possible that all first drafts are cringey, that I should polish my turds into gleaming gems, but the first cheesy rhyme and I send myself spiraling.</p>
 <p>The irony is that I love lyrics that are unabashedly cheesy. I respect writers who can write an imperfect line and just move on, rather than obsessing over each comma until it becomes a masterpiece (or gets too frustrating to continue).</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Id75 day 2</title>
-        <pubDate>Wed Nov 04 2020</pubDate>
+        <pubDate>Wed, 04 Nov 2020 20:55:01 GMT</pubDate>
         <link>https://schwartz.world/blog/id75_day_2/index.html</link>
         <description>Id75 day 2 posted on Wed Nov 04 2020</description>
-        <content><p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
+        <content:encoded><![CDATA[ <p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
 <p><a href="https://www.typingtest.com/">Inline image: Typing Test Screen Shot - 18wpm, 2 typos (https://schwartz.world/img/typetest-2020-11-3.png)</a></p>
 <p>I’m absolutely loving QMK though, and I can’t believe the power is offers. On layer 1 (not 0), I have set the arrow keys to emit mouse events. I can move the pointer using them as well as left and right click. Additionally, with all the typos, I got pretty sick of reaching for the <code>backspace</code> key, so I remapped <code>j</code> and <code>k</code> to work as <code>backspace</code> and <code>enter</code> respectively. There are a lot of keys I never use, so I’d like to relegate them to lower layers (I’m looking at you <code>ins</code> and <code>scroll lock</code>) and use the extra real estate for macros.</p>
 <p>I also split the bottom row, and put a key for toggling between levels in between <code>b</code> and <code>v</code>.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>New keyboard day</title>
-        <pubDate>Wed Nov 04 2020</pubDate>
+        <pubDate>Wed, 04 Nov 2020 15:42:58 GMT</pubDate>
         <link>https://schwartz.world/blog/new_keyboard_day/index.html</link>
         <description>New keyboard day posted on Wed Nov 04 2020</description>
-        <content><p>It’s new keyboard day in the <code>schwartz</code> household. I’ve been a mechanical keyboard user for the last 2.5 years, pretty much since I stopped cosplaying as a software dev and actually became one. At my last job I somehow wound up with a friend’s <a href="https://codekeyboards.com/">Code keyboard</a> when he left.</p>
+        <content:encoded><![CDATA[ <p>It’s new keyboard day in the <code>schwartz</code> household. I’ve been a mechanical keyboard user for the last 2.5 years, pretty much since I stopped cosplaying as a software dev and actually became one. At my last job I somehow wound up with a friend’s <a href="https://codekeyboards.com/">Code keyboard</a> when he left.</p>
 <h3 id="tweaking-the-setup">Tweaking the Setup</h3>
 <p>I use this phrase a lot, because I do it a lot. One vertical monitor and a laptop; two horizontal monitors, laptop closed; one vertical, one horizontal <em>and</em> laptop screen. The only part of my workstation that is non-negotiable is the <a href="https://www.kensington.com/en-ca/p/products/control/trackballs/expert-mouse-optical-trackball/">Kensington Expert Trackball</a>. Everything else is fair game. There is no ideal arrangement, the act of fiddling is its own reward. I never did this before I was a professional werb derv. In fact, I learned to code on a sub-$200 Chromebook with no external peripherals.</p>
 <h3 id="my-old-keyboard">My Old Keyboard</h3>
@@ -248,15 +248,15 @@ Inline video: undefined (https://schwartz.world)</content>
 <p>I think the real power in this keyboard lies in frequently tweaking the mapping. I keep overshooting the <code>backspace</code> key, but I can remap it to go in the place I expect it to, instead of forcing my body to retrain.</p>
 <p>I think I may separate out the letters into two halves with the arrow/fn keys in the middle. There’s a lot more keys than I’m used to, and I’d like to program in some macros for when I’m writing code. I wonder if I can hit a key and have it input <code>const x = () =&gt; {};</code>. I know I can do it with Hammerspoon but having it built into the keyboard would mean the behavior would exist when I work on a Raspberry Pi or my laptop-repurposed-as-a-server. There is absolutely a chance I will use the ID75 for a few months and decide to go back to a regular staggered keyboard.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Asynchronous education</title>
-        <pubDate>Tue Oct 27 2020</pubDate>
+        <pubDate>Tue, 27 Oct 2020 17:09:46 GMT</pubDate>
         <link>https://schwartz.world/blog/asynchronous_education/index.html</link>
         <description>Asynchronous education posted on Tue Oct 27 2020</description>
-        <content><p>Apparently, in India during the Covid pandemic, a large number of schools are using Whatsapp for teaching.</p>
+        <content:encoded><![CDATA[ <p>Apparently, in India during the Covid pandemic, a large number of schools are using Whatsapp for teaching.</p>
 <p>It makes a lot of sense, when you think about it. You wouldn’t necessarily expect every house to have a computer to dedicate to a child’s education (although it would be nice), but phones are supposedly common enough there to make Whatsapp an ideal platform. Phones are even more common here in my little white slice of suburbia. I wouldn’t be surprised if most kids had their own phone. Additionally, Whatsapp provides read receipts, so teachers can check that students are actually viewing the lessons. The downside is that Whatsapp is a Facebook provided service.</p>
 <p>The big thing that Whatsapp™ Edumacation offers that Zoom™ Edumacation doesn’t offer is <code>asynchronousity</code>. As far as I’m concerned a group lesson on Zoom is basically the same thing as watching a video, except without the upsides of video. Teachers have to put as much (or more) time into teaching than in a classroom, while students are expected to pay attention without any of the social pressure to do so that comes with being in a roomful of kids.</p>
 <p>School, as it currently exists in America, heavily rewards a certain type of learner. I am not that type of learner. I know for a fact that if I was in high school right now, I’d be failing. I can barely pay attention during Zoom meetings at Work™, and those typically top out around 45 minutes. But I also know that the <code>async</code> model offered by Whatsapp lessons would have resonated with me, big time.</p>
@@ -283,15 +283,15 @@ Inline video: undefined (https://schwartz.world)</content>
 </ul>
 <p>I truly feel for the generation coming of age now. I can’t imagine doing 8th grade in front of a Chromebook. I only hope that by the time my children enter real school (as opposed to preschool) that we’ll have this figured out a little more for them. All the async learning options involve thinking holistically. Instead of planning weekly lessons, you’d have to <em>build</em> the game or prerecord and transcribe <em>all</em> the lectures, but the payoff would be huge as teachers could share resources and build on them, the same way software does with open source.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Educational tv</title>
-        <pubDate>Tue Oct 27 2020</pubDate>
+        <pubDate>Tue, 27 Oct 2020 10:35:25 GMT</pubDate>
         <link>https://schwartz.world/blog/educational_tv/index.html</link>
         <description>Educational tv posted on Tue Oct 27 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>I don’t want to be one of those complaining old men, constantly bemoaning every difference that I see between the world of my youth and that of today.I’m not that old anyway; at 38 I consider myself to be just barely reaching adulthood.</p>
 <p>I have two small children of the girl persuasion, ages 2 and 4. The pandemic has changed so much about their lives, but one change is that we all have a lot more screen time than before.</p>
 <p>Children’s programming is shit today. Boring computer-generated animation, interchangeable characters with impossibly cheerful voices. Most of it seems lazy and half-baked. You could take the plots and characters from any number of shows and switch them around and it would all fit fine. I’m talking about shows like <em>PJ Masks</em>, <em>Paw Patrol</em>, and <em>Mickey Mouse Clubhouse</em>.</p>
@@ -300,15 +300,15 @@ Inline video: undefined (https://schwartz.world)</content>
 <p>Contrast that to the shows I watched as a kid. We’ve been playing <em>Fraggle Rock</em>, <em>The Elephant Show</em>, <em>Magic Schoolbus</em>, <em>Beakman’s World</em>, <em>Bill Nye the Science Guy</em>. They’re just better.</p>
 <p>The Fraggles are such well-developed characters, and the show does such a good job of showing the fragile beauty of their ecosystem. There are layers of information that can be gleaned on subsequent rewatches. As children mature, there are jokes and nuances they start to grasp. The show is actually entertaining for adults.</p>
 <p>Contrast that to <em>The PJ Masks</em>, a show that makes me want to actually put my head through the TV.</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Converting large movies to smallish mp4s</title>
-        <pubDate>Tue Oct 27 2020</pubDate>
+        <pubDate>Tue, 27 Oct 2020 10:31:00 GMT</pubDate>
         <link>https://schwartz.world/blog/converting_large_movies_to_smallish_mp4s/index.html</link>
         <description>Converting large movies to smallish mp4s posted on Tue Oct 27 2020</description>
-        <content><p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
+        <content:encoded><![CDATA[ <p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
 <p>Eventually I’d like to get it working with some sort of attached storage, but at the moment I’m using the MacBook’s HD which is relatively meager once you start filling up the HD with movies. I don’t need much though, since the main purpose is providing my kids with better educational content than is offered on Netlix / Prime / Hulu, as well as allowing us to eliminate our Disney+ subscription. The kids watch the same movies over and over again (he said as he cued up Olaf’s Frozen Adventure for the 10,000th time).</p>
 <p>Warning: It isn’t a fast process, at least not on an old-ass MacBook. Doing a full season of a TV show takes forever since FFMPEG goes through line by line.</p>
 <p>Warning: This appends <code>.mp4</code> to the filename, meaning <code>some-movie.mkv</code> becomes <code>some-movie.mkv.mp4</code>. I’m working on a bulk file renaming tool to run afterward to format the titles into the Plex naming scheme (<code>"MASH s01e09"</code>).</p>
@@ -327,15 +327,15 @@ Inline video: undefined (https://schwartz.world)</content>
     done;
 }</code></pre>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Fudgy brownie cupcakes</title>
-        <pubDate>Mon Oct 26 2020</pubDate>
+        <pubDate>Mon, 26 Oct 2020 20:23:03 GMT</pubDate>
         <link>https://schwartz.world/blog/fudgy_brownie_cupcakes/index.html</link>
         <description>Fudgy brownie cupcakes posted on Mon Oct 26 2020</description>
-        <content><h2 id="brownie-cupcakes-recipe"><a href="https://www.alsothecrumbsplease.com/brownie-cupcakes-recipe/">Brownie Cupcakes Recipe</a></h2>
+        <content:encoded><![CDATA[ <h2 id="brownie-cupcakes-recipe"><a href="https://www.alsothecrumbsplease.com/brownie-cupcakes-recipe/">Brownie Cupcakes Recipe</a></h2>
 <h3 id="ingredients">Ingredients</h3>
 <ul>
 <li>1 cup butter, melted and cooled (226g)</li>
@@ -352,15 +352,15 @@ Inline video: undefined (https://schwartz.world)</content>
 <p>Spoon batter with an ice cream scoop into the liners and fill almost full.</p>
 <p>Bake for 22-26 minutes until the tops look crinkled and a toothpick centered in the middle comes out slightly dirty. Don’t overbake them or they are getting cakey. I baked mine for exactly 25 minutes. Remove from the oven and let cool for 10 minutes. Then carefully remove from pan and transfer to a wire rack and let cool completely before frosting.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Adding comments to the blog</title>
-        <pubDate>Sat Oct 03 2020</pubDate>
+        <pubDate>Sat, 03 Oct 2020 07:10:03 GMT</pubDate>
         <link>https://schwartz.world/blog/adding_comments_to_the_blog/index.html</link>
         <description>Adding comments to the blog posted on Sat Oct 03 2020</description>
-        <content><p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
+        <content:encoded><![CDATA[ <p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
 <p>I narrowed my options down to these options:</p>
 <ul>
 <li>Users email their comments. A Node script checks the email once per day and adds the comments to a DB. I generate the HTML at build time.</li>
@@ -372,15 +372,15 @@ Inline video: undefined (https://schwartz.world)</content>
 <h3 id="update-2020-26-10">Update: 2020-26-10</h3>
 <p>I’ve updated the build tools for the blog to inlcude Pandoc and JSDom, which gives me the ability to manipulate the generated HTML. Previously, I was parsing the MD with JavaScript and having a heck of a time of it. That means that our links to <code>meta</code> data (like where comments are located), can be left in the HTML with <code>display: none;</code>. If you view the source of this page, you’ll see it right there.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Dongles</title>
-        <pubDate>Fri Sep 25 2020</pubDate>
+        <pubDate>Fri, 25 Sep 2020 17:35:53 GMT</pubDate>
         <link>https://schwartz.world/blog/dongles/index.html</link>
         <description>Dongles posted on Fri Sep 25 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 <p>I am on the record as being anti-dongle. It’s a battle, and I’m losing it.</p>
 <p>Work has provided me with a shiny MacBook pro, which has 4 USB-c ports that have to work for everything.</p>
 <ol type="1">
@@ -404,28 +404,28 @@ Inline video: undefined (https://schwartz.world)</content>
 <p>Why not use a USB hub?</p>
 </blockquote>
 <p>I guess I could. But I have dongles, so I use them. It’s the same difference.</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Archive bookmarklet</title>
-        <pubDate>Wed Sep 23 2020</pubDate>
+        <pubDate>Thu, 24 Sep 2020 03:10:23 GMT</pubDate>
         <link>https://schwartz.world/blog/archive_bookmarklet/index.html</link>
         <description>Archive bookmarklet posted on Wed Sep 23 2020</description>
-        <content><h2 id="a-useful-bookmarklet-i-stumbled-across">A useful Bookmarklet I stumbled across</h2>
+        <content:encoded><![CDATA[ <h2 id="a-useful-bookmarklet-i-stumbled-across">A useful Bookmarklet I stumbled across</h2>
 <p><a href="https://news.ycombinator.com/item?id=24809650">Shamelessly lifted from the Hacker News Comment</a></p>
 <p>Takes you to archive.org’s historical record of your site.</p>
 <p><code>javascript:void(open('http://archive.today/?run=1&amp;url='+encodeURIComponent(document.location)))</code></p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>The hardest and easiest part of react</title>
-        <pubDate>Wed Sep 23 2020</pubDate>
+        <pubDate>Thu, 24 Sep 2020 03:10:23 GMT</pubDate>
         <link>https://schwartz.world/blog/the_hardest_and_easiest_part_of_react/index.html</link>
         <description>The hardest and easiest part of react posted on Wed Sep 23 2020</description>
-        <content>
+        <content:encoded><![CDATA[ 
 
 <h2 id="the-hardest-and-easiest-part-of-reactjs">The Hardest and Easiest Part of ReactJS</h2>
 <p>In the last year, I switched from a small shop where I was <em>the</em> front-end guy to a bigger one where there are dozens of us. Dozens of us! I’ve gotten a lot better at reading other people’s code as a result, especially React code. React is great in that it has a small, unopinionated API, but that same freedom is also its biggest weakness.</p>
@@ -508,15 +508,15 @@ const Child = ({ id, onLoad, loading }) =&gt; {
 <p>This also makes testing much easier, as testing <code>Child</code> doesn’t require mocking the API response at all. You can just check that it calls its <code>onLoad</code> method when it first loads. You could further abstract the loading and data fetching behavior behind a custom hook that can also be tested in isolation.</p>
 <p><em>“Seems so easy, but this example is so simple and contrived”</em></p>
 <p>It’s supposed to be simple. It only gets hard if you forget to refactor as you go. Where to put your state and effects is the fundamental question of React programming. Building out a React app will require you to make assumptions about where state belongs and then <a href="https://reactjs.org/docs/lifting-state-up.html">revisit those assumptions constantly</a>. The first time you ask yourself, how do I propogate this change back up the tree reactively, that’s the exact moment you should be questioning where things are located in your app, because data shouldn’t move up, but down. Go with the flow.</p>
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>On typescript</title>
-        <pubDate>Tue Sep 15 2020</pubDate>
+        <pubDate>Tue, 15 Sep 2020 19:10:23 GMT</pubDate>
         <link>https://schwartz.world/blog/on_typescript/index.html</link>
         <description>On typescript posted on Tue Sep 15 2020</description>
-        <content><p>I don’t like it.</p>
+        <content:encoded><![CDATA[ <p>I don’t like it.</p>
 <h3 id="my-experience">My experience</h3>
 <p>I work on a large and tangled React codebase. We have two linter rules related to <code>any</code> types:</p>
 <ul>
@@ -542,15 +542,15 @@ const Child = ({ id, onLoad, loading }) =&gt; {
 <h3 id="in-summation">In Summation</h3>
 <p>Someday I’d like to try a project with TypeScript my way, and I think I might like that. I’d prefer to use the types conservatively, leaving most code <em>un</em>typed except the most important bits. I probably won’t do that unless Deno becomes mainstream enough to seriously contend with Node.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
     <item>
         <title>Static site generators</title>
-        <pubDate>Thu Sep 10 2020</pubDate>
+        <pubDate>Thu, 10 Sep 2020 19:10:23 GMT</pubDate>
         <link>https://schwartz.world/blog/static_site_generators/index.html</link>
         <description>Static site generators posted on Thu Sep 10 2020</description>
-        <content><h2 id="static-site-generators">Static Site Generators</h2>
+        <content:encoded><![CDATA[ <h2 id="static-site-generators">Static Site Generators</h2>
 <p>Some people knit. Some bake. Me? I build static site generators. This site is one of them.</p>
 <p>My introduction to static site generators was the incredible <a href="www.gatsbyjs.com">Gatsby JS</a>, and this site was built with Gatsby originally. Gatsby is an amazing product, but I don’t want to write React in my off-time.</p>
 <p>Even worse, I couldn’t make Gatsby work with Leaflet. At the time, I was very interested in JavaScript maps, and there was a quirk where Leaflet would bind itself to the <code>window</code> object before it was instatiated. This may have been fixed since then.</p>
@@ -575,8 +575,9 @@ const Child = ({ id, onLoad, loading }) =&gt; {
 <h3 id="what-will-you-write-about">What will you write about?</h3>
 <p>Maybe lots of things. Maybe nothing. Maybe I’ll tear the whole thing down next month and try again.</p>
 
-</content>
+ ]]></content:encoded>
     </item>
     
+
   </channel>
 </rss>

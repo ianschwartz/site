@@ -9,12 +9,13 @@ export const {JSDOM} = jsdom;
 
 
 export const rssTemplate = (items) => `<?xml version="1.0"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>schwartz.world blog</title>
     <link>https://schwartz.world/blog/</link>
     <description>JS Developer, Dad, Slacker</description>
-    ${items}
+      ${items}
+
   </channel>
 </rss>`
 
