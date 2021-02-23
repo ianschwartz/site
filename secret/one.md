@@ -1,0 +1,33 @@
+It happened again. A flash and I'm back at the beginning. I think I went further than ever before.
+
+Imagine this: you're a person. Me, in fact. Living your life and all of a sudden a piano falls on your head and you wake up and it's your thirteenth birthday again, and you're thirteen and blowing out the candles. What were you doing a second before that? Eating? Fucking? Driving? It doesn't matter. You're thirteen and you get another chance at life.
+
+It's not bad, all things considered. At least not the first time back around. You get to reunite with your dead parents and your childhood friends. Your body used to be achy and old but now you're young. You retain your memory and are able to make better decisions than you made the first time around. Years go by and you barely think of your old life, who would believe you? You are wealthy and popular. You have a super hot wife. And then she gets pregnant and life has a new meaning. The old you, that waste of space, could never have been a parent, but he never existed. His wasted potential is no-longer a waste. You pour years of love and affection into that child, watch her grow and mature into a beautiful young woman. You attend her high school graduation. Then college. Then her wedding. Then med school.
+
+Your daughter is perfect and intelligent, and by all estimations she is going to create a splash in this world. She is a doctor. She is a mother. It has been so long since you traveled back in time that you have forgotton about it. 
+
+That's what happened to me.
+
+And then I went back again. I don't even know how I died.
+
+The frustrating thing is that you can't do the same thing the same way twice. The big world events remain largely unchanged unless you change them. Sure you could kneecap a quarterback and change the outcome of the 1995 superbowl, but why would you? For financial gain? You can get rich without interfering.
+
+But the little splashes you make in the lives of others, that can never be the same twice. Your lives diverge from each other more and more as time goes on. You can try to meet your wife again, but can you make her fall in love with you? Can you conceive a child at the same exact moment and bring back the most important thing you ever did? Of course not.
+
+Anybody who has been in a time loop will tell you, you can't kill yourself. Ask Bill Murray. Did they make that movie? You know what happens, right? You jump in front of a semi and then the world snaps instantly back to your fucking thirteenth birthday and you are fucking thirteen and blowing out the fucking candles. 
+
+You will watch your dad get that heart attack every time. He will never eat the right foods or quit smoking. Every time you start over at age thirteen, he is always exactly seven years and fifty-one days from death. Sometimes your mom handles it well. Sometimes not. 
+
+One time around she remarried, and he was a hitter. You killed him, and then yourself. You wondered as you dug into cake and pizza, whether or not the other timelines still exist. Are you starting over? Or did you leave your mother behind to find your corpse? Still better than watching her get hit again. Another time around she drank herself to death. That was a strange one to see, very out of character for her.
+
+Always you picture your daughter's face. You dream of her at night. Do you even remember what she looked like? Is that even her? She had brown hair, but lighter or darker? Does she still exist somewhere? What about your grandchildren?
+
+You don't go crazy like Bill Murray. He experienced the same day over and over. You are experiencing lifetimes, but there is no nirvana to be attained. You will never escape this loop. You have been sentenced to be yourself forever, and given enough time you can be everybody. You cure cancer. You engineer a genocide. You learn to fly. You marry again and again. You get a vasectomy as soon as possible and you tell your wives you are sterile. You own a restaurant. You ride the trains. You die in a concentration camp. You die of old age.
+
+It's your thirtheenth birthday again and you're thirteen and blowing out the candles. "Make a wish!" yells a friend, right on cue. You lapse into a depression and stare at the ceiling refusing to eat or drink anything. You don't sleep. You just waste away, willing your body to subside on its own atrophied muscle. Your mother cries by your bedside. Your father yells. They forcefeed you. They take you to see someone. You spend a decade under a pharmaceutical fog. You hang yourself in your bedroom.
+
+It's your thirteenth birthday again and you're thirteen and you are blowing out the candles. What if you don't die? What if you take your years of experience and intelligence and become a scientist. You cured cancer once, can you cure death? You commit yourself to the greatest undertaking of all time, a single project spanning lifetimes. The process is simple enough. You retain most of your memory of your most recent lifetime (although older ones have become a bit foggy). You can seed scientific progress if you only memorize the right pieces of information before dying. You live the life of an ascetic, nothing but raw cruciferous vegetables, rigorous exercise and study. You become a doctor (again), and an expert in cellular biology and neuroscience. You have to time this right. If you die too young, science won't advance enough to matter, and if you die too old, you won't be able to remember enough. You commit suicide on your 45th birthday taking with you as much about anti-aging technology as you can.
+
+It's your thirteenth birthday again and you're thirteen and blowing out the candles. You allow yourself to enjoy the cake and arcade games. You win big at skeeball. The information you hoped to preserve leaves your mind. You do the whole thing again. Thirty-two years of work is nothing.
+
+This time when you come to, you leave the party with your parents calling after you. You run out and don't look back and find a pen and paper and begin to write. You panhandle enough for a bus ticket and some coffee, and you ride for hours, scribbling away the whole time. You return home to your worried parents. They will worry more when you leave for good later that week. You know how to amass a fortune without them, and you do, becoming the worlds youngest billionaire. You end world hunger and provide free education for all who want it. You own thousands of labs dedicated to expanding your research. It becomes clear that they will not acheive your goal in this lifetime, and you commit yourself to memorizing an entire branch of science *again* to bring back with you.
