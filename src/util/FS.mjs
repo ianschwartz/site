@@ -47,10 +47,10 @@ export const FS = {
     writeFile: (path, data) => {
     console.log(path)
     return new Promise((resolve, reject) => {
-        /*return fs.writeFile(path, data, (err, res) => {
+        return fs.writeFile(path, data, (err, res) => {
             if (err) console.error(err);
             resolve(res)
-        })*/
+        })
     })
 },
 }

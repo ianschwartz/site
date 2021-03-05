@@ -7,7 +7,7 @@
       
     <item>
         <title>Sleep apnea</title>
-        <pubDate>Wed, 03 Feb 2021 16:02:07 GMT</pubDate>
+        <pubDate>Wed, 03 Feb 2021 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/sleep_apnea/index.html</link>
         <description>Sleep apnea posted on Wed Feb 03 2021</description>
         <content:encoded><![CDATA[ 
@@ -50,7 +50,7 @@
     
     <item>
         <title>Dependency isolation</title>
-        <pubDate>Mon, 01 Feb 2021 15:56:23 GMT</pubDate>
+        <pubDate>Mon, 01 Feb 2021 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/dependency_isolation/index.html</link>
         <description>Dependency isolation posted on Mon Feb 01 2021</description>
         <content:encoded><![CDATA[ 
@@ -84,7 +84,7 @@
     
     <item>
         <title>A whoops and an update</title>
-        <pubDate>Tue, 29 Dec 2020 00:29:27 GMT</pubDate>
+        <pubDate>Mon, 28 Dec 2020 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/a_whoops_and_an_update/index.html</link>
         <description>A whoops and an update posted on Mon Dec 28 2020</description>
         <content:encoded><![CDATA[ 
@@ -106,7 +106,7 @@
     
     <item>
         <title>Garfsay</title>
-        <pubDate>Tue, 29 Dec 2020 00:29:27 GMT</pubDate>
+        <pubDate>Mon, 28 Dec 2020 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/garfsay/index.html</link>
         <description>Garfsay posted on Mon Dec 28 2020</description>
         <content:encoded><![CDATA[ 
@@ -120,7 +120,7 @@
     
     <item>
         <title>Bring back physical media</title>
-        <pubDate>Tue, 15 Dec 2020 15:30:35 GMT</pubDate>
+        <pubDate>Tue, 15 Dec 2020 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/bring_back_physical_media/index.html</link>
         <description>Bring back physical media posted on Tue Dec 15 2020</description>
         <content:encoded><![CDATA[ 
@@ -139,28 +139,8 @@
     </item>
     
     <item>
-        <title>The sad state of software for kids</title>
-        <pubDate>Tue, 08 Dec 2020 16:06:16 GMT</pubDate>
-        <link>https://schwartz.world/blog/the_sad_state_of_software_for_kids/index.html</link>
-        <description>The sad state of software for kids posted on Tue Dec 08 2020</description>
-        <content:encoded><![CDATA[ 
-<p>I have two small children, a 4.5 year old and a 2.5 year old, both girls. Since the pandemic began, screen time has become more of a thing for both of them. It’s unfortunate, but I know few parents who haven’t had to do the same. It’s just too many hours a day to be <em>on</em>.</p>
-<p>So we have screen time, but <a href="https://schwartz.world/blog/educational_tv/">all screen time is not created equally</a>. At the bottom of the heirarchy is clips from childrens shows on YouTube (the only free way to stream Peppa Pig), then PBS Kids Shows (I’ll do a <em>Pinkalicious</em> rant on here someday), then classic (not new)</p>
-<p>Sesame Street, then PBS Kids games, then <em>Educational</em> games. I think it’s not controversial to state that interactive media like games are better than mindless screen time.</p>
-<p>Unfortunately, the quality of a lot of children’s media has really declined. Watching older shows and movies, it’s not just nostalgia. Modern Sesame Street episodes are 30 minutes instead of an hour. The show has much less time to devote to numbers and alphabet, instead choosing to focus on social lessons. I still love and respect the project, but the old show was a much more effective tool. Luckily there is access to older material online.</p>
-<p>In the same vein, software for little kids just sucks. There are a few standout projects, <a href="https://gcompris.net/index-en.html">GCompris</a> and <a href="https://learn.khanacademy.org/khan-academy-kids/">Kahn Academy Kids</a> come to mind. But for every good app, there are a lot of bad ones. In-App purchases and upgrades are very common, and subscription models are becoming common as well. <a href="https://www.abcmouse.com/">Renting</a> an app by the <a href="https://learnwithhomer.com/">month</a> is garbage.</p>
-<p>Most software development for kids seems to be in the mobile / tablet space, and that’s the worst one for small children. My younger daughter accidentally navigates to a different app, 100% of the time, and my older daughter knows how to send texts (although not to whom she is sending them). Anything browser based has a different problem, you can’t whack the keys without eventually closing the tab, opening some menu or just navigating away. And kids inevitably whack the menu.</p>
-<p>The first computer I had was an Apple II. It ran one program at a time. This was better for kids.</p>
-<p>The second computer I had ran DOS. Since there was no GUI, there were no conventional shortcuts. You could launch a game from a CD-ROM. You couldn’t run two programs at once on that either without launching Windows, or maybe you could but I never learned how. We could set my little sister up with a <em>Berenstein Bears</em> game and her two options were <code>play that game</code>, or <code>go find another activity</code>. This was better for kids.</p>
-<p>I wonder if a retrocomputer (or a reasonable emulation of one) is the solution for me. I just set up my old G3 iMac. There’s a ton of abandonware for it online, almost all of it as higher quality than today, or at least not full of the horrible UX patterns we’ve all gotten used to in the last couple of decades.</p>
-<p>Inline image: Picture of my G3 iMac (https://schwartz.world/img/imac.jpg)</p>
-<p>This is the ideal computer for a kid, I think. I’m not going to hook it up to the network, so security isn’t a concern. I can load it with enough software to keep them interested as they get older. It’s completely GUI based with no command line, but that’s not important for a kid who can’t read yet. Maybe even better. And it has a working CD/DVD drive, which is good because I really think physical media are better for children. Maybe I’ll do my next post on that.</p>
- ]]></content:encoded>
-    </item>
-    
-    <item>
         <title>Raspberry pi timelapse cam pt2</title>
-        <pubDate>Tue, 08 Dec 2020 16:05:35 GMT</pubDate>
+        <pubDate>Wed, 09 Dec 2020 01:30:00 GMT</pubDate>
         <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt2/index.html</link>
         <description>Raspberry pi timelapse cam pt2 posted on Tue Dec 08 2020</description>
         <content:encoded><![CDATA[ 
@@ -175,7 +155,7 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Raspberry pi timelapse cam pt1</title>
-        <pubDate>Tue, 08 Dec 2020 16:05:35 GMT</pubDate>
+        <pubDate>Wed, 09 Dec 2020 01:20:00 GMT</pubDate>
         <link>https://schwartz.world/blog/raspberry_pi_timelapse_cam_pt1/index.html</link>
         <description>Raspberry pi timelapse cam pt1 posted on Tue Dec 08 2020</description>
         <content:encoded><![CDATA[ 
@@ -204,8 +184,28 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     </item>
     
     <item>
+        <title>The sad state of software for kids</title>
+        <pubDate>Wed, 09 Dec 2020 01:20:00 GMT</pubDate>
+        <link>https://schwartz.world/blog/the_sad_state_of_software_for_kids/index.html</link>
+        <description>The sad state of software for kids posted on Tue Dec 08 2020</description>
+        <content:encoded><![CDATA[ 
+<p>I have two small children, a 4.5 year old and a 2.5 year old, both girls. Since the pandemic began, screen time has become more of a thing for both of them. It’s unfortunate, but I know few parents who haven’t had to do the same. It’s just too many hours a day to be <em>on</em>.</p>
+<p>So we have screen time, but <a href="https://schwartz.world/blog/educational_tv/">all screen time is not created equally</a>. At the bottom of the heirarchy is clips from childrens shows on YouTube (the only free way to stream Peppa Pig), then PBS Kids Shows (I’ll do a <em>Pinkalicious</em> rant on here someday), then classic (not new)</p>
+<p>Sesame Street, then PBS Kids games, then <em>Educational</em> games. I think it’s not controversial to state that interactive media like games are better than mindless screen time.</p>
+<p>Unfortunately, the quality of a lot of children’s media has really declined. Watching older shows and movies, it’s not just nostalgia. Modern Sesame Street episodes are 30 minutes instead of an hour. The show has much less time to devote to numbers and alphabet, instead choosing to focus on social lessons. I still love and respect the project, but the old show was a much more effective tool. Luckily there is access to older material online.</p>
+<p>In the same vein, software for little kids just sucks. There are a few standout projects, <a href="https://gcompris.net/index-en.html">GCompris</a> and <a href="https://learn.khanacademy.org/khan-academy-kids/">Kahn Academy Kids</a> come to mind. But for every good app, there are a lot of bad ones. In-App purchases and upgrades are very common, and subscription models are becoming common as well. <a href="https://www.abcmouse.com/">Renting</a> an app by the <a href="https://learnwithhomer.com/">month</a> is garbage.</p>
+<p>Most software development for kids seems to be in the mobile / tablet space, and that’s the worst one for small children. My younger daughter accidentally navigates to a different app, 100% of the time, and my older daughter knows how to send texts (although not to whom she is sending them). Anything browser based has a different problem, you can’t whack the keys without eventually closing the tab, opening some menu or just navigating away. And kids inevitably whack the menu.</p>
+<p>The first computer I had was an Apple II. It ran one program at a time. This was better for kids.</p>
+<p>The second computer I had ran DOS. Since there was no GUI, there were no conventional shortcuts. You could launch a game from a CD-ROM. You couldn’t run two programs at once on that either without launching Windows, or maybe you could but I never learned how. We could set my little sister up with a <em>Berenstein Bears</em> game and her two options were <code>play that game</code>, or <code>go find another activity</code>. This was better for kids.</p>
+<p>I wonder if a retrocomputer (or a reasonable emulation of one) is the solution for me. I just set up my old G3 iMac. There’s a ton of abandonware for it online, almost all of it as higher quality than today, or at least not full of the horrible UX patterns we’ve all gotten used to in the last couple of decades.</p>
+<p>Inline image: Picture of my G3 iMac (https://schwartz.world/img/imac.jpg)</p>
+<p>This is the ideal computer for a kid, I think. I’m not going to hook it up to the network, so security isn’t a concern. I can load it with enough software to keep them interested as they get older. It’s completely GUI based with no command line, but that’s not important for a kid who can’t read yet. Maybe even better. And it has a working CD/DVD drive, which is good because I really think physical media are better for children. Maybe I’ll do my next post on that.</p>
+ ]]></content:encoded>
+    </item>
+    
+    <item>
         <title>Self-censorship</title>
-        <pubDate>Thu, 05 Nov 2020 20:23:12 GMT</pubDate>
+        <pubDate>Thu, 05 Nov 2020 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/self-censorship/index.html</link>
         <description>Self-censorship posted on Thu Nov 05 2020</description>
         <content:encoded><![CDATA[ <p>As a child, I was unafraid to create. I wrote stories and songs without fear of embarrassment. I can’t say when this changed, but it did, to be sure. There have been a few times when I’ve written things that really impressed myself, but most of the time I make myself cringe. It’s possible that all first drafts are cringey, that I should polish my turds into gleaming gems, but the first cheesy rhyme and I send myself spiraling.</p>
@@ -215,7 +215,7 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Id75 day 2</title>
-        <pubDate>Wed, 04 Nov 2020 20:55:01 GMT</pubDate>
+        <pubDate>Wed, 04 Nov 2020 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/id75_day_2/index.html</link>
         <description>Id75 day 2 posted on Wed Nov 04 2020</description>
         <content:encoded><![CDATA[ <p>Day 2 of using an ortholinear keyboard is pretty rough. My typing style is less “hands on the home row” and more “be person who has used a keyboard and just know where all the letters are”. On a normal keeb, I tend to use two fingers and a thumb (per hand) for everything. That isn’t possible here, so I’m <em>mavis beaconing</em> the crap out of this keyboard. Typing is very slow.</p>
@@ -228,9 +228,9 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>New keyboard day</title>
-        <pubDate>Wed, 04 Nov 2020 15:42:58 GMT</pubDate>
+        <pubDate>Mon, 02 Nov 2020 16:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/new_keyboard_day/index.html</link>
-        <description>New keyboard day posted on Wed Nov 04 2020</description>
+        <description>New keyboard day posted on Mon Nov 02 2020</description>
         <content:encoded><![CDATA[ <p>It’s new keyboard day in the <code>schwartz</code> household. I’ve been a mechanical keyboard user for the last 2.5 years, pretty much since I stopped cosplaying as a software dev and actually became one. At my last job I somehow wound up with a friend’s <a href="https://codekeyboards.com/">Code keyboard</a> when he left.</p>
 <h3 id="tweaking-the-setup">Tweaking the Setup</h3>
 <p>I use this phrase a lot, because I do it a lot. One vertical monitor and a laptop; two horizontal monitors, laptop closed; one vertical, one horizontal <em>and</em> laptop screen. The only part of my workstation that is non-negotiable is the <a href="https://www.kensington.com/en-ca/p/products/control/trackballs/expert-mouse-optical-trackball/">Kensington Expert Trackball</a>. Everything else is fair game. There is no ideal arrangement, the act of fiddling is its own reward. I never did this before I was a professional werb derv. In fact, I learned to code on a sub-$200 Chromebook with no external peripherals.</p>
@@ -253,9 +253,9 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Asynchronous education</title>
-        <pubDate>Tue, 27 Oct 2020 17:09:46 GMT</pubDate>
+        <pubDate>Thu, 29 Oct 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/asynchronous_education/index.html</link>
-        <description>Asynchronous education posted on Tue Oct 27 2020</description>
+        <description>Asynchronous education posted on Thu Oct 29 2020</description>
         <content:encoded><![CDATA[ <p>Apparently, in India during the Covid pandemic, a large number of schools are using Whatsapp for teaching.</p>
 <p>It makes a lot of sense, when you think about it. You wouldn’t necessarily expect every house to have a computer to dedicate to a child’s education (although it would be nice), but phones are supposedly common enough there to make Whatsapp an ideal platform. Phones are even more common here in my little white slice of suburbia. I wouldn’t be surprised if most kids had their own phone. Additionally, Whatsapp provides read receipts, so teachers can check that students are actually viewing the lessons. The downside is that Whatsapp is a Facebook provided service.</p>
 <p>The big thing that Whatsapp™ Edumacation offers that Zoom™ Edumacation doesn’t offer is <code>asynchronousity</code>. As far as I’m concerned a group lesson on Zoom is basically the same thing as watching a video, except without the upsides of video. Teachers have to put as much (or more) time into teaching than in a classroom, while students are expected to pay attention without any of the social pressure to do so that comes with being in a roomful of kids.</p>
@@ -288,9 +288,9 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Educational tv</title>
-        <pubDate>Tue, 27 Oct 2020 10:35:25 GMT</pubDate>
+        <pubDate>Wed, 28 Oct 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/educational_tv/index.html</link>
-        <description>Educational tv posted on Tue Oct 27 2020</description>
+        <description>Educational tv posted on Wed Oct 28 2020</description>
         <content:encoded><![CDATA[ 
 <p>I don’t want to be one of those complaining old men, constantly bemoaning every difference that I see between the world of my youth and that of today.I’m not that old anyway; at 38 I consider myself to be just barely reaching adulthood.</p>
 <p>I have two small children of the girl persuasion, ages 2 and 4. The pandemic has changed so much about their lives, but one change is that we all have a lot more screen time than before.</p>
@@ -305,7 +305,7 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Converting large movies to smallish mp4s</title>
-        <pubDate>Tue, 27 Oct 2020 10:31:00 GMT</pubDate>
+        <pubDate>Tue, 27 Oct 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/converting_large_movies_to_smallish_mp4s/index.html</link>
         <description>Converting large movies to smallish mp4s posted on Tue Oct 27 2020</description>
         <content:encoded><![CDATA[ <p>Not much to this. I’ve set up a Plex server on a 2011ish MacBook air. This server is also responsible for hosting some homemade services on my local network.</p>
@@ -332,7 +332,7 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Fudgy brownie cupcakes</title>
-        <pubDate>Mon, 26 Oct 2020 20:23:03 GMT</pubDate>
+        <pubDate>Mon, 26 Oct 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/fudgy_brownie_cupcakes/index.html</link>
         <description>Fudgy brownie cupcakes posted on Mon Oct 26 2020</description>
         <content:encoded><![CDATA[ <h2 id="brownie-cupcakes-recipe"><a href="https://www.alsothecrumbsplease.com/brownie-cupcakes-recipe/">Brownie Cupcakes Recipe</a></h2>
@@ -357,9 +357,9 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Adding comments to the blog</title>
-        <pubDate>Sat, 03 Oct 2020 07:10:03 GMT</pubDate>
+        <pubDate>Fri, 25 Sep 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/adding_comments_to_the_blog/index.html</link>
-        <description>Adding comments to the blog posted on Sat Oct 03 2020</description>
+        <description>Adding comments to the blog posted on Fri Sep 25 2020</description>
         <content:encoded><![CDATA[ <p>I’ve been thinking about comments a lot. This blog is built with my own static site generator, and adding live comments to a site with no backend is no easy task.</p>
 <p>I narrowed my options down to these options:</p>
 <ul>
@@ -377,7 +377,7 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Dongles</title>
-        <pubDate>Fri, 25 Sep 2020 17:35:53 GMT</pubDate>
+        <pubDate>Fri, 25 Sep 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/dongles/index.html</link>
         <description>Dongles posted on Fri Sep 25 2020</description>
         <content:encoded><![CDATA[ 
@@ -409,7 +409,7 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>Archive bookmarklet</title>
-        <pubDate>Thu, 24 Sep 2020 03:10:23 GMT</pubDate>
+        <pubDate>Wed, 23 Sep 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/archive_bookmarklet/index.html</link>
         <description>Archive bookmarklet posted on Wed Sep 23 2020</description>
         <content:encoded><![CDATA[ <h2 id="a-useful-bookmarklet-i-stumbled-across">A useful Bookmarklet I stumbled across</h2>
@@ -422,9 +422,9 @@ Inline video: undefined (https://schwartz.world) ]]></content:encoded>
     
     <item>
         <title>The hardest and easiest part of react</title>
-        <pubDate>Thu, 24 Sep 2020 03:10:23 GMT</pubDate>
+        <pubDate>Tue, 22 Sep 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/the_hardest_and_easiest_part_of_react/index.html</link>
-        <description>The hardest and easiest part of react posted on Wed Sep 23 2020</description>
+        <description>The hardest and easiest part of react posted on Tue Sep 22 2020</description>
         <content:encoded><![CDATA[ 
 
 <h2 id="the-hardest-and-easiest-part-of-reactjs">The Hardest and Easiest Part of ReactJS</h2>
@@ -513,7 +513,7 @@ const Child = ({ id, onLoad, loading }) =&gt; {
     
     <item>
         <title>On typescript</title>
-        <pubDate>Tue, 15 Sep 2020 19:10:23 GMT</pubDate>
+        <pubDate>Tue, 15 Sep 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/on_typescript/index.html</link>
         <description>On typescript posted on Tue Sep 15 2020</description>
         <content:encoded><![CDATA[ <p>I don’t like it.</p>
@@ -547,7 +547,7 @@ const Child = ({ id, onLoad, loading }) =&gt; {
     
     <item>
         <title>Static site generators</title>
-        <pubDate>Thu, 10 Sep 2020 19:10:23 GMT</pubDate>
+        <pubDate>Thu, 10 Sep 2020 15:59:00 GMT</pubDate>
         <link>https://schwartz.world/blog/static_site_generators/index.html</link>
         <description>Static site generators posted on Thu Sep 10 2020</description>
         <content:encoded><![CDATA[ <h2 id="static-site-generators">Static Site Generators</h2>
