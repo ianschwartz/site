@@ -22,7 +22,8 @@ export const rssTemplate = (items) => `<?xml version="1.0"?>
 const RSSEntries = [];
 const main = async () => {
  try {
-   const files = await buildIndex()
+   const files = await buildIndex();
+   console.log(files)
    for (let f of files) {
      await createHTMLFile(f).then(entry => {
        RSSEntries.push(entry)

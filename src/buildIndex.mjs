@@ -18,7 +18,7 @@ const parsePost = async (post) => {
   const body = await FS.readFile(pathToFile);
   const name = post.split('.')[0];
   return {
-    createdAt: stats.birthtime,
+    createdAt: stats.mtime,
     editedAt: stats.mtime,
     fileName: name,
     htmlFileName: `./blog/${name}/index.html`,
