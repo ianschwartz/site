@@ -45,12 +45,12 @@ export const FS = {
         return fs.existsSync(args)
     },
     writeFile: (path, data) => {
-      console.log(path)
-        return new Promise((resolve, reject) => {
-            return fs.writeFile(path, data, (err, res) => {
-                if (err) console.error(err);
-                resolve(res)
-            })
-        })
-    },
+    console.log(path)
+    return new Promise((resolve, reject) => {
+        /*return fs.writeFile(path, data, (err, res) => {
+            if (err) console.error(err);
+            resolve(res)
+        })*/
+    })
+},
 }
