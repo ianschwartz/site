@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>schwartz.world - Updates March 2021</title>
+    <title>schwartz.world - Schwudoku</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -176,25 +176,32 @@ ooolccccccccccloolcc:;,,;:clllcccccccccccccccc:;,,,,,,,,:lxO00000OOOxoooolccc:;;
 
 <main>
     <div class="title">
-        <h2>Updates March 2021</h2>
+        <h2>Schwudoku</h2>
         
-            <small><b>Created:</b> Thu Mar 04 2021 11:59:00 GMT-0500 (Eastern Standard Time)</small>
+            <small><b>Created:</b> Fri Mar 19 2021 12:11:39 GMT-0400 (Eastern Daylight Time)</small>
         
         
         
 
 
     </div>
-    <section id="main"><p>I don’t know if it was the COVID-somnia, the COVID-epression, the COVID-xiety or what, but I have just not been feeling work lately. I haven’t felt excited about what I’ve been doing for a while, which led me to applying for a senior dev position, which I got. It’ll be nice to do something new.</p>
-<h3 id="pontification">Pontification</h3>
-<p>I’d like to write more about my journey to becoming a senior developer. I’m completely self-taught. If you’re flipping through this blog staring at my opinions on development, thinking “this guy has no clue”, that’s cool. I’m doing my best, and a lot of people seem to think I know what I’m doing. I think a lot about the <code>right</code> way to build software, and I want to write about what I’m thinking. Really I’d like to talk about what I’m thinking with people who are as interested in this as I am, but there’s a lot of ways to get excited about tech and I don’t feel like I know anybody who really thinks about programming the way I do. I’m pretty sure that my loved ones would struggle to explain what I do, even though it seems very simple to me.</p>
-<p>I’m not talking about making code beautiful, although it can be poetic. I strive to maintain a mental model for whatever I’m working on. I need to carry the whole thing in my head, and I can only do that if things are factored properly. How can we build the code so that we have to work less to retain that mental model? It doesn’t happen right away, but code is like a chair that you sit in until it conforms to the individual contours of your ass.</p>
-<p>When state changes, I don’t want to have to wonder where that change is coming from. When something needs changing, I don’t want to have to touch 10,000 files to make that change. I want to look at a function and know what it’s doing, without having to figure out how. There is no code that perfectly fits this, and deciding which tradeoffs to make is a delicate art.</p>
-<h3 id="sleep-update">Sleep Update</h3>
-<p>Sleep eludes me, as usual, but a little less than before.</p>
-<p>I still hate the CPAP machine. I hate fiddling with it, cleaning it, waking up with it on. I hate the way it fills me up with air like a balloon. But more than that, I hate that I can feel it working. I don’t know what that means for my future. Will I be sleeping in a mask forever?</p>
-<p>When I first started I had to wear the mask before bed for a couple hours while watching TV to get my compliance numbers up, but we are 2 months in and I now average around 5.5 hours of sleep with the mask on. This is a fucking miracle and nothing less. I had one night where I made it 7.5 hours.</p>
-<p>My motivation is returning. That’s the most amazing part. I’ve been running and coding and reading. Schwartz is coming back in a big way. Get ready, people.</p>
+    <section id="main"><p>During my week off in between jobs, I decided to build a sudoku web app. I think I’m at a solid place to say that the features are all pretty much there, but the UX still needs a little polish. I’m still researching ad networks, but I’d love to have a few variants of this out in the wild eventually with a banner ad on the page, an idea I’m blatantly stealing from a thread on the Orange Site.</p>
+<p>One thing that makes my sudoku implementation unique is that I’m tracking the entire game state in the URL at all times. You can copy/paste the URL and pick up your game exactly as you left it. This is based on an idea I have been playing with at work, and one that I’d like to see more devs use.</p>
+<h3 id="global-state-in-react">Global State in React</h3>
+<p>I am not a fan of having global state in React. Most state doesn’t need to be global, and in some ways the pain of prop-drilling is a natural deterrant. When you build React apps, if you stick to what I consider to be the React paradigm (state lives high in the tree, props get passed down, events bubble up), you get some guarantees. If the UI changes, you should be able to follow the tree upward until you find the state that changed to trigger that UI change. Global state is anathema to this.</p>
+<p>I think it comes from people who haven’t internalized the React Compositional Model. We used to build websites where we would reach out and change things directly with JavaScript, but you’re not really supposed to need to give orders like that in React.</p>
+<p>If I was going to recommend something I don’t recommend, I would say that global state makes sense if that state is:</p>
+<ul>
+<li>Mostly read-only</li>
+<li>Only able to be changed by one type of element</li>
+</ul>
+<p>But before I reach for redux or mobx or schwartx, I like to use the pre-existing global state stores in the browser. Cookies are for global state that lasts for a session or longer. LocalStorage is for more persistant state. Most important is the URL.</p>
+<h3 id="the-url">The URL</h3>
+<p>The URL of a page (including any query string params), is an interesting beast. On the one hand, it is completely ephemeral. Many people don’t even think about them as they browse around and unscrupulous browser vendors want to de-emphasize the URL.</p>
+<p>On the other hand, a URL can also be persistant. Whatever URL the user has bookmarked or copy/pasted is their entry point into the website. This can be a powerful tool. How much information could you actually encode in a URL?</p>
+<p>Sudoku is an excellent starting point, as a sudoku game can trivially be encoded as an 81 character string. Digits 1-9 have obvious meaning, and a character can be chosen to represent an empty space.</p>
+<p>I decided to take it a step further, as players need the ability to note the possible candidates in each square. If you think of the candidates as 9 boolean values (it could be 1, it could not be 2, etc), then they can be trivially represented as a 9-digit binary number. To save a little space, why not encode them as integers? “111111111” in binary is only 512 in decimal after all.</p>
+<p>Play <code>schwudoku</code> online at <a href="https://www.schwudoku.com"> schwudoku.com</a> and let me know what you think!</p>
 </section>
     <section id="comments">
         
