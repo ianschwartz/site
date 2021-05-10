@@ -1,0 +1,19 @@
+body {
+	background: #f5e3fa;
+	color: #2a0036;
+}
+
+pre	{
+		font-size: 1.45rem;
+
+}
+h1 {
+	width: 100%;
+	background: pink;
+	text-align: center;
+}
+
+th {
+	background: #e1d9ff;
+	width: 5;
+}
