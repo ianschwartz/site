@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>schwartz.world</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Place favicon.ico in the root directory -->
+
+</head>
+
+<body>
+<header>
+  <h1 class="pulse">Schwartz.World!</h1>
+</header>
+
+<main>
+    <section>
+    	<input
+    		type="file"
+    		accept=".png, .jpg, .jpeg, .pjpeg, .heic, .gif"
+    		capture="environment"
+   		/>
+    </section>
+  </main>
+  <footer>
+    © 2019 <a href="mailto://ian@schwartz.world">Ian Schwartz</a>
+  </footer>
+<script>
+	const input = document.querySelector('input');
+	input.addEventListener('change',e => {
+		e.preventDefault();
+		console.log(e.target.value)
+	})
+</script>
+</body>
+</html>
